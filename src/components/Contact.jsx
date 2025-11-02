@@ -18,8 +18,8 @@ function Contact() {
           <p className="text-gray-400 mt-2 text-sm">For sponsorships, hosting or partnerships — reach out and we'll reply within 48 hours.</p>
 
           <ul className="mt-4 text-sm text-gray-300 space-y-2">
-            <li>📧 email: contact@ukesportshub.example</li>
-            <li>📱 whatsapp: +91 70000 00000</li>
+            <li>📧 email: ukesportshub07@gmail.com</li>
+            <li>📱 whatsapp: +91 97607 02302</li>
             <li>📍 Dehradun, Uttarakhand</li>
           </ul>
         </div>

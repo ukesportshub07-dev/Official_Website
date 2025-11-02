@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function AnimatedStatCard({ targetNumber, suffix, label, isText, triggerAnimation }) {
   const [count, setCount] = useState(0);
@@ -98,7 +99,11 @@ function Hero() {
 
           <div className="mt-6 flex gap-3">
             <a href="#tournaments" className="inline-block bg-white text-gray-900 px-5 py-3 rounded-lg font-semibold shadow">See Tournaments</a>
-            <a href="#register" className="inline-block border border-gray-600 px-5 py-3 rounded-lg text-sm">Register Team</a>
+             <Link
+              to="/Forms"
+              className="inline-block border border-gray-600 px-5 py-3 rounded-lg text-sm">
+              Register Team
+            </Link>
           </div>
 
           <div ref={statsRef} className="mt-8 grid grid-cols-3 gap-3 text-xs text-gray-200">
@@ -109,7 +114,7 @@ function Hero() {
               triggerAnimation={startAnimation}
             />
             <AnimatedStatCard
-              targetNumber={5000}
+              targetNumber={500}
               suffix="+"
               label="Community Members"
               triggerAnimation={startAnimation}
@@ -135,7 +140,11 @@ function Hero() {
               <h3 className="text-lg font-bold">Next LAN: Dehradun Arena</h3>
               <p className="text-gray-400 mt-2 text-sm">06 - 07 Nov • Graphic Era Hill University — Competitive CS/Valorant/Valorant Tournaments & community booths.</p>
               <div className="mt-4 flex gap-2">
-                <a href="#register" className="px-3 py-2 bg-[#7c3aed] rounded-md text-sm font-semibold">Register</a>
+                 <Link
+              to="/Forms"
+              className="px-3 py-2 bg-[#7c3aed] rounded-md text-sm font-semibold">
+              Register Team
+            </Link>
                 <a href="#tournaments" className="px-3 py-2 border border-gray-700 rounded-md text-sm">Event Info</a>
               </div>
             </div>

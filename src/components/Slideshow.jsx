@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  '/slideshow/IMG_0099.JPG',
-  '/slideshow/IMG_0135.JPG',
-  '/slideshow/IMG_0102.JPG',
-  '/slideshow/IMG_0139.JPG',
-  '/slideshow/IMG_0164.JPG',
-  '/slideshow/IMG_0252.JPG',
-  '/slideshow/IMG_4224.jpg',
-  '/slideshow/IMG_4228.jpg',
-  '/slideshow/IMG_4253.jpg',
-  '/slideshow/IMG_4310.jpg',
-  '/slideshow/IMG_4313.jpg',
-  '/slideshow/IMG_8928.JPG',
-  '/slideshow/IMG_8931.JPG',
-  '/slideshow/IMG_8936.JPG',
+  '/src/assets/slideshow/IMG_0099.JPG',
+  '/src/assets/slideshow/IMG_0102.JPG',
+  '/src/assets/slideshow/IMG_0135.JPG',
+  '/src/assets/slideshow/IMG_0139.JPG',
+  '/src/assets/slideshow/IMG_0164.JPG',
+  '/src/assets/slideshow/IMG_0252.JPG',
+  '/src/assets/slideshow/IMG_4224.jpg',
+  '/src/assets/slideshow/IMG_4228.jpg',
+  '/src/assets/slideshow/IMG_4253.jpg',
+  '/src/assets/slideshow/IMG_4310.jpg',
+  '/src/assets/slideshow/IMG_4313.jpg',
+  '/src/assets/slideshow/IMG_8928.JPG',
+  '/src/assets/slideshow/IMG_8931.JPG',
+  '/src/assets/slideshow/IMG_8936.JPG',
 ];
 
 function SlideShow() {
@@ -23,7 +23,7 @@ function SlideShow() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 1500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -35,7 +35,7 @@ function SlideShow() {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-500 ease-in-out ${
+          className={`absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-500 md:duration-2000 ease-in-out ${
             index === currentImageIndex ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ 
@@ -52,8 +52,7 @@ function SlideShow() {
 
         <div className="relative z-20 px-6 sm:px-12 lg:px-24 text-left max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-            Welcome To <br></br>
-            UK ESPORTS HUB
+            Welcome to UKESPORTS HUB
           </h1>
           <p className="text-xl sm:text-2xl mb-8 max-w-xl drop-shadow-md">
             Uttarakhand's home for competitive gaming. Join tournaments, find teammates, and level up.
@@ -73,20 +72,4 @@ function SlideShow() {
   );
 };
 
-
 export default SlideShow;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
