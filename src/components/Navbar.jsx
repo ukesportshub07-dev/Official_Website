@@ -8,11 +8,14 @@ function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-3">
-            <img 
-              src=".\src\assets\whitelogo.png" 
-              alt="UKESPORTS HUB" 
-              className="h-12 w-12 rounded-md object-cover" 
-              onError={(e) => { e.target.src = 'https://via.placeholder.com/80' }}
+      import whiteLogo from './src/assets/whitelogo.png';
+<img
+  src={whiteLogo}
+  alt="UKESPORTS HUB"
+  className="h-12 w-12 rounded-md object-cover"
+  onError={(e) => { e.target.src = 'https://via.placeholder.com/80'; }}
+/>
+
             />
             <div>
               <div className="text-lg font-bold text-white">UKESPORTS HUB</div>
@@ -60,4 +63,5 @@ function Navbar() {
 
 
 export default Navbar;
+
 
