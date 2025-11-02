@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles from the original file */
+:root {
+  --accent: #7c3aed;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.08), rgba(0, 0, 0, 0))
+}
+
+/* Accessibility: focus outlines */
+.user-is-tabbing:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
