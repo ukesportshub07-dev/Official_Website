@@ -9,7 +9,7 @@ function Navbar() {
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-3">
             <img 
-              src="src/assets/whitelogo.png" 
+              src=".\src\assets\whitelogo.png" 
               alt="UKESPORTS HUB" 
               className="h-12 w-12 rounded-md object-cover" 
               onError={(e) => { e.target.src = 'https://via.placeholder.com/80' }}
@@ -60,3 +60,4 @@ function Navbar() {
 
 
 export default Navbar;
+
