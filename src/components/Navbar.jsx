@@ -19,7 +19,7 @@ function Navbar() {
           </a>
 
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-200">
-            <a href="#home" className="hover:text-white">Home</a>
+            <a href="https://www.ukesportshub.in/" className="hover:text-white">Home</a>
             <a href="#hero" className="hover:text-white">About Us</a>
             <a href="#tournaments" className="hover:text-white">Upcmoing Events</a>
             <a href="#events" className="hover:text-white">Past Event </a>
@@ -58,6 +58,7 @@ function Navbar() {
 
 
 export default Navbar;
+
 
 
 
