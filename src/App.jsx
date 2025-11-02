@@ -1,30 +1,30 @@
+// src/App.js
+
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './index.css'; 
+
 import Navbar from './components/Navbar.jsx';
-import Hero from './components/Hero.jsx';
-import About from './components/About.jsx';
-import Tournaments from './components/Tournaments.jsx';
-import Events from './components/Events.jsx';
-import News from './components/News.jsx';
-import Team from './components/Team.jsx';
-import Register from './components/Register.jsx';
-import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import SlideShow from './components/Slideshow.jsx';
+
+import Home from './home.jsx';
+import NewPage from './2ndpge.jsx';
+import Form from './Form.jsx';
 
 function App() {
   return (
     <div className="bg-gray-900 text-gray-100 leading-relaxed">
-      <Navbar />
-      <SlideShow/>
-      <Hero />
-      <About />
-      <Tournaments />
-      <Events />
-      <News />
-      <Team />
-      <Register />
-      <Contact />
-      <Footer />
+      
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/new-page" element={<NewPage />} />
+          <Route path="/Forms" element={<Form />} />
+          <Route path="*" element={<h1 className="p-10 text-4xl text-red-500">404 - Page Not Found</h1>} />
+        </Routes>
+      </main>
+      
+      
     </div>
   );
 }
