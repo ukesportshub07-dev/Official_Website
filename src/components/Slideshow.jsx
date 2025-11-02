@@ -4,17 +4,17 @@ const images = [
   '/slideshow/IMG_0099.JPG',
   '/slideshow/IMG_0135.JPG',
   '/slideshow/IMG_0102.JPG',
-  '/src/assets/slideshow/IMG_0139.JPG',
-  '/src/assets/slideshow/IMG_0164.JPG',
-  '/src/assets/slideshow/IMG_0252.JPG',
-  '/src/assets/slideshow/IMG_4224.jpg',
-  '/src/assets/slideshow/IMG_4228.jpg',
-  '/src/assets/slideshow/IMG_4253.jpg',
-  '/src/assets/slideshow/IMG_4310.jpg',
-  '/src/assets/slideshow/IMG_4313.jpg',
-  '/src/assets/slideshow/IMG_8928.JPG',
-  '/src/assets/slideshow/IMG_8931.JPG',
-  '/src/assets/slideshow/IMG_8936.JPG',
+  '/slideshow/IMG_0139.JPG',
+  '/slideshow/IMG_0164.JPG',
+  '/slideshow/IMG_0252.JPG',
+  '/slideshow/IMG_4224.jpg',
+  '/slideshow/IMG_4228.jpg',
+  '/slideshow/IMG_4253.jpg',
+  '/slideshow/IMG_4310.jpg',
+  '/slideshow/IMG_4313.jpg',
+  '/slideshow/IMG_8928.JPG',
+  '/slideshow/IMG_8931.JPG',
+  '/slideshow/IMG_8936.JPG',
 ];
 
 function SlideShow() {
@@ -74,6 +74,7 @@ function SlideShow() {
 
 
 export default SlideShow;
+
 
 
 
