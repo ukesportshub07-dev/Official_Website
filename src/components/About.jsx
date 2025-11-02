@@ -50,7 +50,7 @@ function About() {
             animate="float"
             variants={floatVariant}
             
-            src="\src\assets\float.png" 
+            src="slideshow\float.png" 
             alt="Esports players ready for battle" 
             className="w-full h-auto object-cover" 
           />
@@ -60,5 +60,6 @@ function About() {
     </section>
   );
 }
+
 
 export default About;
