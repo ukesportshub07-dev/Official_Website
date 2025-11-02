@@ -1,20 +1,29 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
- '/slideshow/IMG_0099.JPG',
-  '/slideshow/IMG_0135.JPG',
-  '/slideshow/IMG_0102.JPG',
-  '/slideshow/IMG_0139.JPG',
-  '/slideshow/IMG_0164.JPG',
-  '/slideshow/IMG_0252.JPG',
-  '/slideshow/IMG_4224.jpg',
-  '/slideshow/IMG_4228.jpg',
-  '/slideshow/IMG_4253.jpg',
-  '/slideshow/IMG_4310.jpg',
-  '/slideshow/IMG_4313.jpg',
-  '/slideshow/IMG_8928.JPG',
-  '/slideshow/IMG_8931.JPG',
-  '/slideshow/IMG_8936.JPG',
+  '/slideshow/1.JPG',
+  '/slideshow/2.JPG',
+  '/slideshow/3.JPG',
+  '/slideshow/4.JPG',
+  '/slideshow/5.JPG',
+  '/slideshow/6.JPG',
+  '/slideshow/7.jpg',
+  '/slideshow/8.jpg',
+  '/slideshow/9.jpg',
+  '/slideshow/10.jpg',
+  '/slideshow/11.JPG',
+  '/slideshow/12.JPG',
+  '/slideshow/13.JPG',
+  '/slideshow/14.JPG',
+  '/slideshow/15.JPG',
+  '/slideshow/16.JPG',
+  '/slideshow/17.jpg',
+  '/slideshow/18.jpg',
+  '/slideshow/19.jpg',
+  '/slideshow/20.jpg',
+  '/slideshow/21.jpg',
+  '/slideshow/22.jpg',
+  '/slideshow/23.jpg',
 ];
 
 function SlideShow() {
@@ -74,3 +83,4 @@ function SlideShow() {
 
 
 export default SlideShow;
+
