@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  '/src/assets/slideshow/IMG_0099.JPG',
+  './src/assets/slideshow/IMG_0099.JPG',
   '/src/assets/slideshow/IMG_0102.JPG',
   '/src/assets/slideshow/IMG_0135.JPG',
   '/src/assets/slideshow/IMG_0139.JPG',
@@ -71,5 +71,6 @@ function SlideShow() {
     </>
   );
 };
+
 
 export default SlideShow;
