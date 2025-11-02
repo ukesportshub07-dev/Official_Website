@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 const images = [
   '/slideshow/IMG_0099.JPG',
-  '/slideshow/IMG_0102.JPG',
   '/slideshow/IMG_0135.JPG',
+  '/slideshow/IMG_0102.JPG',
   '/src/assets/slideshow/IMG_0139.JPG',
   '/src/assets/slideshow/IMG_0164.JPG',
   '/src/assets/slideshow/IMG_0252.JPG',
@@ -74,6 +74,7 @@ function SlideShow() {
 
 
 export default SlideShow;
+
 
 
 
