@@ -13,7 +13,7 @@ function Navbar() {
 
             />
             <div>
-              <div className="text-lg font-bold text-white">UKESPORTS HUB</div>
+              <div className="text-lg font-bold text-white">UK ESPORTS HUB</div>
               <div className="text-xs text-gray-300 -mt-1">Uttarakhand Esports Community</div>
             </div>
           </a>
@@ -58,6 +58,7 @@ function Navbar() {
 
 
 export default Navbar;
+
 
 
 
