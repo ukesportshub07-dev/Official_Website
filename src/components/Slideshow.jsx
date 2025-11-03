@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-  '/slideshow/1.JPG',
-  '/slideshow/2.JPG',
-  '/slideshow/3.JPG',
-  '/slideshow/4.JPG',
-  '/slideshow/5.JPG',
-  '/slideshow/6.JPG',
+  '/slideshow/1.jpg',
+  '/slideshow/2.jpg',
+  '/slideshow/3.jpg',
+  '/slideshow/4.jpg',
+  '/slideshow/5.jpg',
+  '/slideshow/6.jpg',
   '/slideshow/7.jpg',
   '/slideshow/8.jpg',
   '/slideshow/9.jpg',
   '/slideshow/10.jpg',
-  '/slideshow/11.JPG',
-  '/slideshow/12.JPG',
-  '/slideshow/13.JPG',
-  '/slideshow/14.JPG',
-  '/slideshow/15.JPG',
-  '/slideshow/16.JPG',
+  '/slideshow/11.jpg',
+  '/slideshow/12.jpg',
+  '/slideshow/13.jpg',
+  '/slideshow/14.jpg',
+  '/slideshow/15.jpg',
+  '/slideshow/16.jpg',
   '/slideshow/17.jpg',
   '/slideshow/18.jpg',
   '/slideshow/19.jpg',
@@ -83,4 +83,5 @@ function SlideShow() {
 
 
 export default SlideShow;
+
 
