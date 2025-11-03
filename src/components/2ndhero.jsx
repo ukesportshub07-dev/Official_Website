@@ -59,7 +59,7 @@ function SaarthiHero() {
           <div className="relative bg-gray-800 rounded-xl p-8 shadow-xl z-10">
             <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12
                  bg-gradient-to-r from-purple-800 to-purple-400 text-transparent bg-clip-text">
-              Featured Esports Titles 🎮
+              Featured Esports Titles
             </h2>
 
             <div className="flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-12">
@@ -137,6 +137,7 @@ function SaarthiHero() {
 
 
 export default SaarthiHero;
+
 
 
 
