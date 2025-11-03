@@ -108,7 +108,7 @@ function Hero() {
 
           <div ref={statsRef} className="mt-8 grid grid-cols-3 gap-3 text-xs text-gray-200">
             <AnimatedStatCard
-              targetNumber={05}
+              targetNumber={5}
               suffix="+"
               label="Tournaments"
               triggerAnimation={startAnimation}
@@ -160,6 +160,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 
