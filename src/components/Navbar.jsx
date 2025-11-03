@@ -19,8 +19,8 @@ function Navbar() {
 
           <Link to="/" className="flex items-center gap-3">
             <img
-              src="\src\assets\logos.png"
-              alt="UKESPORTS HUB"
+              src="/logos/whitelogo.png"
+              alt="UK ESPORTS HUB"
               className="h-12 w-12 rounded-md object-cover"
               onError={(e) => { e.target.src = 'https://via.placeholder.com/80' }}
             />
@@ -86,5 +86,6 @@ function Navbar() {
     </header>
   );
 }
+
 
 export default Navbar;
