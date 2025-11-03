@@ -36,11 +36,9 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
               <div className="text-sm text-gray-400">Uttarakhand Esports Community</div>
             </div>
           </div>
-          
-        
+     
           <p className="text-sm text-gray-400 mt-2">Follow us on social platforms for real time updates, brackets, and live streams.</p>
 
-        
           <div className="flex mt-2">
             <a href="https://www.instagram.com/ukesportshub" target="_blank" rel="noopener noreferrer" 
               aria-label="UK Esports Hub" 
@@ -85,5 +83,6 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 }
 
 export default Footer;
+
 
 
