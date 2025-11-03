@@ -137,8 +137,8 @@ function Hero() {
           <div className="bg-gradient-to-b from-[#7c3aed]/30 to-transparent p-1 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]">
             <div className="bg-gray-800 rounded-xl p-6">
               <img src="/images/banner.png" />
-              <h3 className="text-lg font-bold">Next LAN: Dehradun Arena</h3>
-              <p className="text-gray-400 mt-2 text-sm">06 - 07 Nov • Graphic Era Hill University — Competitive CS/Valorant/Valorant Tournaments & community booths.</p>
+              <h3 className="text-lg font-bold">Next LAN: ENDGAME 2025 </h3>
+              <p className="text-gray-400 mt-2 text-sm">06 - 07 Nov 2025 • Graphic Era Hill University — Competitive Free Fire / BGMI Tournaments.</p>
               <div className="mt-4 flex gap-2">
                  <Link
               to="/Forms"
@@ -160,4 +160,5 @@ function Hero() {
 }
 
 export default Hero;
+
 
