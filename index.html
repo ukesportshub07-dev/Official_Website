@@ -1,50 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- Basic Meta -->
+  <!-- Essential Meta -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>UK ESPORTS HUB | Esports Tournaments, News & Community in Uttarakhand</title>
-  <meta name="description" content="Join UKESPORTS HUB — the premier destination for competitive gaming and esports tournaments in Uttarakhand. Find LAN events, the latest gaming news, and be part of the thriving UK gamer community." />
-  <meta name="keywords" content="esports tournament in uttarakhand, esports uttarakhand, UK esports, uttarakhand esports hub, gaming uttarakhand, competitive gaming uttarakhand, LAN events dehradun, uttarakhand gamers" />
-  <meta name="author" content="UK ESPORTS HUB Team" />
+  <!-- Primary SEO -->
+  <title>UKESPORTS HUB | Esports Tournaments, Gaming News & Community in Uttarakhand</title>
+  <meta name="description" content="Join UKESPORTS HUB — Uttarakhand’s #1 esports community for gamers. Discover tournaments, LAN events, news, and competitive gaming updates from across the state." />
+  <meta name="keywords" content="UKESPORTS HUB, esports uttarakhand, uttarakhand esports hub, uk esports, gaming tournaments dehradun, LAN events uttarakhand, bgmi tournaments, free fire events, uk gamers" />
+  <meta name="author" content="UKESPORTS HUB Team" />
+  <link rel="canonical" href="https://www.ukesportshub.in/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/logos/social_logo.png" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="UK ESPORTS HUB | Esports Tournaments & Gaming in Uttarakhand" />
+  <!-- Open Graph (Facebook / WhatsApp / Discord) -->
+  <meta property="og:title" content="UKESPORTS HUB | Esports Tournaments & Gaming in Uttarakhand" />
+  <meta property="og:description" content="Compete, connect, and celebrate gaming at UKESPORTS HUB — Uttarakhand’s leading esports platform for BGMI, Free Fire, Valorant, and more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.ukesportshub.in/" />
   <meta property="og:image" content="https://www.ukesportshub.in/logos/social_share_image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:description" content="Your home for competitive gaming and esports tournaments in Uttarakhand. Join the UK gamer community, find LAN events, and dominate the leaderboard!" />
   <meta property="og:site_name" content="UKESPORTS HUB" />
 
-  <!-- Twitter -->
+  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@UKESPORTS_HUB" />
-  <meta name="twitter:creator" content="@UKESPORTS_HUB" />
-  <meta name="twitter:title" content="UKESPORTS HUB: Uttarakhand's #1 Esports Destination" />
-  <meta name="twitter:description" content="Your home for competitive gaming and esports tournaments in Uttarakhand. Join the UK gamer community, find LAN events, and dominate the leaderboard!" />
+  <meta name="twitter:title" content="UKESPORTS HUB — Uttarakhand’s Premier Esports Destination" />
+  <meta name="twitter:description" content="Join Uttarakhand’s biggest gaming community. Participate in esports tournaments, LAN events, and news updates only at UKESPORTS HUB." />
   <meta name="twitter:image" content="https://www.ukesportshub.in/logos/social_share_image.jpg" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.ukesportshub.in/" />
-
-  <!-- Structured Data (SEO Enhancement) -->
+  <!-- Schema.org JSON-LD (Google Structured Data) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "UK ESPORTS HUB",
+    "name": "UKESPORTS HUB",
     "url": "https://www.ukesportshub.in",
     "logo": "https://www.ukesportshub.in/logos/social_logo.png",
     "sameAs": [
@@ -52,12 +51,29 @@
       "https://twitter.com/UKESPORTS_HUB",
       "https://www.youtube.com/@ukesportshub"
     ],
-    "description": "UK ESPORTS HUB is Uttarakhand’s premier esports organization hosting tournaments, LAN events, and gaming community initiatives."
+    "description": "UKESPORTS HUB is Uttarakhand’s premier esports organization hosting tournaments, LAN events, and gaming community initiatives."
   }
   </script>
+
+  <!-- Robots and Indexing -->
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Optional: Analytics (uncomment if you use GA or Meta Pixel) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
 </head>
 
 <body>
-  <!-- Your site content goes here -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <!-- React App Entry -->
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
