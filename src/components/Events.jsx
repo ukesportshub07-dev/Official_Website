@@ -79,7 +79,7 @@ function Events() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           } hover:scale-105 hover:bg-gray-700 hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer`}
         >
-          <h4 className="font-semibold text-lg text-white">UKESPORTS Charity Stream</h4>
+          <h4 className="font-semibold text-lg text-white">UK ESPORTS Charity Stream</h4>
           <p className="text-sm text-gray-300 mt-2">Join us for a 24-hour charity livestream event featuring your favorite local streamers, pro players, and community leaders to raise funds for local causes.</p>
         </div>
 
@@ -87,5 +87,6 @@ function Events() {
     </section>
   );
 }
+
 
 export default Events;
