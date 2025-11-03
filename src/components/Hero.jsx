@@ -94,7 +94,7 @@ function Hero() {
 
         <section>
           <p className="text-sm text-indigo-300 font-semibold">Uttarakhand • Esports • Community</p>
-          <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold text-white">UKESPORTS HUB</h1>
+          <h1 className="mt-4 text-4xl sm:text-5xl font-extrabold text-white">UK ESPORTS HUB</h1>
           <p className="mt-4 text-gray-300 max-w-xl">We run tournaments, LAN parties, community nights and help players & teams from Uttarakhand level up. Join events, find teammates, and keep up with local esports news.</p>
 
           <div className="mt-6 flex gap-3">
@@ -160,3 +160,4 @@ function Hero() {
 }
 
 export default Hero;
+
