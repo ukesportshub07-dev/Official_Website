@@ -108,13 +108,13 @@ function Hero() {
 
           <div ref={statsRef} className="mt-8 grid grid-cols-3 gap-3 text-xs text-gray-200">
             <AnimatedStatCard
-              targetNumber={12}
+              targetNumber={05}
               suffix="+"
               label="Tournaments"
               triggerAnimation={startAnimation}
             />
             <AnimatedStatCard
-              targetNumber={500}
+              targetNumber={550}
               suffix="+"
               label="Community Members"
               triggerAnimation={startAnimation}
@@ -160,5 +160,6 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
