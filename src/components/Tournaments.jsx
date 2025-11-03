@@ -97,14 +97,14 @@ function Tournaments() {
               src="/images/banner.png" 
               alt="Valorant tournament" 
               className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Valorant'; }}
+              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Endgame 2025 E Sports Event'; }}
             />
             <h3 className="font-semibold text-white text-lg">Endgame 2025 E Sports Event</h3>
             <p className="text-xs text-gray-400 mt-2"> 06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000</p>
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-cyan-600 hover:bg-cyan-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Ongoing Event</a>
+               <a href="#" className="px-3 py-2 border border-blue-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Ongoing Event</a>
             </div>
           </article>
 
@@ -119,14 +119,14 @@ function Tournaments() {
               src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop" 
               alt="CS:GO tournament" 
               className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=CS:GO'; }}
+              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Campus Clash Esports'; }}
             />
             <h3 className="font-semibold text-white text-lg"> Campus Clash Esports </h3>
             <p className="text-xs text-gray-400 mt-2">Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR </p>
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Upcoming Event</a>
+              <a href="#" className="px-3 py-2 border border-green-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Upcoming Event</a>
             </div>
           </article>
 
@@ -141,14 +141,14 @@ function Tournaments() {
               src="https://images.unsplash.com/photo-1599058917212-d7e614681149?q=80&w=1200&auto:format&fit=crop" 
               alt="Mobile gaming tournament" 
               className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=BGMI'; }}
+              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Domination 2025'; }}
             />
             <h3 className="font-semibold text-white text-lg">Domination 2025</h3>
             <p className="text-xs text-gray-400 mt-2">25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000 • Uttarakhand </p>
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-pink-600 hover:bg-pink-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Past Event</a>
+               <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Past Event</a>
             </div>
           </article>
           
@@ -163,14 +163,14 @@ function Tournaments() {
               src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop" 
               alt="CS:GO tournament" 
               className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=CS:GO'; }}
+              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Summer Carnival 2025'; }}
             />
             <h3 className="font-semibold text-white text-lg"> Summer Carnival 2025 </h3>
             <p className="text-xs text-gray-400 mt-2">14 - 15 May • LAN • Prizepool Upto: ₹25,000 </p>
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Past Event</a>
+              <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Past Event</a>
             </div>
           </article>
           
@@ -182,6 +182,7 @@ function Tournaments() {
 
 
 export default Tournaments;
+
 
 
 
