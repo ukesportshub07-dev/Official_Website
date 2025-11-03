@@ -1,4 +1,4 @@
-// src/components/sponsors.jsx
+// src/components/oursponsors.jsx
 
 import React from 'react';
 import SimpleNavbar from './components/Navbar2';
@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Hero from './components/2ndhero';
 import Footer2 from './components/Footer2';
 
-function sponsors() {
+function oursponsors() {
   return (
    <>
    <SimpleNavbar/>
@@ -17,4 +17,4 @@ function sponsors() {
   );
 }
 
-export default sponsors;
+export default oursponsors;
