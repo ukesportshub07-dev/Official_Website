@@ -99,7 +99,7 @@ function Tournaments() {
               className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
               onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Valorant'; }}
             />
-            <h3 className="font-semibold text-white text-lg">Endgame 2025 — Valorant</h3>
+            <h3 className="font-semibold text-white text-lg">Endgame 2025 — E Sports</h3>
             <p className="text-xs text-gray-400 mt-2">06 Nov • Online Qualifiers • Prizepool: ₹20,000</p>
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-cyan-600 hover:bg-cyan-500 rounded text-sm font-medium text-white transition-colors">Register</a>
@@ -157,4 +157,5 @@ function Tournaments() {
 
 
 export default Tournaments;
+
 
