@@ -32,22 +32,19 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
             />
             <div>
         
-              <div className="font-extrabold text-xl tracking-wide text-white">UKESPORTS HUB</div>
+              <div className="font-extrabold text-xl tracking-wide text-white">UK ESPORTS HUB</div>
               <div className="text-sm text-gray-400">Uttarakhand Esports Community</div>
             </div>
           </div>
           
         
-          <p className="text-sm text-gray-400 mt-2">Follow us on social platforms for real-time updates, brackets, and live streams.</p>
+          <p className="text-sm text-gray-400 mt-2">Follow us on social platforms for real time updates, brackets, and live streams.</p>
 
         
           <div className="flex mt-2">
-            <a 
-              href="#instagram" 
-              aria-label="UkEsportshub"
-              className="text-gray-400 hover:text-pink-500 transition duration-300"
-              
-            >
+            <a href="https://www.instagram.com/ukesportshub" target="_blank" rel="noopener noreferrer" 
+              aria-label="UK Esports Hub" 
+              className="text-gray-400 hover:text-pink-500 transition duration-300" >
               {InstagramIcon}
                
             </a>
@@ -81,10 +78,12 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 
       <div className="bg-gray-900 border-t border-gray-800 text-center text-sm text-gray-500 py-2">
         &copy;UK Esports Hub | Level Up Your Game. | All Rights Reserved. | {formattedDate} {currentYear} 
+        <p> Develope and Mantain By UK Esports Hub </p>
       </div>
     </footer>
   );
 }
 
 export default Footer;
+
 
