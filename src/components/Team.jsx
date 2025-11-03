@@ -102,7 +102,7 @@ function Team() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           } hover:scale-105 hover:bg-gray-700 hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer`}
         >
-          <img src="https://placehold.co/140x140/2D3748/7C3AED?text=SDK" alt="Aman Panwar" className="mx-auto rounded-full h-28 w-28 object-cover border-2 border-purple-500/50" />
+          <img src="https://placehold.co/140x140/2D3748/7C3AED?text=AP" alt="Aman Panwar" className="mx-auto rounded-full h-28 w-28 object-cover border-2 border-purple-500/50" />
           <h4 className="mt-3 font-semibold text-white">Aman Panwar</h4>
           <p className="text-xs text-gray-400">Public Relations & Outreach Head </p>
         </div>
@@ -114,6 +114,7 @@ function Team() {
 
 
 export default Team;
+
 
 
 
