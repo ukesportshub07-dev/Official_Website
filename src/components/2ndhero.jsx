@@ -11,8 +11,8 @@ function SaarthiHero() {
              bg-gradient-to-r from-purple-800 to-purple-400 text-transparent bg-clip-text">
             UK ESPORTS HUB
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 font-medium">
-            Your Global Esports Journey, Starts in our arena.
+          <p className="text-xl md:text-2xl text-gray-750 font-medium">
+            Your Global Esports Journey, Starts In Our Arena.
           </p>
           <p className="text-xl md:text-2xl text-white font-bold">
            #Your Battle •  Your Squard • Our Stage .
@@ -137,5 +137,6 @@ function SaarthiHero() {
 
 
 export default SaarthiHero;
+
 
 
