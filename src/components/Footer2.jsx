@@ -28,7 +28,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
         <div className="flex flex-col gap-6 max-w-sm">
           <div className="flex items-center gap-4">
             <img 
-              src="/Assist/Logo/social_logo.png" 
+              src="/logos/whitelogo.png"
               alt="logo" 
               className="h-12 w-12 rounded-lg object-cover" 
               onError={(e) => { e.target.src = 'https://placehold.co/96x96/1f2937/d1d5db?text=UK' }}
@@ -98,3 +98,4 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 }
 
 export default Footer2;
+
