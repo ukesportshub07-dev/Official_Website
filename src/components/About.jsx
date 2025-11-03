@@ -44,7 +44,7 @@ function About() {
           </div>
         </div>
         
-        <aside className="p-6 m-4 rounded-lg mt-15 max-w-lg mx-auto h-auto bg-black overflow-hidden ">
+        <aside className="p-6 m-4 rounded-lg mt-15 max-w-lg mx-auto h-auto overflow-hidden ">
           <motion.img 
             initial={{ y: 0 }} 
             animate="float"
@@ -63,6 +63,7 @@ function About() {
 
 
 export default About;
+
 
 
 
