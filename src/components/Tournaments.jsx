@@ -78,7 +78,7 @@ function Tournaments() {
     <section ref={sectionRef} id="tournaments" className="bg-gray-900/60 py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold">Ongoing/Upcoming & Past Tournaments</h2>
+          <h2 className="text-2xl font-bold">Ongoing / Upcoming & Past Tournaments</h2>
           <a href="#register" className="text-sm text-purple-400 hover:text-purple-300 underline">Register your team</a>
         </div>
 
@@ -182,6 +182,7 @@ function Tournaments() {
 
 
 export default Tournaments;
+
 
 
 
