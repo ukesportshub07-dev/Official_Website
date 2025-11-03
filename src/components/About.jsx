@@ -30,8 +30,8 @@ function About() {
               <p className="text-sm text-gray-400 mt-2">Online & LAN competitions with transparent brackets and prizes.</p>
             </div>
             <div className="p-4 bg-gray-800 rounded-lg">
-              <h4 className="font-semibold text-white">Community Nights</h4>
-              <p className="text-sm text-gray-400 mt-2">Casual play, coaching sessions, and scrim matchmaking.</p>
+              <h4 className="font-semibold text-white">Watch Party</h4>
+              <p className="text-sm text-gray-400 mt-2">Esports Watch Party, stream top matches, play casually, and learn from pros. Join coaching sessions and scrim matchmaking to sharpen your competitive edge.</p>
             </div>
             <div className="p-4 bg-gray-800 rounded-lg">
               <h4 className="font-semibold text-white">Team Support</h4>
@@ -63,6 +63,7 @@ function About() {
 
 
 export default About;
+
 
 
 
