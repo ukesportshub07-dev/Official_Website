@@ -104,7 +104,7 @@ function Tournaments() {
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-cyan-600 hover:bg-cyan-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-               <a href="#" className="px-3 py-2 border border-blue-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Ongoing Event</a>
+               <a href="#" className="px-3 py-2 border border-blue-600 rounded text-sm text-gray-300 transition-colors hover:bg-blue-600 hover:text-white">Ongoing Event</a>
             </div>
           </article>
 
@@ -126,7 +126,7 @@ function Tournaments() {
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-green-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Upcoming Event</a>
+              <a href="#" className="px-3 py-2 border border-green-600 rounded text-sm text-gray-300 transition-colors hover:bg-green-600 hover:text-white">Upcoming Event</a>
             </div>
           </article>
 
@@ -148,7 +148,7 @@ function Tournaments() {
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-pink-600 hover:bg-pink-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-               <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Past Event</a>
+               <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-red-600 hover:text-white">Past Event</a>
             </div>
           </article>
           
@@ -170,7 +170,7 @@ function Tournaments() {
             <div className="mt-4 flex gap-2">
               <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Past Event</a>
+              <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-red-600 hover:text-white">Past Event</a>
             </div>
           </article>
           
@@ -182,6 +182,7 @@ function Tournaments() {
 
 
 export default Tournaments;
+
 
 
 
