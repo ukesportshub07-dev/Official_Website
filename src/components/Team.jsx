@@ -33,7 +33,7 @@ function Team() {
   return (
     <section ref={sectionRef} id="team" className="max-w-6xl mx-auto px-6 py-16 overflow-hidden">
       <h2 className="text-2xl font-bold">Meet the Team</h2>
-      <p className="text-gray-400 mt-2">Organizers, Admins and members who run UKE SPORTS HUB.</p>
+      <p className="text-gray-400 mt-2">Organizers, Admins and members who run UK ESPORTS HUB.</p>
 
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
@@ -114,6 +114,7 @@ function Team() {
 
 
 export default Team;
+
 
 
 
