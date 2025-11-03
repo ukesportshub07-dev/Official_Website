@@ -136,7 +136,7 @@ function Hero() {
         >
           <div className="bg-gradient-to-b from-[#7c3aed]/30 to-transparent p-1 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]">
             <div className="bg-gray-800 rounded-xl p-6">
-              <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="LAN event" className="rounded-md w-full h-56 object-cover mb-4" />
+              <img src="/images/banner.png" />
               <h3 className="text-lg font-bold">Next LAN: Dehradun Arena</h3>
               <p className="text-gray-400 mt-2 text-sm">06 - 07 Nov • Graphic Era Hill University — Competitive CS/Valorant/Valorant Tournaments & community booths.</p>
               <div className="mt-4 flex gap-2">
