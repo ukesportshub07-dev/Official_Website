@@ -46,7 +46,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
          
           <div className="flex mt-2">
             <a 
-              href="https://www.instagram.com/ukesportshub" 
+             href="https://www.instagram.com/ukesportshub" target="_blank" rel="noopener noreferrer"
               aria-label="Uk Esports Hub"
               className="text-gray-400 hover:text-pink-500 transition duration-300"
               
@@ -93,7 +93,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
     
       <div className="bg-gray-900 border-t border-gray-800 text-center text-sm text-gray-500 py-2">
         &copy;UK Esports Hub | All Rights Reserved. | {formattedDate} {currentYear} 
-        <p> Develope and Mantain By Udit Bhai :D </p>
+        <p> Develope and Mantain By UK Esports Hub </p>
       </div>
       
     </footer>
@@ -101,5 +101,6 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 }
 
 export default Footer2;
+
 
 
