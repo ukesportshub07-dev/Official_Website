@@ -83,6 +83,28 @@ function Tournaments() {
         </div>
 
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                   <article 
+            className={`p-4 bg-gray-800 rounded-lg border border-gray-700 transition-all ease-out duration-1000 delay-200 ${
+              isVisible ? 'opacity-100' : 'opacity-0 translate-y-12'
+            } ${
+              isVisible ? 'translate-y-0' : ''
+            } hover:scale-105 hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer group`}
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop" 
+              alt="CS:GO tournament" 
+              className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
+              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Campus Clash Esports'; }}
+            />
+            <h3 className="font-semibold text-white text-lg"> Campus Clash Esports </h3>
+            <p className="text-xs text-gray-400 mt-2">Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR </p>
+            <div className="mt-4 flex gap-2">
+              <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
+              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
+              <a href="#" className="px-3 py-2 border border-green-600 rounded text-sm text-gray-300 transition-colors hover:bg-green-600 hover:text-white">Upcoming Event</a>
+            </div>
+          </article>
           
           <article 
             className={`p-4 bg-gray-800 rounded-lg border transition-all ease-out duration-1000 ${
@@ -105,28 +127,6 @@ function Tournaments() {
               <a href="#register" className="px-3 py-2 bg-cyan-600 hover:bg-cyan-500 rounded text-sm font-medium text-white transition-colors">Register</a>
               <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
                <a href="#" className="px-3 py-2 border border-blue-600 rounded text-sm text-gray-300 transition-colors hover:bg-blue-600 hover:text-white">Ongoing Event</a>
-            </div>
-          </article>
-
-          <article 
-            className={`p-4 bg-gray-800 rounded-lg border border-gray-700 transition-all ease-out duration-1000 delay-200 ${
-              isVisible ? 'opacity-100' : 'opacity-0 translate-y-12'
-            } ${
-              isVisible ? 'translate-y-0' : ''
-            } hover:scale-105 hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer group`}
-          >
-            <img 
-              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop" 
-              alt="CS:GO tournament" 
-              className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Campus Clash Esports'; }}
-            />
-            <h3 className="font-semibold text-white text-lg"> Campus Clash Esports </h3>
-            <p className="text-xs text-gray-400 mt-2">Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR </p>
-            <div className="mt-4 flex gap-2">
-              <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
-              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-green-600 rounded text-sm text-gray-300 transition-colors hover:bg-green-600 hover:text-white">Upcoming Event</a>
             </div>
           </article>
 
@@ -182,6 +182,7 @@ function Tournaments() {
 
 
 export default Tournaments;
+
 
 
 
