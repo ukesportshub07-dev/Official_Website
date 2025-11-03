@@ -51,7 +51,21 @@ function SaarthiHero() {
 
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
+
+        
+         <div className="mt-20 relative bg-gradient-to-b from-[#7c3aed]/30 to-transparent p-1 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.03] group overflow-hidden">
+
+  <div className="absolute inset-0 rounded-xl bg-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none blur-md z-0"></div>
+  <div className="absolute inset-0 rounded-xl bg-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none blur-sm z-0"></div>
+
+  <div className="relative bg-gray-800 rounded-xl p-8 shadow-xl z-10">
+    <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12
+                  bg-gradient-to-r from-purple-800 to-purple-400 text-transparent bg-clip-text">
+      Featured Esports Titles
+    </h2>
+
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
       <div className="text-center max-w-xs mx-auto">
         <span className="text-6xl mb-4 inline-block transform hover:scale-110 transition duration-300">💎</span>
         <h3 className="text-xl font-bold text-purple-400 mb-2">Free Fire</h3>
@@ -87,9 +101,10 @@ function SaarthiHero() {
           Precision, strategy, and teamwork will define the battlefield as PC gamers compete for glory. Stay tuned our next-generation LAN tournaments are about to begin.
         </p>
       </div>
-        </div>
-       </div>
-      </div>
+    </div>
+  </div>
+</div>
+
          
 
 
@@ -125,6 +140,7 @@ function SaarthiHero() {
 
 
 export default SaarthiHero;
+
 
 
 
