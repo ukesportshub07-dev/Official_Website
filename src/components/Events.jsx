@@ -33,8 +33,7 @@ function Events() {
   return (
     <section ref={sectionRef} id="events" className="max-w-6xl mx-auto px-6 py-16 overflow-hidden">
       <h2 className="text-2xl font-bold">LAN & Community Events</h2>
-      <p className="text-gray-400 mt-2">Our LAN events bring players together — PCs, comfy seats, casters, and prize fights.</p>
-
+      <p className="text-gray-400 mt-2">Our LAN events bring players together PCs, comfy seats, casters, and prize fights.</p>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <div 
@@ -42,10 +41,10 @@ function Events() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           } hover:scale-105 hover:bg-gray-700 hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer`}
         >
-          <h4 className="font-semibold text-lg text-white">Dehradun Arena — Nov 6-7</h4>
-          <p className="text-sm text-gray-300 mt-2">Hosted at Graphic Era Hill University — open to all colleges. Food and hostel facility available for winners.</p>
+          <h4 className="font-semibold text-lg text-white">Endgame 2025 E-sports Event </h4>
+          <p className="text-sm text-gray-300 mt-2">Hosted at Graphic Era Hill University open to all colleges and students above 15+ age.</p>
           <ul className="mt-3 text-xs text-gray-400 space-y-1">
-            <li>• Walk-in scrims & coaching</li>
+            <li>• Walk-in scrims & LAN event</li>
             <li>• Live caster desk</li>
             <li>• Hardware partners and free trials</li>
           </ul>
@@ -56,8 +55,9 @@ function Events() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           } hover:scale-105 hover:bg-gray-700 hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer`}
         >
-          <h4 className="font-semibold text-lg text-white">Monthly Community Night</h4>
-          <p className="text-sm text-gray-300 mt-2">Casual nights every 3rd Saturday for scrims, open ladders, and giveaways. A great place to find new teammates.</p>
+          <h4 className="font-semibold text-lg text-white">Monthly Events </h4>
+          <p className="text-sm text-gray-300 mt-2">UK Esports Hub hosts competitive events every month, bringing gamers together for 
+            thrilling matches and fresh challenges year round.</p>
         </div>
 
         <div 
@@ -65,12 +65,13 @@ function Events() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           } hover:scale-105 hover:bg-gray-700 hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer`}
         >
-          <h4 className="font-semibold text-lg text-white">Valorant Bootcamp (Online)</h4>
-          <p className="text-sm text-gray-300 mt-2">A week-long online bootcamp for aspiring pros. VOD reviews, aim training sessions, and strategy breakdowns with top-tier coaches.</p>
+          <h4 className="font-semibold text-lg text-white"> Bootcamp (Online)</h4>
+          <p className="text-sm text-gray-300 mt-2">A week-long online bootcamp designed to level up competitive gamers. Includes guided scrims, aim drills, 
+            team coordination sessions, and pro-level strategy coaching.</p>
           <ul className="mt-3 text-xs text-gray-400 space-y-1">
-            <li>• Radiant-level coaches</li>
-            <li>• Daily scrims</li>
-            <li>• 1-on-1 VOD review</li>
+            <li>• Professional esports coaches </li>
+            <li>• Team scrims</li>
+            <li>• Personalized performance feedback</li>
           </ul>
         </div>
 
@@ -79,8 +80,9 @@ function Events() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           } hover:scale-105 hover:bg-gray-700 hover:shadow-lg hover:shadow-purple-500/30 cursor-pointer`}
         >
-          <h4 className="font-semibold text-lg text-white">UK ESPORTS Charity Stream</h4>
-          <p className="text-sm text-gray-300 mt-2">Join us for a 24-hour charity livestream event featuring your favorite local streamers, pro players, and community leaders to raise funds for local causes.</p>
+          <h4 className="font-semibold text-lg text-white">UK ESPORTS HUB Charity Stream</h4>
+          <p className="text-sm text-gray-300 mt-2">A 24 hour charity livestream uniting top players, streamers, 
+            and the gaming community to raise funds for meaningful local causes.</p>
         </div>
 
       </div>
@@ -90,3 +92,4 @@ function Events() {
 
 
 export default Events;
+
