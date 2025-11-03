@@ -14,7 +14,7 @@ function SaarthiHero() {
           <p className="text-xl md:text-2xl text-gray-600 font-medium">
             Your Global Esports Journey, Starts in our arena.
           </p>
-          <p className="text-xl md:text-2xl text-white-800 font-bold">
+          <p className="text-xl md:text-2xl text-white font-bold">
            #Your Battle •  Your Squard • Our Stage .
           </p>
         </div>
@@ -137,4 +137,5 @@ function SaarthiHero() {
 
 
 export default SaarthiHero;
+
 
