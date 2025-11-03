@@ -90,15 +90,14 @@ function SaarthiHero() {
                   UK Esports Hub celebrates mobile gaming excellence by giving casual players and pros alike the platform to rise through exciting bracket challenges.
                 </p>
                 
-                 <div className="flex flex-col justify-center items-center text-center">
-                <span className="text-6xl mb-4 inline-block transform hover:scale-110 transition duration-300">🔫</span>
-                <h3 className="text-xl font-bold text-purple-400 mb-2">VALORANT  | CS 2 </h3>
-                <p className="text-gray-300">
-                  Get ready to experience the ultimate tactical FPS showdown! Valorant and CS 2 are coming soon to UK Esports Hub. 
-                  Precision, strategy, and teamwork will define the battlefield as PC gamers compete for glory. Stay tuned our next-generation LAN tournaments are about to begin.
-                </p>
-                   
-              </div>
+                 <div className="text-center max-w-xs mx-auto lg:col-span-3 lg:justify-self-center">
+                  <span className="text-6xl mb-4 inline-block transform hover:scale-110 transition duration-300">🔫</span>
+                  <h3 className="text-xl font-bold text-purple-400 mb-2">VALORANT | CS 2 </h3>
+                  <p className="text-gray-300">
+                    Get ready to experience the ultimate tactical FPS showdown! Valorant and CS 2 are coming soon to UK Esports Hub.
+                    Precision, strategy, and teamwork will define the battlefield as PC gamers compete for glory. Stay tuned our next-generation LAN tournaments are about to begin.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -137,6 +136,7 @@ function SaarthiHero() {
 
 
 export default SaarthiHero;
+
 
 
 
