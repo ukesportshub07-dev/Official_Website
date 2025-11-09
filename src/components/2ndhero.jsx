@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SaarthiHero() {
+function Hero2() {
   return (
     <section id='hero2' className="relative min-h-screen py-20 text-gray-800 overflow-hidden font-inter">
 
@@ -139,7 +139,8 @@ function SaarthiHero() {
 }
 
 
-export default SaarthiHero;
+export default Hero2;
+
 
 
 
