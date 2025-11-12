@@ -116,7 +116,7 @@ function Tournaments() {
             } hover:scale-105 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-lg hover:shadow-cyan-500/20 cursor-pointer group`}
           >
             <img 
-              src="/images/banner.png" 
+              src="/images/Battle.webp" 
               alt="Valorant tournament" 
               className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
               onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Endgame 2025 E Sports Event'; }}
@@ -182,6 +182,7 @@ function Tournaments() {
 
 
 export default Tournaments;
+
 
 
 
