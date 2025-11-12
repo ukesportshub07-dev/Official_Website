@@ -86,7 +86,7 @@ const Formscreen = () => {
   const [selectedGame, setSelectedGame] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const SHEET_URL = process.env.VITE_API_URL;
+  const SHEET_URL = process.env.SECRET_API_URL;
 
   const numPlayers = (selectedGame === "valorant" || selectedGame === "csgo") ? 5 : 4;
   const isPlayerSectionVisible = !!selectedGame;
@@ -272,5 +272,6 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
+
 
 
