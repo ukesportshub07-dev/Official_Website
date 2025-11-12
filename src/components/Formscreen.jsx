@@ -204,7 +204,7 @@ const Formscreen = () => {
                 <label className={labelClass}>Select Event *</label>
                 <select name="event" className={inputSelectClass} id="eventList" required>
                   <option value="">-- Select Event --</option>
-                  <option value="campusclash">Campus Clash</option>
+                  <option value="Battel Era 2.0">Battel Era 2.0</option>
                 </select>
               </div>
               <div>
@@ -272,6 +272,7 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
+
 
 
 
