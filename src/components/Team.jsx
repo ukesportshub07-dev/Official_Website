@@ -11,7 +11,7 @@ const coreTeam = [
 ];
 
 const ambassadors = [
-  { name: "Dikshita Maindola", role: "D.A.V. Post Graduate College Dehradun", img: "/images/Ambasadors/Dikshita.jpg", alt: "Dikshita Maindola" },
+  { name: "Dikshita Maindola", role: "D.A.V. Post Graduate College Dehradun", img: "/images/Ambasadors/Dikshita.webp", alt: "Dikshita Maindola" },
   { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "b" },
   { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "c" },
   { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "d" },
@@ -176,7 +176,7 @@ function Carousel({ teamData, title, subtitle }) {
                     <button
                       onClick={goToPrev}
                       disabled={currentIndex === 0}
-                      className={`text-indigo-600 p-2 rounded-full shadow-lg transition duration-200 disabled:opacity-30 disabled:cursor-not-allowed`}
+                      className={`text-grey-900 p-2 rounded-full shadow-lg transition duration-200 disabled:opacity-30 disabled:cursor-not-allowed`}
                       aria-label="Previous slide"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
@@ -189,7 +189,7 @@ function Carousel({ teamData, title, subtitle }) {
                     <button
                       onClick={goToNext}
                       disabled={currentIndex >= maxIndex}
-                      className={`text-indigo-600 p-2 rounded-full shadow-lg transition duration-200 disabled:opacity-30 disabled:cursor-not-allowed`}
+                      className={`text-grey-900 p-2 rounded-full shadow-lg transition duration-200 disabled:opacity-30 disabled:cursor-not-allowed`}
                       aria-label="Next slide"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6 h-6">
@@ -233,6 +233,7 @@ function Team() {
 }
 
 export default Team;
+
 
 
 
