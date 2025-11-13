@@ -15,13 +15,13 @@ function Team() {
   ];
 
   const settings = {
-    // ... settings remain the same
-    dots: true, // Recommended for mobile
+    dots: true, 
     infinite: true,
     slidesToShow: 4, 
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    arrows: false, // Comma is now implicitly after this line due to structure
     responsive: [
       {
         breakpoint: 1024, 
@@ -31,7 +31,7 @@ function Team() {
         }
       },
       {
-        breakpoint: 768, 
+        breakpoint: 768, // This is the breakpoint for 380px screens
         settings: {
           slidesToShow: 1, 
           slidesToScroll: 1,
@@ -51,16 +51,11 @@ function Team() {
       <h2 className="text-2xl font-bold px-6">Meet the Team</h2>
       <p className="text-gray-400 mt-2 px-6 pb-8">Organizers, Admins and Members who run UK ESPORTS HUB.</p>
       
-      {/* ✅ FIX: Apply -mx-2 (negative margin) to the Slider wrapper. 
-        This is a common fix for react-slick gap issues.
-      */}
       <div className="mx-6">
           <Slider {...settings} className="-mx-2"> 
-            {/* The className="-mx-2" targets the slick container */}
             {members.map((m) => (
               <div 
                 key={m.name} 
-                // Add px-2 for padding INSIDE the slide, to create space between items
                 className="h-450px bg-gray-800 text-white rounded-xl group px-2" 
                 onClick={() => handleCardClick(m)}
               >
