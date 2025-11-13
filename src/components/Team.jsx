@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const coreTeam = [
-  { name: "Rahul Singh Dhami", role: "Founder / Co-Founder", img: "/images/rahul.jpg", alt: "Rahul Singh Dhami" },
+  { name: "Rahul Singh Dhami", role: "Founder / Co-Founder", img: "/images/Ambasadors/replace.png", alt: "Rahul Singh Dhami" },
   { name: "Paras Bisht", role: "Chief Executive Officer", img: "/images/paras.jpg", alt: "Paras Bisht" },
   { name: "Udit Samant", role: "Technical Lead", img: "/images/udit.jpg", alt: "Udit Samant" },
   { name: "Shantanu", role: "General Manager", img: "/images/shantanu.jpg", alt: "Shantanu" },
@@ -11,11 +11,12 @@ const coreTeam = [
 ];
 
 const ambassadors = [
-  { name: "Dikshita Maindola", role: "D.A.V. Post Graduate College Dehradun", img: "/images/Ambasadors/Diksha.jpg", alt: "Dikshita Maindola" },
-  { name: "", role: "Outreach Lead", img: "", alt: "b" },
-  { name: "", role: "Event Coordinator", img: "", alt: "c" },
-  { name: "", role: "Community Manager", img: "", alt: "d" },
-  { name: "", role: "Content Creator", img: "", alt: "e" },
+  { name: "Dikshita Maindola", role: "D.A.V. Post Graduate College Dehradun", img: "/images/Ambasadors/Dikshita.jpg", alt: "Dikshita Maindola" },
+  { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "b" },
+  { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "c" },
+  { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "d" },
+  { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "e" },
+  { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "e" },
 ];
 
 const getSlidesToShow = (width) => {
@@ -232,6 +233,7 @@ function Team() {
 }
 
 export default Team;
+
 
 
 
