@@ -23,6 +23,15 @@ function Team() {
     className: "w-full space-x-4",
     responsive: [
       {
+        breakpoint: 480, 
+        settings: {
+            slidesToShow: 1, 
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+        }
+    },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
@@ -78,4 +87,5 @@ function Team() {
 };
 
 export default Team;
+
 
