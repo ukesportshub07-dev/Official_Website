@@ -11,7 +11,7 @@ const coreTeam = [
 ];
 
 const ambassadors = [
-  { name: "Dikshita Maindola", role: "D.A.V. Post Graduate College Dehradun", img: "/images/Ambasadors/Dikshita.webp", alt: "Dikshita Maindola" },
+  { name: "Dikshita Maindola", role: "D.A.V. Post Graduate College Dehradun", img: "/images/Ambasadors/Diksha.jpg", alt: "Dikshita Maindola" },
   { name: "", role: "Outreach Lead", img: "", alt: "b" },
   { name: "", role: "Event Coordinator", img: "", alt: "c" },
   { name: "", role: "Community Manager", img: "", alt: "d" },
@@ -232,5 +232,6 @@ function Team() {
 }
 
 export default Team;
+
 
 
