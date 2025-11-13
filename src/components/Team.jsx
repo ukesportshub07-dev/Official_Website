@@ -58,7 +58,7 @@ function Team() {
     <div className="w-full max-w-6xl mx-auto py-10 ">
       <h2 className="text-2xl font-bold px-6">Meet the Team</h2>
       <p className="text-gray-400 mt-2 px-6 pb-8">Organizers, Admins and Members who run UK ESPORTS HUB.</p>
-      <div className="">
+      <div className="-mx-[10px] md:mx-auto">
           <Slider {...settings}>
             {members.map((m) => (
               <div 
@@ -87,5 +87,6 @@ function Team() {
 };
 
 export default Team;
+
 
 
