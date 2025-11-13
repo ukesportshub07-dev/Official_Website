@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Team() {
   const members = [
+    // ... members array remains the same
     { name: "Rahul Singh Dhami", role: "Founder / Co-Founder", img: "/images/rahul.jpg", alt: "RSD" },
     { name: "Paras Bisht", role: "Chief Executive Officer", img: "/images/paras.jpg", alt: "Paras Bisht" },
     { name: "Udit Samant", role: "Technical Lead", img: "/images/udit.jpg", alt: "Udit Samant" },
@@ -14,36 +15,28 @@ function Team() {
   ];
 
   const settings = {
-    dots: false,
+    // ... settings remain the same
+    dots: true, // Recommended for mobile
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 4, 
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    className: "w-full",
-    
     responsive: [
-      {
-        breakpoint: 640, 
-        settings: {
-          slidesToShow: 1.1, 
-          slidesToScroll: 1,
-          arrows: false,
-          dots: false,
-        }
-      },
-      {
-        breakpoint: 768, 
-        settings: {
-          slidesToShow: 2, 
-          slidesToScroll: 1,
-        }
-      },
       {
         breakpoint: 1024, 
         settings: {
           slidesToShow: 3, 
           slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 1, 
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true, 
         }
       }
     ]
@@ -58,27 +51,30 @@ function Team() {
       <h2 className="text-2xl font-bold px-6">Meet the Team</h2>
       <p className="text-gray-400 mt-2 px-6 pb-8">Organizers, Admins and Members who run UK ESPORTS HUB.</p>
       
-      <div className="-mx-4 md:mx-auto"> 
-          <Slider {...settings}>
+      {/* ✅ FIX: Apply -mx-2 (negative margin) to the Slider wrapper. 
+        This is a common fix for react-slick gap issues.
+      */}
+      <div className="mx-6">
+          <Slider {...settings} className="-mx-2"> 
+            {/* The className="-mx-2" targets the slick container */}
             {members.map((m) => (
               <div 
                 key={m.name} 
-                className="p-2" 
+                // Add px-2 for padding INSIDE the slide, to create space between items
+                className="h-450px bg-gray-800 text-white rounded-xl group px-2" 
                 onClick={() => handleCardClick(m)}
               >
-                <div className="h-450px bg-gray-800 text-white rounded-xl group overflow-hidden"> 
-                    <div className="h-52 rounded-xl bg-transparent flex justify-center items-center">
-                      <img 
-                        src={m.img} 
-                        alt={m.alt} 
-                        className="h-44 w-44 rounded-full border-2 border-purple-500/50 transition-all ease-out duration-1000 delay-600 group-hover:scale-105 group-hover:bg-transparent group-hover:shadow-lg group-hover:shadow-purple-500/30 cursor-pointer" 
-                      />
-                    </div>
+                <div className="h-52 rounded-xl bg-transparent flex justify-center items-center">
+                  <img 
+                    src={m.img} 
+                    alt={m.alt} 
+                    className="h-44 w-44 rounded-full border-2 border-purple-500/50 transition-all ease-out duration-1000 delay-600 group-hover:scale-105 group-hover:bg-transparent group-hover:shadow-lg group-hover:shadow-purple-500/30 cursor-pointer" 
+                  />
+                </div>
 
-                    <div className="flex flex-col justify-center items-center gap-1 py-3 ">
-                      <h4 className="text-xl font-bold mt-4 ">{m.name}</h4>
-                      <p className="text-xs text-gray-400 font-bold pb-2 ">{m.role}</p>
-                    </div>
+                <div className="flex flex-col justify-center items-center gap-1 py-3 ">
+                  <h4 className="text-xl font-bold mt-4 ">{m.name}</h4>
+                  <p className="text-xs text-gray-400 font-bold pb-2 ">{m.role}</p>
                 </div>
               </div>
             ))}
