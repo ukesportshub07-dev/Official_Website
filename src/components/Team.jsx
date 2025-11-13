@@ -144,7 +144,7 @@ function Team() {
                   style={{ width: `${slideWidth}px` }}
                 >
                   <div className="bg-gray-800 rounded-xl shadow-xl transition-transform duration-300 ease-in-out hover:scale-[1.03] overflow-hidden p-6 mx-auto flex flex-col items-center text-center h-full">
-                    <div className="w-32 h-32 rounded-full overflow-hidden mb-5 shadow-inner border-4 border-indigo-500/50 flex items-center justify-center">
+                    <div className="w-32 h-32 rounded-full overflow-hidden mb-5 shadow-inner border-4 border-purple-500/20 flex items-center justify-center">
                       <img
                         className="w-full h-full object-cover"
                         src={member.img}
@@ -197,3 +197,4 @@ function Team() {
 }
 
 export default Team;
+
