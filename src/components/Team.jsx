@@ -20,6 +20,7 @@ function Team() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    className: "w-full space-x-4",
     responsive: [
       {
         breakpoint: 768,
@@ -77,3 +78,4 @@ function Team() {
 };
 
 export default Team;
+
