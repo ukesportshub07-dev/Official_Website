@@ -32,7 +32,7 @@ function SimpleNavbar() {
             <nav className="hidden md:flex items-center gap-8 text-sm"> 
               
               <Link 
-                to="/" 
+                to="/#team" 
                 className="text-white hover:text-[#7c3aed] transition duration-200"
               >
                 Home
@@ -103,3 +103,4 @@ function SimpleNavbar() {
 
 
 export default SimpleNavbar;
+
