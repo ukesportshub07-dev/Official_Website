@@ -33,7 +33,7 @@ function Navbar() {
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-200 ">
             <a href="#home" className="hover:text-[#7c3aed] transition duration-200">Home</a>
             <a href="#hero" className="hover:text-[#7c3aed] transition duration-200">About Us</a>
-            <a href="#tournaments" className="hover:text-[#7c3aed] transition duration-200">Upcmoing Events</a>
+            <a href="#tournaments" className="hover:text-[#7c3aed] transition duration-200">Upcoming Events</a>
             <a href="#contact" className="hover:text-[#7c3aed] transition duration-200">Contact</a>
 
             <Link to="/new-page" className="hover:text-[#7c3aed] transition duration-200">
@@ -89,3 +89,4 @@ function Navbar() {
 
 
 export default Navbar;
+
