@@ -207,7 +207,7 @@ function Carousel({ teamData, title, subtitle }) {
 
 function Team() {
     return (
-        <div className="bg-gray-900 font-inter"> 
+        <div id="team" className="bg-gray-900 font-inter"> 
             
             <div className="py-8">
                 <Carousel 
@@ -233,6 +233,7 @@ function Team() {
 }
 
 export default Team;
+
 
 
 
