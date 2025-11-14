@@ -10,6 +10,17 @@ function SimpleNavbar() {
     setIsMobileMenuOpen(false);
   };
 
+  const scrollWithDelay = (el) => {
+  setTimeout(() => {
+    const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
+    const yOffset = -64; 
+    window.scrollTo({ 
+      top: yCoordinate + yOffset, 
+      behavior: 'smooth' 
+    });
+  }, 50); 
+};
+
   return (
     <header className="bg-gray-800/60 backdrop-blur sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,6 +44,7 @@ function SimpleNavbar() {
               
               <Link 
                 to="/#team" 
+                scroll={scrollWithDelay}
                 className="text-white hover:text-[#7c3aed] transition duration-200"
               >
                 Home
@@ -103,4 +115,5 @@ function SimpleNavbar() {
 
 
 export default SimpleNavbar;
+
 
