@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 function SimpleNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,13 +43,13 @@ function SimpleNavbar() {
           <div className="flex items-center gap-4"> 
             <nav className="hidden md:flex items-center gap-8 text-sm"> 
               
-              <Link 
+              <HashLink 
                 to="/#team" 
                 scroll={scrollWithDelay}
                 className="text-white hover:text-[#7c3aed] transition duration-200"
               >
                 Home
-              </Link>
+              </HashLink>
 
               <a 
                 href="#footer2" 
@@ -115,5 +116,6 @@ function SimpleNavbar() {
 
 
 export default SimpleNavbar;
+
 
 
