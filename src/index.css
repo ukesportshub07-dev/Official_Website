@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles from the original file */
+:root {
+  --accent: #7c3aed;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, rgba(124, 58, 237, 0.08), rgba(0, 0, 0, 0))
+}
+
+/* Accessibility: focus outlines */
+.user-is-tabbing:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .slick-slide {
+    width: 100% ;
+  }
+}
+
+.slick-list {
+  margin: 0 -8px; 
+  padding: 0 0 !important; 
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide:focus {
+  outline: none; 
+}
+
+.slick-slide {
+  display: block; 
+}
+
+.slick-slide > div {
+  width: 100%;
+}
+
+/* In your index.css or a global CSS file */
+@keyframes pulse-strong {
+  0%, 100% {
+    transform: scale(1.15) translateZ(0); /* Base active scale */
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); /* No shadow */
+  }
+  50% {
+    transform: scale(1.25) translateZ(0); /* Larger scale at peak */
+    box-shadow: 0 0 10px 10px rgba(99, 102, 241, 0.9); /* Strong, blue glow */
+  }
+}
+
+.animate-pulse-strong {
+  animation: pulse-strong 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

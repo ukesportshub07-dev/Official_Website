@@ -7,14 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Primary SEO -->
-  <title>UK ESPORTS HUB | Esports Tournaments, Gaming News & Community in Uttarakhand</title>
-  <meta name="description" content="Join UK ESPORTS HUB — Uttarakhand’s #1 esports community for gamers. Discover tournaments, LAN events, news, and competitive gaming updates from across the state." />
-  <meta name="keywords" content="UK ESPORTS HUB, esports uttarakhand, uttarakhand esports hub, uk esports, gaming tournaments dehradun, LAN events uttarakhand, bgmi tournaments, free fire events, uk gamers" />
+  <title>Uttarakhand Esports Hub | Uttarakhand Esports </title>
+  <meta name="description" content="UK ESPORTS HUB hosts esports tournaments, LAN events, and campus competitions across Uttarakhand. Join BGMI, Free Fire, Valorant and other competitive events from Dehradun and beyond." />
+  <meta name="keywords" content="uttarakhand esports, uk esports hub, esports dehradun, gaming tournaments dehradun, uttarakhand gaming community, uk esports tournaments, bgmi tournament uttarakhand, free fire tournament dehradun, lan events uk" />
   <meta name="author" content="UK ESPORTS HUB Team" />
   <link rel="canonical" href="https://www.ukesportshub.in/" />
 
+  <!-- Geo / Local Targeting -->
+  <meta name="geo.region" content="IN-UT" />
+  <meta name="geo.placename" content="Dehradun" />
+  <meta name="geo.position" content="30.3165;78.0322" />
+  <meta name="ICBM" content="30.3165, 78.0322" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/logos/social_logo.png" />
+
+  <!-- Theme Color (for mobile UI) -->
+  <meta name="theme-color" content="#000000" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,28 +31,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Open Graph (Facebook / WhatsApp / Discord) -->
-  <meta property="og:title" content="UK ESPORTS HUB | Esports Tournaments & Gaming in Uttarakhand" />
-  <meta property="og:description" content="Compete, connect, and celebrate gaming at UKESPORTS HUB — Uttarakhand’s leading esports platform for BGMI, Free Fire, Valorant, and more." />
+  <meta property="og:title" content="Uttarakhand Esports Tournaments | UK ESPORTS HUB" />
+  <meta property="og:description" content="Compete in esports tournaments, LAN events, and campus championships across Uttarakhand with UK ESPORTS HUB." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.ukesportshub.in/" />
   <meta property="og:image" content="https://www.ukesportshub.in/logos/social_logo.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="UK ESPORTS HUB" />
+  <meta property="og:locale" content="en_IN" />
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@UKESPORTS_HUB" />
-  <meta name="twitter:title" content="UK ESPORTS HUB — Uttarakhand’s Premier Esports Destination" />
-  <meta name="twitter:description" content="Join Uttarakhand’s biggest gaming community. Participate in esports tournaments, LAN events, and news updates only at UKESPORTS HUB." />
+  <meta name="twitter:title" content="UK ESPORTS HUB — Esports Tournaments & LAN Events in Uttarakhand" />
+  <meta name="twitter:description" content="Join Uttarakhand’s biggest gaming community. Play BGMI, Free Fire, Valorant and more at UK ESPORTS HUB tournaments and LAN events." />
   <meta name="twitter:image" content="https://www.ukesportshub.in/logos/social_logo.png" />
 
-  <!-- Schema.org JSON-LD (Google Structured Data) -->
+  <!-- Schema.org JSON-LD (Organization + Website + Search) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "UKESPORTS HUB",
+    "name": "UK ESPORTS HUB",
     "url": "https://www.ukesportshub.in",
     "logo": "https://www.ukesportshub.in/logos/social_logo.png",
     "sameAs": [
@@ -51,22 +61,44 @@
       "https://twitter.com/UKESPORTS_HUB",
       "https://www.youtube.com/@ukesportshub"
     ],
-    "description": "UK ESPORTS HUB is Uttarakhand’s premier esports organization hosting tournaments, LAN events, and gaming community initiatives."
+    "description": "UK ESPORTS HUB is Uttarakhand’s premier esports organization hosting tournaments, LAN events, and campus championships for gamers.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dehradun",
+      "addressRegion": "Uttarakhand",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "UK ESPORTS HUB",
+    "url": "https://www.ukesportshub.in",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.ukesportshub.in/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
   <!-- Robots and Indexing -->
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
   <!-- Optional: Analytics (uncomment if you use GA or Meta Pixel) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
-  </script> -->
+  </script>
+  -->
 </head>
 
 <body>
