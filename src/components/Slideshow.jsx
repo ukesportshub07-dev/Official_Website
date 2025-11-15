@@ -61,7 +61,7 @@ function SlideShow() {
 
         <div className="relative z-20 px-6 sm:px-12 lg:px-24 text-left max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-            Welcome to UKESPORTS HUB
+            Welcome to UK ESPORTS HUB
           </h1>
           <p className="text-xl sm:text-2xl mb-8 max-w-xl drop-shadow-md">
             Uttarakhand's home for competitive gaming. Join tournaments, find teammates, and level up.
@@ -83,5 +83,6 @@ function SlideShow() {
 
 
 export default SlideShow;
+
 
 
