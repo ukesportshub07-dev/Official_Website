@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
@@ -14,7 +14,6 @@ const animationStyles = `
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const [isEventOpen, setIsEventOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isBlogOpen, setIsBlogOpen] = useState(false);
@@ -33,43 +32,56 @@ function Navbar() {
     setIsBlogOpen(false);
   };
 
+  // Function to get the current navbar height
+  const getNavbarHeight = useCallback(() => {
+    // Returns the actual measured height of the sticky header, defaults to 64px (h-16)
+    return headerRef.current ? headerRef.current.offsetHeight : 64;
+  }, []);
+
+  // Custom scroll function with offset and conditional delay
+  const scrollWithOffset = useCallback((el) => {
+    const navbarHeight = getNavbarHeight();
+    const yOffset = -navbarHeight; // Negative offset to account for sticky navbar
+
+    // Add a longer delay (350ms) if the mobile menu is currently open.
+    // The mobile menu transition is 300ms, so 350ms ensures the menu is fully collapsed 
+    // before the final scroll position is calculated.
+    const scrollDelay = isMobileMenuOpen ? 350 : 50; 
+
+    const scroll = () => {
+      const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: yCoordinate + yOffset,
+        behavior: 'smooth'
+      });
+    };
+
+    setTimeout(scroll, scrollDelay);
+  }, [getNavbarHeight, isMobileMenuOpen]); // Dependency on isMobileMenuOpen is crucial
+
   const handleLinkClick = () => {
+    // This function closes the menu/dropdowns immediately, 
+    // but the actual scroll (inside scrollWithOffset) is delayed if needed.
     setIsMobileMenuOpen(false);
     closeDesktopDropdowns();
-
   };
 
-
   const toggleEventDropdown = () => {
-
     setIsAboutOpen(false);
     setIsBlogOpen(false);
     setIsEventOpen(prev => !prev);
   };
 
   const toggleAboutDropdown = () => {
-
     setIsEventOpen(false);
     setIsBlogOpen(false);
     setIsAboutOpen(prev => !prev);
   };
 
   const toggleBlogDropdown = () => {
-
     setIsEventOpen(false);
     setIsAboutOpen(false);
     setIsBlogOpen(prev => !prev);
-  };
-
-  const scrollWithDelay = (el) => {
-    setTimeout(() => {
-      const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
-      const yOffset = -64;
-      window.scrollTo({
-        top: yCoordinate + yOffset,
-        behavior: 'smooth'
-      });
-    }, 50);
   };
 
   useEffect(() => {
@@ -97,7 +109,7 @@ function Navbar() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <HashLink to="/#home" className="flex items-center gap-3"
-              scroll={scrollWithDelay}
+              scroll={scrollWithOffset} // Use the new function
               onClick={handleLinkClick}>
               <img
                 src={placeholderImageUrl}
@@ -113,7 +125,7 @@ function Navbar() {
 
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <HashLink to="/#home" className="hover:text-[#7c3aed] transition duration-200 font-semibold"
-                scroll={scrollWithDelay}
+                scroll={scrollWithOffset} // Use the new function
                 onClick={handleLinkClick}>Home</HashLink>
 
               <div className="relative">
@@ -131,7 +143,7 @@ function Navbar() {
                   <div className="absolute right-0 mt-3 w-48 rounded-lg shadow-2xl bg-gray-700/95 backdrop-blur ring-1 ring-white/10 focus:outline-none z-50 origin-top-right animate-fade-in-down">
                     <HashLink
                       to="/#tournaments"
-                      scroll={scrollWithDelay}
+                      scroll={scrollWithOffset} // Use the new function
                       className="block px-4 py-2 text-sm text-gray-200  hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                       onClick={handleLinkClick}
                     >
@@ -139,7 +151,7 @@ function Navbar() {
                     </HashLink>
                     <HashLink
                       to="/#tournaments"
-                      scroll={scrollWithDelay}
+                      scroll={scrollWithOffset} // Use the new function
                       className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                       onClick={handleLinkClick}
                     >
@@ -147,7 +159,7 @@ function Navbar() {
                     </HashLink>
                     <HashLink
                       to=""
-                      scroll={scrollWithDelay}
+                      scroll={scrollWithOffset} // Use the new function
                       className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                       onClick={handleLinkClick}
                     >
@@ -173,7 +185,7 @@ function Navbar() {
                     <div className=" ml-2 space-y-1 py-1 animate-fade-in-down">
                       <HashLink
                         to="/#hero"
-                        scroll={scrollWithDelay}
+                        scroll={scrollWithOffset} // Use the new function
                         className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                         onClick={handleLinkClick}
                       >
@@ -181,7 +193,7 @@ function Navbar() {
                       </HashLink>
                       <HashLink
                         to="/#team"
-                        scroll={scrollWithDelay}
+                        scroll={scrollWithOffset} // Use the new function
                         className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                         onClick={handleLinkClick}
                       >
@@ -189,7 +201,7 @@ function Navbar() {
                       </HashLink>
                       <HashLink
                         to="/#ambassador"
-                        scroll={scrollWithDelay}
+                        scroll={scrollWithOffset} // Use the new function
                         className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                         onClick={handleLinkClick}
                       >
@@ -214,27 +226,27 @@ function Navbar() {
                 {isBlogOpen && (
                   <div className="absolute right-0 mt-3 w-48 rounded-lg shadow-2xl bg-gray-700/95 backdrop-blur ring-1 ring-white/10 focus:outline-none z-50 origin-top-right animate-fade-in-down">
                     <HashLink
-                      to="/blog#update"
-                      scroll={scrollWithDelay}
-                      className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
-                      onClick={handleLinkClick}
-                    >
-                      Updates
-                    </HashLink>
-                    <HashLink
                       to="/blog#news"
-                      scroll={scrollWithDelay}
+                      scroll={scrollWithOffset} // Use the new function
                       className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                       onClick={handleLinkClick}
                     >
                       Latest News
+                    </HashLink>
+                    <HashLink
+                      to="/blog#update"
+                      scroll={scrollWithOffset} // Use the new function
+                      className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
+                      onClick={handleLinkClick}
+                    >
+                      Updates
                     </HashLink>
                   </div>
                 )}
               </div>
               <HashLink
                 to="/sponsers"
-                scroll={scrollWithDelay}
+                scroll={scrollWithOffset} // Use the new function
                 className="block text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                 onClick={handleLinkClick}
               >
@@ -242,7 +254,7 @@ function Navbar() {
               </HashLink>
               <HashLink
                 to="/#contact"
-                scroll={scrollWithDelay}
+                scroll={scrollWithOffset} // Use the new function
                 className="block text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                 onClick={handleLinkClick}
               >
@@ -282,7 +294,8 @@ function Navbar() {
           style={{ maxHeight: isMobileMenuOpen ? '500px' : '0' }}
         >
           <div className="px-4 pb-4 pt-2 space-y-2 bg-gray-800/90 text-gray-200">
-            <a href="#home" className="block py-2 hover:text-[#7c3aed] transition duration-200" onClick={handleLinkClick}>Home</a>
+            {/* FIX: Use HashLink and scrollWithOffset for internal anchors */}
+            <HashLink to="/#home" className="block py-2 hover:text-[#7c3aed] transition duration-200" scroll={scrollWithOffset} onClick={handleLinkClick}>Home</HashLink>
 
             {/* Mobile Event Dropdown */}
             <div className="border-t border-gray-700 pt-2">
@@ -300,7 +313,7 @@ function Navbar() {
                 <div className="pl-4 border-l border-[#7c3aed] ml-2 space-y-1 py-1 animate-fade-in-down">
                   <HashLink
                     to="/#tournaments"
-                    scroll={scrollWithDelay}
+                    scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
@@ -308,7 +321,7 @@ function Navbar() {
                   </HashLink>
                   <HashLink
                     href="/#tournaments"
-                    scroll={scrollWithDelay}
+                    scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
@@ -316,7 +329,7 @@ function Navbar() {
                   </HashLink>
                   <HashLink
                     to=""
-                    scroll={scrollWithDelay}
+                    scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
@@ -342,7 +355,7 @@ function Navbar() {
                 <div className="pl-4 border-l border-[#7c3aed] ml-2 space-y-1 py-1 animate-fade-in-down">
                   <HashLink
                     to="/#hero"
-                    scroll={scrollWithDelay}
+                    scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
@@ -350,7 +363,7 @@ function Navbar() {
                   </HashLink>
                   <HashLink
                     to="/#team"
-                    scroll={scrollWithDelay}
+                    scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
@@ -358,7 +371,7 @@ function Navbar() {
                   </HashLink>
                   <HashLink
                     to="/#ambassador"
-                    scroll={scrollWithDelay}
+                    scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
@@ -382,27 +395,31 @@ function Navbar() {
 
               {isBlogOpen && (
                 <div className="pl-4 border-l border-[#7c3aed] ml-2 space-y-1 py-1 animate-fade-in-down">
-                 <HashLink
-                    to="/blog#update"
-                    scroll={scrollWithDelay}
-                    className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
-                    onClick={handleLinkClick}
-                  >
-                    Updates
-                  </HashLink>
                   <HashLink
                     to="/blog#news"
-                    scroll={scrollWithDelay}
+                    scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
                     Latest News
                   </HashLink>
+                  <HashLink
+                    to="/blog#update"
+                    scroll={scrollWithOffset} // Use the new function
+                    className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
+                    onClick={handleLinkClick}
+                  >
+                    Updates
+                  </HashLink>
                 </div>
               )}
             </div>
+            
+            {/* Using <a> for external/page links is fine */}
             <a href="/Sponsers" className="block py-2 hover:text-[#7c3aed] transition duration-200" onClick={handleLinkClick}>Our Sponsers</a>
-            <HashLink to="/#contact" className="block py-2 hover:text-[#7c3aed] transition duration-200" scroll={scrollWithDelay} onClick={handleLinkClick}>Contact</HashLink>
+            
+            {/* FIX: Use HashLink and scrollWithOffset for internal anchors */}
+            <HashLink to="/#contact" className="block py-2 hover:text-[#7c3aed] transition duration-200" scroll={scrollWithOffset} onClick={handleLinkClick}>Contact</HashLink>
             <a
               href="/Forms"
               className="block w-full text-center bg-[#7c3aed] hover:bg-[#6b21c6] text-white px-4 py-2 rounded-lg text-sm font-semibold mt-4 transition-colors shadow-lg shadow-[#7c3aed]/50 border-t border-gray-700/50 pt-4"
@@ -418,4 +435,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
