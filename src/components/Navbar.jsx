@@ -124,7 +124,7 @@ function Navbar() {
             </HashLink>
 
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <HashLink to="https://www.ukesportshub.in/" className="hover:text-[#7c3aed] transition duration-200 font-semibold"
+              <HashLink to="/#home" className="hover:text-[#7c3aed] transition duration-200 font-semibold"
                 scroll={scrollWithOffset} // Use the new function
                 onClick={handleLinkClick}>Home</HashLink>
 
@@ -437,5 +437,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
