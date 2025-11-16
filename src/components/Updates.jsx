@@ -4,27 +4,27 @@ const STEPS = [
   { 
     id: "registrations", 
     label: "Registrations Open", 
-    date: new Date(2026, 1, 10)
+    date: new Date(2026, 0, 10)
   }, 
   { 
     id: "fixtures", 
     label: "Fixtures Released", 
-    date: new Date(2026, 1, 20)
+    date: new Date(2026, 0, 20)
   },
   { 
     id: "live", 
     label: "Event Live", 
-    date: new Date(2026, 1, 22)
+    date: new Date(2026, 0, 22)
   },
   { 
     id: "results", 
     label: "Results Announced", 
-    date: new Date(2026, 1, 30)
+    date: new Date(2026, 0, 30)
   },
   { 
     id: "shortlisted", 
     label: "Teams Shortlisted", 
-    date: new Date(2026, 1, 31)
+    date: new Date(2026, 0, 31)
   },
 ];
 
@@ -305,4 +305,5 @@ const Update = () => {
 
 
 export default Update;
+
 
