@@ -1,13 +1,39 @@
 import React, { useState } from 'react';
 
-function Contact() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+const SCRIPT_URL = import.meta.env.VITE_API2_URL;;
+
+function Contact() {
+
+  const [status, setStatus] = useState('idle');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 6000);
-    e.target.reset();
+    setStatus('loading');
+
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.text();
+
+      if (result === "Success") {
+        setStatus('success');
+        e.target.reset(); 
+        setTimeout(() => setStatus('idle'), 6000); 
+      } else {
+       
+        throw new Error(result);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 6000); 
+    }
   };
 
   return (
@@ -28,12 +54,26 @@ function Contact() {
           <input name="name" placeholder="Your name" className="w-full p-3 bg-gray-900 rounded outline-none" required />
           <input name="email" placeholder="Email" className="w-full p-3 bg-gray-900 rounded mt-3 outline-none" required />
           <textarea name="message" placeholder="Message" rows="5" className="w-full p-3 bg-gray-900 rounded mt-3 outline-none" required></textarea>
+          
           <div className="mt-3 flex gap-3">
-            <button className="bg-[#7c3aed] px-4 py-2 rounded font-semibold" type="submit">Send Message</button>
+            <button 
+              className="bg-[#7c3aed] px-4 py-2 rounded font-semibold disabled:bg-gray-500" 
+              type="submit"
+              disabled={status === 'loading'}
+            >
+              {status === 'loading' ? 'Sending...' : 'Send Message'}
+            </button>
             <button className="px-4 py-2 border rounded" type="reset">Reset</button>
           </div>
-          <p id="contactMsg" className={`text-sm text-green-400 mt-3 ${!isSubmitted ? 'hidden' : ''}`}>
+
+          
+          <p id="contactMsg" className={`text-sm text-green-400 mt-3 ${status !== 'success' ? 'hidden' : ''}`}>
             Message sent — we'll be in touch.
+          </p>
+
+        
+          <p id="contactError" className={`text-sm text-red-400 mt-3 ${status !== 'error' ? 'hidden' : ''}`}>
+            Failed to send message. Please try again.
           </p>
         </form>
       </div>
