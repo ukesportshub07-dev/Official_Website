@@ -87,15 +87,17 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
       </div>
 
       <div className="bg-gray-900 border-t border-gray-800 text-center text-sm text-gray-500 py-2">
-        &copy;UK Esports Hub | Level Up Your Game. | All Rights Reserved. | {formattedDate} {currentYear} 
+        &copy;UK Esports Hub | All Rights Reserved. | {formattedDate} {currentYear} 
+        <p className="mt-1">#YourBattel • YourSquard • OurStage </p>
         <p className="mt-1">Developed and Maintained by UK Esports Hub</p>
-       <p className="mt-1">#YourBattel • YourSquard • OurStage </p>
+ 
       </div>
     </footer>
   );
 }
 
 export default Footer;
+
 
 
 
