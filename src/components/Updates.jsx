@@ -4,27 +4,27 @@ const STEPS = [
   { 
     id: "registrations", 
     label: "Registrations Open", 
-    date: new Date(2025, 10, 1)
+    date: new Date(2026, 1, 10)
   }, 
   { 
     id: "fixtures", 
     label: "Fixtures Released", 
-    date: new Date(2025, 10, 10)
+    date: new Date(2026, 1, 20)
   },
   { 
     id: "live", 
     label: "Event Live", 
-    date: new Date(2025, 10, 18)
+    date: new Date(2026, 1, 22)
   },
   { 
     id: "results", 
     label: "Results Announced", 
-    date: new Date(2025, 11, 5)
+    date: new Date(2026, 1, 30)
   },
   { 
     id: "shortlisted", 
     label: "Teams Shortlisted", 
-    date: new Date(2025, 11, 9)
+    date: new Date(2026, 1, 31)
   },
 ];
 
@@ -112,7 +112,7 @@ const Update = () => {
     <div id="update" className="w-full max-w-5xl mx-auto my-6 p-5 sm:p-6 rounded-2xl b   shadow-sm">
       
       <h2 className="mb-1 text-2xl font-bold text-white">Event Updates</h2>
-      <h3 className="mb-6 text-sm text-gray-500">Track your event progress</h3>
+      <h3 className="mb-6 text-sm text-gray-500">Track Our Event Progress</h3>
 
       <div className="relative">
         
@@ -305,3 +305,4 @@ const Update = () => {
 
 
 export default Update;
+
