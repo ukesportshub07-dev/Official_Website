@@ -290,7 +290,7 @@ const Update = () => {
 
       <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           <span className="text-sm text-gray-700">
             <strong className="text-blue-700">Current Status:</strong> {STEPS[currentIndex]?.label || "Coming Soon"}
           </span>
@@ -305,5 +305,6 @@ const Update = () => {
 
 
 export default Update;
+
 
 
