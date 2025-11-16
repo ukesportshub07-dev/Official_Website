@@ -9,34 +9,34 @@ const tournamentData = [
     status: "Upcoming Event",
     statusColor: "border-green-600 hover:bg-green-600",
     themeColor: "purple",
-    isHighlighted: false,
+    isHighlighted: true,
   },
   {
     id: 2,
     title: "Battel Era 2.0",
     details: "13 Nov - 14 Nov 2025 • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹2,00,000/-",
     src: "/Banner/Battle.webp",
-    status: "Past Event",
+    status: "Event Recape",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "cyan",
-    isHighlighted: true,
+    isHighlighted: false,
   },
   {
     id: 3,
     title: "Endgame 2025 E-Sports Event",
     details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000/-",
     src: "/Banner/endgame.webp",
-    status: "Past Event",
+    status: "Event Recape",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "cyan",
-    isHighlighted: true,
+    isHighlighted: false,
   },
   {
     id: 4,
     title: "Free Fire Max Nova Clash",
     details: "27 Sep 2025 • Offline • Uttarakhand",
     src: "/Banner/Free Fire Max Nova Clash.webp",
-    status: "Past Event",
+    status: "Event Recape",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "pink",
     isHighlighted: false,
@@ -46,7 +46,7 @@ const tournamentData = [
     title: "Domination 2025",
     details: "25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000/- • Uttarakhand",
     src: "/Banner/Domination.webp",
-    status: "Past Event",
+    status: "Event Recape",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "pink",
     isHighlighted: false,
@@ -56,7 +56,7 @@ const tournamentData = [
     title: "Summer Carnival 2025",
     details: "14 - 15 May • LAN • Prizepool Upto: ₹25,000/-",
     src: "Banner/summer_carnival.webp",
-    status: "Past Event",
+    status: "Event Recape",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "purple",
     isHighlighted: false,
@@ -209,7 +209,7 @@ function Tournaments() {
                 <p className="text-xs text-gray-400 mt-2">{tournament.details}</p>
                 <div className="mt-4 flex gap-2">
                   <a href="#register" className={`px-3 py-2 ${currentTheme.bg} rounded text-sm font-medium text-white transition-colors`}>Register</a>
-                  <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
+                  <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white"> Event Details</a>
                   <a href="#" className={`px-3 py-2 border ${tournament.statusColor} rounded text-sm text-gray-300 transition-colors ${tournament.statusColor === 'border-red-600 hover:bg-red-600' ? 'hover:text-white' : ''} ${tournament.statusColor}`}>
                     {tournament.status}
                   </a>
@@ -225,6 +225,7 @@ function Tournaments() {
 }
 
 export default Tournaments;
+
 
 
 
