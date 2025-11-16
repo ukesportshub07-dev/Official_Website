@@ -193,7 +193,7 @@ const Formscreen = () => {
                 {/* Field name: Event */}
                 <select name="Event" className={inputSelectClass} id="eventList" required>
                   <option value="">-- Select Event --</option>
-                  <option value="Battel Era 2.0">Battel Era 2.0</option>
+                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Uttarakhand Esports Festival 2026 (UEF-2026)</option>
                 </select>
               </div>
               <div>
@@ -263,3 +263,4 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
+
