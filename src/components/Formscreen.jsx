@@ -165,9 +165,10 @@ const Formscreen = () => {
                   <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era Hill University, Dehradun</option>
                   <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era Hill University, Haldwani</option>
                   <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era Hill University, Bhimtal</option>
-                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era (Deemed To Be) University, Dehradun</option>
+                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era (Deemed To Be) University, Dehradun </option>
                 </select>
               </div>
+            </div>
 
           <div className={`${formSectionBaseClass} bg-emerald-50 border-emerald-200`}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-800">
@@ -272,5 +273,6 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
+
 
 
