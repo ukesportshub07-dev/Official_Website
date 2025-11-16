@@ -4,7 +4,7 @@ const tournamentData = [
   {
     id: 1,
     title: "Uttarakhand Esports Festival 2026 (UEF-2026)",
-    details: "Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR",
+    details: "Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000+ • 12 Universities • Diamonds: 250,000+",
     src: "/Banner/UEF.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600 hover:bg-green-600",
@@ -14,7 +14,7 @@ const tournamentData = [
   {
     id: 2,
     title: "Battel Era 2.0",
-    details: "13 Nov - 14 Nov 2025 • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹200,000",
+    details: "13 Nov - 14 Nov 2025 • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹2,00,000/-",
     src: "/Banner/Battle.webp",
     status: "Past Event",
     statusColor: "border-red-600 hover:bg-red-600",
@@ -24,7 +24,7 @@ const tournamentData = [
   {
     id: 3,
     title: "Endgame 2025 E-Sports Event",
-    details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000",
+    details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000/-",
     src: "/Banner/endgame.webp",
     status: "Past Event",
     statusColor: "border-red-600 hover:bg-red-600",
@@ -44,7 +44,7 @@ const tournamentData = [
   {
     id: 5,
     title: "Domination 2025",
-    details: "25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000 • Uttarakhand",
+    details: "25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000/- • Uttarakhand",
     src: "/Banner/Domination.webp",
     status: "Past Event",
     statusColor: "border-red-600 hover:bg-red-600",
@@ -54,7 +54,7 @@ const tournamentData = [
   {
     id: 6,
     title: "Summer Carnival 2025",
-    details: "14 - 15 May • LAN • Prizepool Upto: ₹25,000",
+    details: "14 - 15 May • LAN • Prizepool Upto: ₹25,000/-",
     src: "Banner/summer_carnival.webp",
     status: "Past Event",
     statusColor: "border-red-600 hover:bg-red-600",
@@ -225,6 +225,7 @@ function Tournaments() {
 }
 
 export default Tournaments;
+
 
 
 
