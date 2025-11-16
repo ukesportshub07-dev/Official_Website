@@ -10,6 +10,7 @@ import Form from './pages/Form.jsx';
 import Oursponsors from './pages/sponsor.jsx';
 import TermsandCondition from './pages/TermsandCondition.jsx';
 import PrivacyandPolicy from './pages/PrivacyandPolicy.jsx';
+import Gallery from './pages/Gallery.jsx';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,10 +36,12 @@ function App() {
           <Route path="/sponsers" element={<Oursponsors/>} /> 
           <Route path="/tandc" element={<TermsandCondition/>} />
           <Route path="/pandp" element={<PrivacyandPolicy />} /> 
+          <Route path="/gallery" element={<Gallery />} /> 
+
           <Route path="*" element={<h1 className="p-10 text-4xl text-red-500">404 - Page Not Found</h1>} />
         </Routes>
       </main>
-
+    
     </div>
   );
 }
