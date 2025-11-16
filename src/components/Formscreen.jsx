@@ -128,14 +128,14 @@ const Formscreen = () => {
         <h1
           className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2 "
         >
-          🎮 Tournament Registration Form Will Open On Jan 2026
+          🎮 Tournament Registration Form
         </h1>
        
- {/* 
+
         
         <form onSubmit={handleSubmit}>
 
-
+      
           <div className={`${formSectionBaseClass} bg-indigo-50 border-indigo-200`}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-indigo-800">
               🏆 Team Information
@@ -149,7 +149,7 @@ const Formscreen = () => {
             </div>
           </div>
 
- 
+         
           <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-800">
               🎓 College Name
@@ -168,7 +168,7 @@ const Formscreen = () => {
             </div>
           </div>
 
-          
+      
           <div className={`${formSectionBaseClass} bg-emerald-50 border-emerald-200`}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-800">
               👤 Leader Contact Information
@@ -190,7 +190,7 @@ const Formscreen = () => {
             </div>
           </div>
 
-       
+          {/* EVENT & GAME SECTION */}
           <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-800">
               🗓️ Choose Event & Game
@@ -214,7 +214,7 @@ const Formscreen = () => {
             </div>
           </div>
 
-       
+          {/* PLAYER SECTION */}
           <div
             className={`${formSectionBaseClass} bg-gray-100 border-gray-200`}
             style={{ display: isPlayerSectionVisible ? 'block' : 'none' }}
@@ -236,7 +236,7 @@ const Formscreen = () => {
             </div>
           </div>
 
-      
+          {/* TERMS SECTION */}
           <div className={`${formSectionBaseClass} bg-red-50 border-l-4 border-red-600`}>
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2 text-gray-800">
               🛡️ Declaration & Terms
@@ -257,7 +257,7 @@ const Formscreen = () => {
             </label>
           </div>
 
-        
+          {/* SUBMIT BUTTON */}
           <button
             type="submit"
             disabled={isSubmitting}
@@ -270,7 +270,8 @@ const Formscreen = () => {
           >
             {isSubmitting ? 'Submitting...' : '🚀 Submit Registration'}
           </button>
-                */}
+          
+// */}
           
         </form>
       </div>
