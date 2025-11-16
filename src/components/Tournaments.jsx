@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 const tournamentData = [
   {
     id: 1,
-    title: "Campus Clash 2026",
+    title: "Uttarakhand Esports Festival 2026 (UEF-2026)",
     details: "Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR",
     src: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop",
     status: "Upcoming Event",
@@ -13,7 +13,7 @@ const tournamentData = [
   },
   {
     id: 2,
-    title: "Endgame 2025 E Sports Event",
+    title: "Endgame 2025 E-Sports Event",
     details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000",
     src: "/Banner/endgame.webp",
     status: "Past Event",
@@ -205,3 +205,4 @@ function Tournaments() {
 }
 
 export default Tournaments;
+
