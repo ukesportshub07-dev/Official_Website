@@ -152,13 +152,22 @@ const Formscreen = () => {
                 {/* Field name: Team Name */}
                 <input type="text" name="Team Name" className={inputSelectClass} placeholder="Enter your official team name" required />
               </div>
+              <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-800">
+              🎓 College Name
+            </h2>
+            <div className={formRowClass}>
               <div>
-                <label className={labelClass}>College Name *</label>
-                {/* Field name: College Name */}
-                <input type="text" name="College Name" className={inputSelectClass} placeholder="Enter your College/University name" required />
+                <label className={labelClass}> Select Your University / College</label>
+                {/* Field name: Event */}
+                <select name="College Name" className={inputSelectClass} id="eventList" required>
+                  <option value="">-- Select Your University / College --</option>
+                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era Hill University, Dehradun</option>
+                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era Hill University, Haldwani</option>
+                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era Hill University, Bhimtal</option>
+                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Graphic Era (Deemed To Be) University, Dehradun</option>
+                </select>
               </div>
-            </div>
-          </div>
 
           <div className={`${formSectionBaseClass} bg-emerald-50 border-emerald-200`}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-800">
@@ -263,4 +272,5 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
+
 
