@@ -9,22 +9,22 @@ const PlayerInput = ({ game, index }) => {
   const getPlayerIdPlaceholder = (game) => {
     switch (game) {
       case "freefire":
-        return `Player ${i} UID`;
+        return Player ${i} UID;
       case "bgmi":
-        return `Player ${i} ID`;
+        return Player ${i} ID;
       default:
-        return `Player ${i} ID/Name`;
+        return Player ${i} ID/Name;
     }
   };
 
   const getIdNameAttribute = (game) => {
     switch (game) {
       case "freefire":
-        return `Player ${i} UID`;
+        return Player ${i} UID;
       case "bgmi":
-        return `Player ${i} ID`;
+        return Player ${i} ID;
       default:
-        return `Player ${i} ID`;
+        return Player ${i} ID;
     }
   };
 
@@ -32,9 +32,9 @@ const PlayerInput = ({ game, index }) => {
     <div className={formRowClass}>
       <input
         type="text"
-        name={`Player ${i} Game Name`}
+        name={Player ${i} Game Name}
         className={inputClass}
-        placeholder={`Player ${i} Game Name`}
+        placeholder={Player ${i} Game Name}
         required
       />
       <input
@@ -50,7 +50,7 @@ const PlayerInput = ({ game, index }) => {
   if (game === "freefire" || game === "bgmi") {
     return (
       <div className="mt-4 border-t border-gray-200 pt-4" key={index}>
-        <h3 className="text-md font-bold mb-3 text-indigo-700">{`Player ${i}`}</h3>
+        <h3 className="text-md font-bold mb-3 text-indigo-700">{Player ${i}}</h3>
         {basicInputs}
       </div>
     );
@@ -59,84 +59,84 @@ const PlayerInput = ({ game, index }) => {
 };
 
 const Formscreen = () => {
-  const [selectedGame, setSelectedGame] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [selectedGame, setSelectedGame] = useState('');
+  // const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const numPlayers = 4;
-  const isPlayerSectionVisible = !!selectedGame;
+  // const numPlayers = 4;
+  // const isPlayerSectionVisible = !!selectedGame;
 
-  const SHEET_URL = import.meta.env.VITE_API_URL;
+  // const SHEET_URL = import.meta.env.VITE_API_URL;
 
-  const handleGameChange = (e) => {
-    setSelectedGame(e.target.value);
-  };
+  // const handleGameChange = (e) => {
+  //   setSelectedGame(e.target.value);
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isSubmitting) return;
-    setIsSubmitting(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (isSubmitting) return;
+  //   setIsSubmitting(true);
 
-    const formData = new FormData(e.target);
-    let urlEncodedData = '';
+  //   const formData = new FormData(e.target);
+  //   let urlEncodedData = '';
 
-    for (let [key, value] of formData.entries()) {
-      const encodedKey = encodeURIComponent(key);
-      const encodedValue = encodeURIComponent(value);
+  //   for (let [key, value] of formData.entries()) {
+  //     const encodedKey = encodeURIComponent(key);
+  //     const encodedValue = encodeURIComponent(value);
 
-      if (key !== 'terms') {
-        urlEncodedData += `${encodedKey}=${encodedValue}&`;
-      }
-    }
-    urlEncodedData = urlEncodedData.slice(0, -1);
+  //     if (key !== 'terms') {
+  //       urlEncodedData += ${encodedKey}=${encodedValue}&;
+  //     }
+  //   }
+  //   urlEncodedData = urlEncodedData.slice(0, -1);
 
-    fetch(SHEET_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: urlEncodedData,
-    })
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.text();
-      })
-      .then(data => {
-        alert("Registration Successful! Server Response: " + data);
-        e.target.reset();
-        setSelectedGame('');
-      })
-      .catch(error => {
-        console.error("Submission Error:", error);
-        alert("There was an error submitting the form. Please try again.");
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
-  };
+  //   fetch(SHEET_URL, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/x-www-form-urlencoded",
+  //     },
+  //     body: urlEncodedData,
+  //   })
+  //     .then(res => {
+  //       if (!res.ok) {
+  //         throw new Error(HTTP error! status: ${res.status});
+  //       }
+  //       return res.text();
+  //     })
+  //     .then(data => {
+  //       alert("Registration Successful! Server Response: " + data);
+  //       e.target.reset();
+  //       setSelectedGame('');
+  //     })
+  //     .catch(error => {
+  //       console.error("Submission Error:", error);
+  //       alert("There was an error submitting the form. Please try again.");
+  //     })
+  //     .finally(() => {
+  //       setIsSubmitting(false);
+  //     });
+  // };
 
-  const containerClass = "max-w-5xl bg-white mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-indigo-100/50";
-  const formSectionBaseClass = "rounded-2xl p-6 mb-8 border border-gray-100 transition duration-500 hover:shadow-lg";
-  const labelClass = "block font-medium mb-1 text-gray-700 text-sm";
-  const inputSelectClass = "w-full p-3 rounded-xl border border-gray-200 bg-white shadow-sm transition duration-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 focus:outline-none text-gray-900";
-  const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-6";
+  // const containerClass = "max-w-5xl bg-white mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-indigo-100/50";
+  // const formSectionBaseClass = "rounded-2xl p-6 mb-8 border border-gray-100 transition duration-500 hover:shadow-lg";
+  // const labelClass = "block font-medium mb-1 text-gray-700 text-sm";
+  // const inputSelectClass = "w-full p-3 rounded-xl border border-gray-200 bg-white shadow-sm transition duration-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 focus:outline-none text-gray-900";
+  // const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-6";
 
   return (
+    {/* 
     <div className="min-h-screen p-4 sm:p-8 font-sans ">
       <div className={containerClass}>
         <h1
           className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2 "
         >
-          🎮 Tournament Registration Form
+          🎮 Tournament Registration Form Will Open On Jan 2026
         </h1>
        
-
         
         <form onSubmit={handleSubmit}>
 
-      
-          <div className={`${formSectionBaseClass} bg-indigo-50 border-indigo-200`}>
+
+          <div className={${formSectionBaseClass} bg-indigo-50 border-indigo-200}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-indigo-800">
               🏆 Team Information
             </h2>
@@ -149,8 +149,8 @@ const Formscreen = () => {
             </div>
           </div>
 
-         
-          <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
+ 
+          <div className={${formSectionBaseClass} bg-purple-50 border-purple-200}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-800">
               🎓 College Name
             </h2>
@@ -168,8 +168,8 @@ const Formscreen = () => {
             </div>
           </div>
 
-      
-          <div className={`${formSectionBaseClass} bg-emerald-50 border-emerald-200`}>
+          
+          <div className={${formSectionBaseClass} bg-emerald-50 border-emerald-200}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-800">
               👤 Leader Contact Information
             </h2>
@@ -190,10 +190,10 @@ const Formscreen = () => {
             </div>
           </div>
 
-          {/* EVENT & GAME SECTION */}
-          <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
+       
+          <div className={${formSectionBaseClass} bg-purple-50 border-purple-200}>
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-800">
-              🗓️ Choose Event & Game
+              🗓 Choose Event & Game
             </h2>
             <div className={formRowClass}>
               <div>
@@ -214,9 +214,9 @@ const Formscreen = () => {
             </div>
           </div>
 
-          {/* PLAYER SECTION */}
+       
           <div
-            className={`${formSectionBaseClass} bg-gray-100 border-gray-200`}
+            className={${formSectionBaseClass} bg-gray-100 border-gray-200}
             style={{ display: isPlayerSectionVisible ? 'block' : 'none' }}
           >
             <h2 className="text-xl font-bold mb-2 flex items-center gap-2 text-gray-800">
@@ -224,8 +224,8 @@ const Formscreen = () => {
             </h2>
 
             <p className="text-sm text-gray-500 mb-4">
-              Provide identification details for **all players**.  
-              All communication will be through the **Team Leader's WhatsApp Number**.
+              Provide identification details for *all players*.  
+              All communication will be through the *Team Leader's WhatsApp Number*.
             </p>
 
             <div id="playerFields">
@@ -236,10 +236,10 @@ const Formscreen = () => {
             </div>
           </div>
 
-          {/* TERMS SECTION */}
-          <div className={`${formSectionBaseClass} bg-red-50 border-l-4 border-red-600`}>
+      
+          <div className={${formSectionBaseClass} bg-red-50 border-l-4 border-red-600}>
             <h2 className="text-xl font-bold mb-3 flex items-center gap-2 text-gray-800">
-              🛡️ Declaration & Terms
+              🛡 Declaration & Terms
             </h2>
 
             <label className="flex items-start space-x-2 text-sm text-gray-700 cursor-pointer">
@@ -257,7 +257,7 @@ const Formscreen = () => {
             </label>
           </div>
 
-          {/* SUBMIT BUTTON */}
+        
           <button
             type="submit"
             disabled={isSubmitting}
@@ -270,14 +270,13 @@ const Formscreen = () => {
           >
             {isSubmitting ? 'Submitting...' : '🚀 Submit Registration'}
           </button>
-          
-// */}
+                
           
         </form>
       </div>
-    </div>
-  );
+      </div>
+      ;*/}
+      )
 };
 
 export default Formscreen;
-
