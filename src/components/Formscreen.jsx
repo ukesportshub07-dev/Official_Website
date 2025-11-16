@@ -289,7 +289,7 @@ const Formscreen = () => {
     minHeight: '80vh', 
     fontSize: '2.5em',
     fontWeight: 'bold',
-    color: '#333',
+    color: '#FFFFFF',
     fontFamily: 'Verdana, sans-serif',
     textAlign: 'center',
     padding: '20px',
@@ -297,9 +297,10 @@ const Formscreen = () => {
 
   return (
     <div style={style}>
-      Form will be open soon!
+     Form Will Be Open On Jan 2026
     </div>
   );
 };
 
 export default Formscreen;
+
