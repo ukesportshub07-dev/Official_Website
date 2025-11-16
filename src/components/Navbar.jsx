@@ -223,6 +223,7 @@ function Navbar() {
                     </HashLink>
                     <HashLink
                       to="/blog#update"
+                      scroll={scrollWithDelay}
                       className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                       onClick={handleLinkClick}
                     >
@@ -233,6 +234,7 @@ function Navbar() {
               </div>
               <HashLink
                 to="/sponsers"
+                scroll={scrollWithDelay}
                 className="block text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                 onClick={handleLinkClick}
               >
@@ -297,7 +299,7 @@ function Navbar() {
               {isEventOpen && (
                 <div className="pl-4 border-l border-[#7c3aed] ml-2 space-y-1 py-1 animate-fade-in-down">
                   <HashLink
-                    to="#tournaments"
+                    to="/#tournaments"
                     scroll={scrollWithDelay}
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
@@ -305,7 +307,7 @@ function Navbar() {
                     Upcoming / Latest Events
                   </HashLink>
                   <HashLink
-                    href="#tournaments"
+                    href="/#tournaments"
                     scroll={scrollWithDelay}
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
@@ -338,27 +340,30 @@ function Navbar() {
 
               {isAboutOpen && (
                 <div className="pl-4 border-l border-[#7c3aed] ml-2 space-y-1 py-1 animate-fade-in-down">
-                  <a
-                    href="#hero"
+                  <HashLink
+                    to="/#hero"
+                    scroll={scrollWithDelay}
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
                     Who We Are
-                  </a>
-                  <a
-                    href="#team"
+                  </HashLink>
+                  <HashLink
+                    to="/#team"
+                    scroll={scrollWithDelay}
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
                     Our Team
-                  </a>
-                  <a
-                    href="#team"
+                  </HashLink>
+                  <HashLink
+                    to="/#ambassador"
+                    scroll={scrollWithDelay}
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
                     Our Ambasadors
-                  </a>
+                  </HashLink>
                 </div>
               )}
             </div>
@@ -377,20 +382,22 @@ function Navbar() {
 
               {isBlogOpen && (
                 <div className="pl-4 border-l border-[#7c3aed] ml-2 space-y-1 py-1 animate-fade-in-down">
-                  <Link
-                    to=""
+                  <HashLink
+                    to="/blog#news"
+                    scroll={scrollWithDelay}
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
                     Latest News
-                  </Link>
-                  <a
-                    href="/gallery"
+                  </HashLink>
+                  <HashLink
+                    to="/blog#update"
+                    scroll={scrollWithDelay}
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
                   >
                     Updates
-                  </a>
+                  </HashLink>
                 </div>
               )}
             </div>
