@@ -14,7 +14,7 @@ const STEPS = [
   { 
     id: "live", 
     label: "Event Live", 
-    date: new Date(2025, 10, 16)
+    date: new Date(2025, 10, 18)
   },
   { 
     id: "results", 
@@ -302,5 +302,6 @@ const Update = () => {
     
   );
 };
+
 
 export default Update;
