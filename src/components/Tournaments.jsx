@@ -1,9 +1,55 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
+const tournamentData = [
+  {
+    id: 1,
+    title: "Campus Clash 2026",
+    details: "Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR",
+    src: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop",
+    status: "Upcoming Event",
+    statusColor: "border-green-600 hover:bg-green-600",
+    themeColor: "purple",
+    isHighlighted: false,
+  },
+  {
+    id: 2,
+    title: "Endgame 2025 E Sports Event",
+    details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000",
+    src: "/Banner/endgame.webp",
+    status: "Past Event",
+    statusColor: "border-red-600 hover:bg-red-600",
+    themeColor: "cyan",
+    isHighlighted: true,
+  },
+  {
+    id: 3,
+    title: "Domination 2025",
+    details: "25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000 • Uttarakhand",
+    src: "/Banner/Domination.webp",
+    status: "Past Event",
+    statusColor: "border-red-600 hover:bg-red-600",
+    themeColor: "pink",
+    isHighlighted: false,
+  },
+  {
+    id: 4,
+    title: "Summer Carnival 2025",
+    details: "14 - 15 May • LAN • Prizepool Upto: ₹25,000",
+    src: "Banner/summer_carnival.webp",
+    status: "Past Event",
+    statusColor: "border-red-600 hover:bg-red-600",
+    themeColor: "purple",
+    isHighlighted: false,
+  },
+];
+
+
+
 function Tournaments() {
   const [isVisible, setIsVisible] = useState(false);
-  const [highlightFirst, setHighlightFirst] = useState(false);
-  const sectionRef = useRef(null); 
+  const [highlightActive, setHighlightActive] = useState(false); 
+  const [, setCurrentHash] = useState(window.location.hash);
+  const sectionRef = useRef(null);
   const highlightTimer = useRef(null);
   const retriggerTimer = useRef(null);
 
@@ -11,20 +57,21 @@ function Tournaments() {
     if (highlightTimer.current) clearTimeout(highlightTimer.current);
     if (retriggerTimer.current) clearTimeout(retriggerTimer.current);
 
-    setHighlightFirst(false); 
+    setHighlightActive(false);
 
     retriggerTimer.current = setTimeout(() => {
-      setHighlightFirst(true); 
-    
+      setHighlightActive(true);
+
       highlightTimer.current = setTimeout(() => {
-        setHighlightFirst(false);
-      }, 2000);
-    }, 10);
+        setHighlightActive(false);
+      }, 3000);
+    }, 50);
   }, []);
 
+  // Intersection Observer logic
   useEffect(() => {
     const currentRef = sectionRef.current;
-    if (!currentRef) return; 
+    if (!currentRef) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -40,34 +87,41 @@ function Tournaments() {
     };
   }, []);
 
+  // Hash change and Click detection logic
   useEffect(() => {
     const handleHashChange = () => {
-      if (window.location.hash === '#tournaments') {
+      const newHash = window.location.hash;
+      setCurrentHash(newHash);
+
+      if (newHash === '#tournaments') {
         runHighlightCheck();
       }
     };
 
     window.addEventListener('hashchange', handleHashChange);
 
-    const allTournamentLinks = document.querySelectorAll('a[href="#tournaments"]');
-
-    const handleLinkClick = () => {
-      if (window.location.hash === '#tournaments') {
-        runHighlightCheck();
+    const handleGlobalClick = (event) => {
+      const target = event.target.closest('a[href*="#tournaments"]');
+      if (target) {
+        setTimeout(() => {
+          if (window.location.hash === '#tournaments') {
+            runHighlightCheck();
+          }
+        }, 100);
       }
     };
 
-    allTournamentLinks.forEach(link => {
-      link.addEventListener('click', handleLinkClick);
-    });
+    document.addEventListener('click', handleGlobalClick);
+
+    if (window.location.hash === '#tournaments') {
+      runHighlightCheck();
+    }
+
 
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
-      
-      allTournamentLinks.forEach(link => {
-        link.removeEventListener('click', handleLinkClick);
-      });
-      
+      document.removeEventListener('click', handleGlobalClick);
+
       if (highlightTimer.current) clearTimeout(highlightTimer.current);
       if (retriggerTimer.current) clearTimeout(retriggerTimer.current);
     };
@@ -84,111 +138,70 @@ function Tournaments() {
 
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                   <article 
-            className={`p-4 bg-gray-800 rounded-lg border border-gray-700 transition-all ease-out duration-1000 delay-200 ${
-              isVisible ? 'opacity-100' : 'opacity-0 translate-y-12'
-            } ${
-              isVisible ? 'translate-y-0' : ''
-            } hover:scale-105 hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer group`}
-          >
-            <img 
-              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop" 
-              alt="CS:GO tournament" 
-              className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Campus Clash Esports'; }}
-            />
-            <h3 className="font-semibold text-white text-lg"> Campus Clash 2026 </h3>
-            <p className="text-xs text-gray-400 mt-2">Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR </p>
-            <div className="mt-4 flex gap-2">
-              <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
-              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-green-600 rounded text-sm text-gray-300 transition-colors hover:bg-green-600 hover:text-white">Upcoming Event</a>
-            </div>
-          </article>
-          
-          <article 
-            className={`p-4 bg-gray-800 rounded-lg border transition-all ease-out duration-1000 ${
-              isVisible ? 'opacity-100' : 'opacity-0 translate-y-12'
-            } ${
-              highlightFirst
-                ? 'scale-105 -translate-y-1 border-cyan-500 shadow-lg shadow-cyan-500/20'
-                : (isVisible ? 'translate-y-0 border-gray-700' : 'border-gray-700')
-            } hover:scale-105 hover:-translate-y-1 hover:border-cyan-500 hover:shadow-lg hover:shadow-cyan-500/20 cursor-pointer group`}
-          >
-            <img 
-              src="/Banner/endgame.webp" 
-              alt="EndGame tournament" 
-              className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Endgame 2025 E Sports Event'; }}
-            />
-            <h3 className="font-semibold text-white text-lg">Endgame 2025 E Sports Event</h3>
-            <p className="text-xs text-gray-400 mt-2"> 06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000</p>
-            <div className="mt-4 flex gap-2">
-              <a href="#register" className="px-3 py-2 bg-cyan-600 hover:bg-cyan-500 rounded text-sm font-medium text-white transition-colors">Register</a>
-              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-red-600 hover:text-white">Past Event</a>
-            </div>
-          </article>
+          {tournamentData.map((tournament, index) => {
 
-          <article 
-            className={`p-4 bg-gray-800 rounded-lg border border-gray-700 transition-all ease-out duration-1000 delay-400 ${
-              isVisible ? 'opacity-100' : 'opacity-0 translate-y-12'
-            } ${
-              isVisible ? 'translate-y-0' : ''
-            } hover:scale-105 hover:-translate-y-1 hover:border-pink-500 hover:shadow-lg hover:shadow-pink-500/20 cursor-pointer group`}
-          >
-            <img 
-              src="/Banner/Domination.webp" 
-              alt="Domination tournament" 
-              className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Domination 2025'; }}
-            />
-            <h3 className="font-semibold text-white text-lg">Domination 2025</h3>
-            <p className="text-xs text-gray-400 mt-2">25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000 • Uttarakhand </p>
-            <div className="mt-4 flex gap-2">
-              <a href="#register" className="px-3 py-2 bg-pink-600 hover:bg-pink-500 rounded text-sm font-medium text-white transition-colors">Register</a>
-              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-               <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-red-600 hover:text-white">Past Event</a>
-            </div>
-          </article>
-          
-          <article 
-            className={`p-4 bg-gray-800 rounded-lg border border-gray-700 transition-all ease-out duration-1000 delay-200 ${
-              isVisible ? 'opacity-100' : 'opacity-0 translate-y-12'
-            } ${
-              isVisible ? 'translate-y-0' : ''
-            } hover:scale-105 hover:-translate-y-1 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer group`}
-          >
-            <img 
-              src="Banner/summer_carnival.webp" 
-              alt="Summer Carnival tournament" 
-              className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out" 
-              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Summer Carnival 2025'; }}
-            />
-            <h3 className="font-semibold text-white text-lg"> Summer Carnival 2025 </h3>
-            <p className="text-xs text-gray-400 mt-2">14 - 15 May • LAN • Prizepool Upto: ₹25,000 </p>
-            <div className="mt-4 flex gap-2">
-              <a href="#register" className="px-3 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-medium text-white transition-colors">Register</a>
-              <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
-              <a href="#" className="px-3 py-2 border border-red-600 rounded text-sm text-gray-300 transition-colors hover:bg-red-600 hover:text-white">Past Event</a>
-            </div>
-          </article>
-          
+           
+            const themeClasses = {
+              purple: {
+                bg: 'bg-purple-600 hover:bg-purple-500',
+                hoverBorder: 'hover:border-purple-500',
+                hoverShadow: 'hover:shadow-purple-500/20',
+                shineBorder: 'border-purple-500 shadow-lg shadow-purple-500/20',
+              },
+              cyan: {
+                bg: 'bg-cyan-600 hover:bg-cyan-500',
+                hoverBorder: 'hover:border-cyan-500',
+                hoverShadow: 'hover:shadow-cyan-500/20',
+                shineBorder: 'border-cyan-500 shadow-lg shadow-cyan-500/20',
+              },
+              pink: {
+                bg: 'bg-pink-600 hover:bg-pink-500',
+                hoverBorder: 'hover:border-pink-500',
+                hoverShadow: 'hover:shadow-pink-500/20',
+                shineBorder: 'border-pink-500 shadow-lg shadow-pink-500/20',
+              },
+            };
+
+            const currentTheme = themeClasses[tournament.themeColor] || themeClasses.purple;
+
+            const isCardHighlighted = tournament.isHighlighted && highlightActive;
+
+            const baseClasses = `p-4 bg-gray-800 rounded-lg border transition-all ease-out duration-1000 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+              }`;
+
+            const dynamicClasses = isCardHighlighted
+              ? `scale-105 -translate-y-1 ${currentTheme.shineBorder} cursor-default` 
+              : `border-gray-700 ${currentTheme.hoverBorder} ${currentTheme.hoverShadow} hover:scale-105 hover:-translate-y-1 cursor-pointer group`; // Normal/Hover state
+
+
+            return (
+              <article
+                key={tournament.id}
+                className={`${baseClasses} ${dynamicClasses}`}
+              >
+                <img
+                  src={tournament.src}
+                  alt={`${tournament.title} banner`}
+                  className="rounded-md w-full h-40 object-cover mb-3 grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
+                  onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/1F2937/FFFFFF?text=Tournament'; }}
+                />
+                <h3 className="font-semibold text-white text-lg">{tournament.title}</h3>
+                <p className="text-xs text-gray-400 mt-2">{tournament.details}</p>
+                <div className="mt-4 flex gap-2">
+                  <a href="#register" className={`px-3 py-2 ${currentTheme.bg} rounded text-sm font-medium text-white transition-colors`}>Register</a>
+                  <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white">Details</a>
+                  <a href="#" className={`px-3 py-2 border ${tournament.statusColor} rounded text-sm text-gray-300 transition-colors ${tournament.statusColor === 'border-red-600 hover:bg-red-600' ? 'hover:text-white' : ''} ${tournament.statusColor}`}>
+                    {tournament.status}
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+         
         </div>
       </div>
     </section>
-  );  
+  );
 }
 
-
 export default Tournaments;
-
-
-
-
-
-
-
-
-
-
