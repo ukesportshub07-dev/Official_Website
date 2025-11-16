@@ -25,7 +25,7 @@ const tournamentData = [
     id: 3,
     title: "Endgame 2025 E-Sports Event",
     details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000",
-    src: "/Banner/endgame.webp",
+    src: "/Banner/Battle.webpp",
     status: "Past Event",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "cyan",
@@ -33,6 +33,16 @@ const tournamentData = [
   },
   {
     id: 4,
+    title: "Free Fire Max Nova Clash",
+    details: "27 Sep 2025 • Offline • Uttarakhand",
+    src: "/Banner/Free Fire Max Nova Clash.webp",
+    status: "Past Event",
+    statusColor: "border-red-600 hover:bg-red-600",
+    themeColor: "pink",
+    isHighlighted: false,
+  },
+  {
+    id: 5,
     title: "Domination 2025",
     details: "25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000 • Uttarakhand",
     src: "/Banner/Domination.webp",
@@ -42,7 +52,7 @@ const tournamentData = [
     isHighlighted: false,
   },
   {
-    id: 5,
+    id: 6,
     title: "Summer Carnival 2025",
     details: "14 - 15 May • LAN • Prizepool Upto: ₹25,000",
     src: "Banner/summer_carnival.webp",
@@ -215,5 +225,6 @@ function Tournaments() {
 }
 
 export default Tournaments;
+
 
 
