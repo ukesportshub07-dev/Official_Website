@@ -15,7 +15,7 @@ const tournamentData = [
     id: 2,
     title: "Battel Era 2.0",
     details: "13 Nov - 14 Nov 2025 • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹200,000",
-    src: "images/Battle.webp",
+    src: "/Banner/Battle.webp",
     status: "Past Event",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "cyan",
@@ -25,7 +25,7 @@ const tournamentData = [
     id: 3,
     title: "Endgame 2025 E-Sports Event",
     details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000",
-    src: "/Banner/Battle.webpp",
+    src: "/Banner/endgame.webp",
     status: "Past Event",
     statusColor: "border-red-600 hover:bg-red-600",
     themeColor: "cyan",
@@ -225,6 +225,7 @@ function Tournaments() {
 }
 
 export default Tournaments;
+
 
 
 
