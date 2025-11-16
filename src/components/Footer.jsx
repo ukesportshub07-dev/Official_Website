@@ -68,7 +68,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
             <div className="font-bold text-lg mb-4 text-white">Quick Links</div>
             <div className="text-base space-y-3">
               {/* Links styled for dark mode with purple hover */}
-              <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#tournaments">Tournaments</a>
+              <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="/#tournaments">Tournaments</a>
               <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#events">Events</a>
               <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#team">Team</a>
               <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#contact">Contact</a>
@@ -95,6 +95,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 }
 
 export default Footer;
+
 
 
 
