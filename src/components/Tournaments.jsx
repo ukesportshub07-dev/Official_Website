@@ -5,7 +5,7 @@ const tournamentData = [
     id: 1,
     title: "Uttarakhand Esports Festival 2026 (UEF-2026)",
     details: "Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000 • 12 Universities • Diamonds: 100,000 • Prizepool: ₹100,000/- INR",
-    src: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto:format&fit=crop",
+    src: "/Banner/UEF.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600 hover:bg-green-600",
     themeColor: "purple",
@@ -225,6 +225,7 @@ function Tournaments() {
 }
 
 export default Tournaments;
+
 
 
 
