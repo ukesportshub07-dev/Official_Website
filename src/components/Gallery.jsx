@@ -178,7 +178,7 @@ function GalleryComp() {
   }));
 
   return (
-    <div className="App">
+    <div id='gallery' className="App">
       <header className=" p-4 text-center text-white">
         <h1 className="text-3xl font-bold">Event Recap</h1>
       </header>
@@ -188,5 +188,6 @@ function GalleryComp() {
     </div>
   );
 }
+
 
 export default GalleryComp;
