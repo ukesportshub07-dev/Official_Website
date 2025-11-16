@@ -68,7 +68,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
             <div className="font-bold text-lg mb-4 text-white">Quick Links</div>
             <div className="text-base space-y-3">
               {/* Links styled for dark mode with purple hover */}
-              <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="/#tournaments">Tournaments</a>
+              <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#tournaments">Tournaments</a>
               <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#events">Events</a>
               <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#team">Team</a>
               <a className="text-gray-400 hover:text-purple-500 transition duration-300 block" href="#contact">Contact</a>
@@ -88,13 +88,14 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 
       <div className="bg-gray-900 border-t border-gray-800 text-center text-sm text-gray-500 py-2">
         &copy;UK Esports Hub | Level Up Your Game. | All Rights Reserved. | {formattedDate} {currentYear} 
-        <p> Develope and Mantain By UK Esports Hub </p>
+       <p className="mt-1">Developed and Maintained by UK Esports Hub</p>
       </div>
     </footer>
   );
 }
 
 export default Footer;
+
 
 
 
