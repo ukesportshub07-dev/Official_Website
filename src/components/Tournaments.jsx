@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const tournamentData = [
   {
@@ -67,7 +68,7 @@ const tournamentData = [
 
 function Tournaments() {
   const [isVisible, setIsVisible] = useState(false);
-  const [highlightActive, setHighlightActive] = useState(false); 
+  const [highlightActive, setHighlightActive] = useState(false);
   const [, setCurrentHash] = useState(window.location.hash);
   const sectionRef = useRef(null);
   const highlightTimer = useRef(null);
@@ -153,14 +154,16 @@ function Tournaments() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Ongoing / Upcoming & Past Tournaments</h2>
-          <a href="#register" className="text-sm text-purple-400 hover:text-purple-300 underline">Register your team</a>
+
+
+          {/* <a href="#register" className="text-sm text-purple-400 hover:text-purple-300 underline">Register your team</a> */}
         </div>
 
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {tournamentData.map((tournament, index) => {
 
-           
+
             const themeClasses = {
               purple: {
                 bg: 'bg-purple-600 hover:bg-purple-500',
@@ -186,11 +189,14 @@ function Tournaments() {
 
             const isCardHighlighted = tournament.isHighlighted && highlightActive;
 
+            // Check if this is the first card (index 0 or id 1)
+            const isFirstCard = index === 0;
+
             const baseClasses = `p-4 bg-gray-800 rounded-lg border transition-all ease-out duration-1000 delay-${index * 200} ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`;
 
             const dynamicClasses = isCardHighlighted
-              ? `scale-105 -translate-y-1 ${currentTheme.shineBorder} cursor-default` 
+              ? `scale-105 -translate-y-1 ${currentTheme.shineBorder} cursor-default`
               : `border-gray-700 ${currentTheme.hoverBorder} ${currentTheme.hoverShadow} hover:scale-105 hover:-translate-y-1 cursor-pointer group`; // Normal/Hover state
 
 
@@ -207,17 +213,55 @@ function Tournaments() {
                 />
                 <h3 className="font-semibold text-white text-lg">{tournament.title}</h3>
                 <p className="text-xs text-gray-400 mt-2">{tournament.details}</p>
+
                 <div className="mt-4 flex gap-2">
-                  <a href="#register" className={`px-3 py-2 ${currentTheme.bg} rounded text-sm font-medium text-white transition-colors`}>Register</a>
-                  <a href="#" className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white"> Event Details</a>
-                  <a href="#" className={`px-3 py-2 border ${tournament.statusColor} rounded text-sm text-gray-300 transition-colors ${tournament.statusColor === 'border-red-600 hover:bg-red-600' ? 'hover:text-white' : ''} ${tournament.statusColor}`}>
-                    {tournament.status}
-                  </a>
+                  {isFirstCard ? (
+                    <>
+                      <HashLink
+                        to="/forms"
+                        className={`px-3 py-2 ${currentTheme.bg} rounded text-sm font-medium text-white transition-colors`}
+                      >
+                        Register
+                      </HashLink>
+                      <HashLink
+                        to=""
+                        className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white"
+                      >
+                        Rulebook
+                      </HashLink>
+                      <div className=" p-1.5 border border-blue-200 rounded-lg hover:border-white hover:bg-white transition-all duration-500 ease-in-out">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                          <span className="text-sm text-gray-700">
+                            <strong className="text-green-700 ">Upcomming</strong>
+                          </span>
+                        </div>
+                      </div>
+
+
+                    </>
+                  ) : (
+                    <>
+                      <HashLink
+                        to="/blog#news"
+                        className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:bg-gray-600 hover:text-white"
+                      >
+                        Event Details
+                      </HashLink>
+                      <a
+                        href="/gallery"
+                        className={`px-3 py-2 border ${tournament.statusColor} rounded text-sm text-gray-300 transition-colors ${tournament.statusColor === 'border-red-600 hover:bg-red-600' ? 'hover:text-white' : ''} ${tournament.statusColor}`}
+                      >
+                        {tournament.status}
+                      </a>
+                    </>
+                  )}
                 </div>
+
               </article>
             );
           })}
-         
+
         </div>
       </div>
     </section>
@@ -225,10 +269,3 @@ function Tournaments() {
 }
 
 export default Tournaments;
-
-
-
-
-
-
-
