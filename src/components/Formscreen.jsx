@@ -281,26 +281,77 @@
 
 import React from 'react';
 
-const Formscreen = () => {
-  const style = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '80vh', 
-    fontSize: '2.5em',
-    fontWeight: 'bold',
-    color: '#FFFFFF',
-    fontFamily: 'Verdana, sans-serif',
-    textAlign: 'center',
-    padding: '20px',
-  };
-
+// The main component must be named 'App' and be the default export.
+const App = () => {
   return (
-    <div style={style}>
-     Form Will Be Open On Jan 2026
+    // Outer container: Full screen, dark background, centered, using Inter font family
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4 font-inter">
+      
+      {/* Content Card: Modern, responsive container with shadow and subtle hover effect */}
+      <div className="
+        bg-gray-800 
+        p-8 md:p-12 
+        rounded-3xl 
+        shadow-2xl 
+        max-w-xl w-full 
+        text-center 
+        border border-gray-700 
+        transform 
+        transition-all 
+        duration-500 
+        hover:scale-[1.01]
+        hover:shadow-indigo-500/30
+      ">
+        
+        {/* Decorative Element: Clock Icon (SVG) with a gentle pulse animation */}
+        <div className="flex justify-center mb-6">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="64" 
+            height="64" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1.5" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            className="text-indigo-400 animate-pulse"
+          >
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+
+        {/* Main Title: Large, bold, responsive text with a vibrant gradient */}
+        <h1 className="
+          text-4xl sm:text-5xl lg:text-6xl 
+          font-extrabold 
+          text-transparent 
+          bg-clip-text 
+          bg-gradient-to-r from-indigo-400 to-cyan-300
+          leading-tight 
+          mb-4
+        ">
+          Forms Will Open in January 2026
+        </h1>
+
+        {/* Subtitle: Lighter weight supporting text */}
+        <p className="
+          mt-4 
+          text-xl sm:text-2xl 
+          font-light 
+          text-gray-300 
+          opacity-90
+        ">
+          Stay tuned for official updates!
+        </p>
+
+
+      </div>
     </div>
   );
 };
 
-export default Formscreen;
+export default App;
+
 
