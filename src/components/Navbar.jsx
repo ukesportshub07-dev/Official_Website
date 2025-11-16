@@ -158,7 +158,7 @@ function Navbar() {
                       Past Events
                     </HashLink>
                     <HashLink
-                      to=""
+                      to="/gallery"
                       scroll={scrollWithOffset} // Use the new function
                       className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors"
                       onClick={handleLinkClick}
@@ -329,7 +329,7 @@ function Navbar() {
                     Past Events
                   </HashLink>
                   <HashLink
-                    to=""
+                    to="/gallery"
                     scroll={scrollWithOffset} // Use the new function
                     className="block py-1 text-sm hover:text-[#7c3aed] transition duration-200"
                     onClick={handleLinkClick}
@@ -437,6 +437,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
 
