@@ -7,23 +7,12 @@ const NEWS_DATA = [
         summary: "Highlights, MVPs and match VODs from Endgame 2025.",
         content: "The full article content for Endgame 2025 includes detailed team analysis, MVP interviews, and links to all streaming VODs.\n\nThe tournament was a great success, showcasing the best talent in the region. We look forward to next year's event!",
     },
+    
     {
         id: 2,
-        title: "How to form a college team: A practical guide",
-        summary: "Step-by-step checklist for tryouts, practice routines and tournament prep.",
-        content: "Forming a collegiate team requires dedication, a structured tryout process, and a consistent practice schedule.\n\nThis guide walks you through legal requirements, budgeting, recruiting strategy, and tips for maintaining team cohesion throughout the season.",
-    },
-    {
-        id: 3,
-        title: "Major Patch Notes V3.2: New Maps and Abilities",
-        summary: "Review of all changes in the latest game update, including map rotations.",
-        content: "Patch V3.2 brings significant changes to the competitive landscape. Two new maps have been added, and several character abilities have received balance adjustments. Check the full list of changes inside!",
-    },
-    {
-        id: 4,
         title: "Summer Carnival 2025",
         summary: "14 - 15 May 2025 Lan Event at Graphic Era Hill University.",
-        content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement. The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.The event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
+        content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.\n\nThe event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
     },
 ];
 
@@ -115,3 +104,4 @@ function Newses() {
 
 
 export default Newses;
+
