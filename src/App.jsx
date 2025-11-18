@@ -32,7 +32,7 @@ function App() {
         {/* 3. Set Default SEO Metadata (Fallback for pages that don't have their own) */}
         <Helmet>
           <title> Uttarakhand Esports Hub | Home </title>
-          <meta name="description" content="Welcome to our website. We provide blog posts, galleries, and more." />
+          <meta name="description" content="UK ESPORTS HUB hosts esports tournaments, LAN events, and campus competitions across Uttarakhand. Join BGMI, Free Fire, Valorant and other competitive events from Dehradun and beyond. />
           <meta name="keywords" content="React, Blog, Gallery, Tech" />
         </Helmet>
 
