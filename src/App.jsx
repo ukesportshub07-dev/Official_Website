@@ -31,7 +31,7 @@ function App() {
         
         {/* 3. Set Default SEO Metadata (Fallback for pages that don't have their own) */}
         <Helmet>
-          <title>My Awesome Website | Home</title>
+          <title> Uttarakhand Esports Hub | Home </title>
           <meta name="description" content="Welcome to our website. We provide blog posts, galleries, and more." />
           <meta name="keywords" content="React, Blog, Gallery, Tech" />
         </Helmet>
