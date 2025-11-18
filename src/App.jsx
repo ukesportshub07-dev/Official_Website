@@ -36,8 +36,6 @@ function App() {
           <meta name="keywords" content="React, Blog, Gallery, Tech" />
         </Helmet>
 
-        {/* 4. Navbar is crucial for SEO (Internal Linking) */}
-        <Navbar /> 
 
         <main className="flex-grow">
           <ScrollToTop /> 
@@ -56,8 +54,7 @@ function App() {
           </Routes>
         </main>
         
-        {/* 5. Footer helps bots find legal pages (Privacy/Terms) */}
-        <Footer />
+      
 
       </div>
     </HelmetProvider>
