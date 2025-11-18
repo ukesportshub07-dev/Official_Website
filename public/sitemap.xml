@@ -1,0 +1,18 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://www.your-website.com/</loc>
+      <lastmod>2024-05-20</lastmod>
+      <priority>1.0</priority>
+   </url>
+   
+   <url>
+      <loc>https://www.your-website.com/blog</loc>
+      <priority>0.8</priority>
+   </url>
+   
+   <url>
+      <loc>https://www.your-website.com/gallery</loc>
+      <priority>0.8</priority>
+   </url>
+
+   </urlset>
