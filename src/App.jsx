@@ -33,7 +33,7 @@ function App() {
         <Helmet>
           <title> Uttarakhand Esports Hub | Home </title>
           <meta name="description" content="UK ESPORTS HUB hosts esports tournaments, LAN events, and campus competitions across Uttarakhand. Join BGMI, Free Fire, Valorant and other competitive events from Dehradun and beyond. />
-          <meta name="keywords" content="React, Blog, Gallery, Tech" />
+          <meta name="keywords" content="uttarakhand esports, uk esports hub, esports dehradun, gaming tournaments dehradun, uttarakhand gaming community, uk esports tournaments, bgmi tournament uttarakhand, free fire tournament dehradun, lan events uk" />
         </Helmet>
 
 
