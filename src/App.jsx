@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async'; // 1. Import Helmet
 import './index.css';
 
 import Navbar from './components/Navbar.jsx';
@@ -24,25 +25,42 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <div className="bg-gray-900 text-gray-100 leading-relaxed min-h-screen">
-
-      <main>
-        <ScrollToTop /> 
+    // 2. Wrap the entire app in HelmetProvider
+    <HelmetProvider>
+      <div className="bg-gray-900 text-gray-100 leading-relaxed min-h-screen flex flex-col">
         
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blogs />} /> 
-          <Route path="/forms" element={<Form />} /> 
-          <Route path="/sponsers" element={<Oursponsors/>} /> 
-          <Route path="/tandc" element={<TermsandCondition/>} />
-          <Route path="/pandp" element={<PrivacyandPolicy />} /> 
-          <Route path="/gallery" element={<Gallery />} /> 
+        {/* 3. Set Default SEO Metadata (Fallback for pages that don't have their own) */}
+        <Helmet>
+          <title>My Awesome Website | Home</title>
+          <meta name="description" content="Welcome to our website. We provide blog posts, galleries, and more." />
+          <meta name="keywords" content="React, Blog, Gallery, Tech" />
+        </Helmet>
 
-          <Route path="*" element={<h1 className="p-10 text-4xl text-red-500">404 - Page Not Found</h1>} />
-        </Routes>
-      </main>
-    
-    </div>
+        {/* 4. Navbar is crucial for SEO (Internal Linking) */}
+        <Navbar /> 
+
+        <main className="flex-grow">
+          <ScrollToTop /> 
+          
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blogs />} /> 
+            <Route path="/forms" element={<Form />} /> 
+            <Route path="/sponsers" element={<Oursponsors/>} /> 
+            <Route path="/tandc" element={<TermsandCondition/>} />
+            <Route path="/pandp" element={<PrivacyandPolicy />} /> 
+            <Route path="/gallery" element={<Gallery />} /> 
+
+            {/* Better 404 handling (Status code is still 200, but user sees error) */}
+            <Route path="*" element={<div className="p-10 text-center"><h1 className="text-4xl text-red-500">404</h1><p>Page Not Found</p></div>} />
+          </Routes>
+        </main>
+        
+        {/* 5. Footer helps bots find legal pages (Privacy/Terms) */}
+        <Footer />
+
+      </div>
+    </HelmetProvider>
   );
 }
 
