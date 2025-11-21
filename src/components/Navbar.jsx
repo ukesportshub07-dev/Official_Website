@@ -118,8 +118,8 @@ function Navbar() {
                 onError={(e) => { e.target.src = placeholderImageUrl }}
               />
               <div>
-                <div className="text-lg font-extrabold text-white tracking-wider">UK ESPORTS HUB</div>
-                <div className="text-xs text-gray-400 -mt-1 font-light hidden sm:block">Uttarakhand Esports Community</div>
+                <div className="text-lg font-extrabold text-white tracking-wider whitespace-nowrap">UK ESPORTS HUB</div>
+                <div className="text-xs text-gray-400 -mt-1 font-light block whitespace-nowrap md:hidden lg:block">Uttarakhand Esports Community</div>
               </div>
             </HashLink>
 
@@ -437,6 +437,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
 
