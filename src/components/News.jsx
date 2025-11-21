@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { X } from 'lucide-react';
+
 
 const NEWS_DATA = [
     {
@@ -12,51 +14,85 @@ const NEWS_DATA = [
         id: 2,
         title: "Summer Carnival 2025",
         summary: "14 - 15 May 2025 Lan Event at Graphic Era Hill University.",
-        content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.\n\nThe event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
-    },
-
-     {
-        id: 2,
-        title: "Summer Carnival 2025",
-        summary: "14 - 15 May 2025 Lan Event at Graphic Era Hill University.",
         content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.\n\nThe event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
-    },
+   },
+
+   
 ];
 
-
 const NewsModal = ({ isVisible, onClose, newsTitle, newsContent }) => {
-    const visibilityClass = isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none';
-    const contentScaleClass = isVisible ? 'scale-100 opacity-100' : 'scale-75 opacity-0';
+    const contentRef = useRef(null);
+    const [shouldRender, setShouldRender] = useState(false);
+
+    useEffect(() => {
+        if (isVisible) {
+            setShouldRender(true);
+            document.body.style.overflow = 'hidden';
+        } else {
+            const timer = setTimeout(() => {
+                setShouldRender(false);
+                document.body.style.overflow = '';
+            }, 300);
+            
+            if (!shouldRender) {
+                document.body.style.overflow = '';
+            }
+
+            return () => clearTimeout(timer);
+        }
+    }, [isVisible, shouldRender]);
+
+    if (!shouldRender) {
+        return null;
+    }
+
+    const modalClasses = isVisible
+        ? 'opacity-100 scale-100 translate-y-0'
+        : 'opacity-0 scale-95 translate-y-4';
+    
+    const backdropClasses = isVisible
+        ? 'opacity-100'
+        : 'opacity-0';
 
     return (
         <div 
-            className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${visibilityClass}`}
+            className={`fixed inset-0 z-50 flex items-center justify-center pointer-events-auto transition-opacity duration-300 ${backdropClasses}`}
             style={{ 
-                backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                backdropFilter: isVisible ? 'blur(8px)' : 'none', 
-                WebkitBackdropFilter: isVisible ? 'blur(8px)' : 'none',
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                backdropFilter: 'blur(10px)', 
+                WebkitBackdropFilter: 'blur(10px)',
             }}
             onClick={onClose}
         >
             <div 
-                className={`bg-gray-800 text-white p-8 rounded-xl shadow-2xl max-w-lg w-11/12 transition-all duration-300 transform ${contentScaleClass}`}
+                className={`bg-gray-800 text-white p-6 md:p-8 rounded-2xl shadow-2xl max-w-xl w-11/12 max-h-[85vh] transform transition-all duration-300 ease-out border border-gray-700/50 flex flex-col ${modalClasses}`}
                 onClick={(e) => e.stopPropagation()}
             >
-                <h3 className="text-3xl font-bold mb-4">{newsTitle}</h3>
-                <p className="text-gray-300 mb-6 whitespace-pre-line">{newsContent}</p>
-                <button 
-                    onClick={onClose}
-                    className="mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded transition duration-150"
+               
+                <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-2xl md:text-3xl font-extrabold text-green-400">{newsTitle}</h3>
+                    <button 
+                        onClick={onClose}
+                        className="p-2 -mr-2 text-gray-400 hover:text-white rounded-full transition duration-150"
+                        aria-label="Close modal"
+                    >
+                        <X size={24} />
+                    </button>
+                </div>
+                
+                <div 
+                    ref={contentRef}
+                   className="text-gray-300 whitespace-pre-line overflow-y-scroll pr-3 scrollbar-thin scrollbar-thumb-green-400 scrollbar-track-gray-200 flex-grow"
                 >
-                    Close
-                </button>
+                    {newsContent}
+                </div>
+                
             </div>
         </div>
     );
 };
 
-// --- Newses Main Component ---
-function Newses() {
+const App = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState({ title: '', content: '' });
 
@@ -69,29 +105,42 @@ function Newses() {
         setIsModalOpen(false);
     };
 
-    return (
-        <>
-            <section id="news" className="bg-gray-900/60 py-16 text-white">
-                <div className="max-w-6xl mx-auto px-6">
-                    <div className="flex items-center justify-between">
-                        <h2 className="text-2xl font-bold">Latest News</h2>
-                        
-                    </div>
+    const scrollbarStyles = `
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 8px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: #4b5563;
+            border-radius: 10px;
+        }
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background: #6366f1;
+            border-radius: 10px;
+        }
+    `;
 
-                    {/* KEY CHANGE: grid-cols-1 (mobile default) and md:grid-cols-3 (PC/tablet) */}
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+    return (
+        <div className="min-h-screen bg-gray-900/90 text-white font-inter">
+            <style>{scrollbarStyles}</style>
+            
+            <section id="news" className="py-12 md:py-16">
+                <div className="max-w-6xl mx-auto px-6">
+                    <h1 className="text-4xl font-extrabold text-gray-100 mb-8">Our News Feed</h1>
+                    <h2 className="text-3xl font-bold mb-8 border-l-4 pl-3 border-purple-600">Latest Esports Updates</h2>
+                    
+                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {NEWS_DATA.map((article) => (
                             <article 
                                 key={article.id} 
-                                className="p-4 bg-gray-800 rounded-lg shadow-lg"
+                                className="p-6 bg-gray-800 rounded-xl shadow-xl hover:shadow-purple-500/20 transition duration-300 transform hover:scale-[1.02] border-t-4 border-purple-600"
                             >
-                                <h3 className="font-semibold">{article.title}</h3>
-                                <p className="text-xs text-gray-400 mt-2">{article.summary}</p>
+                                <h3 className="text-xl font-semibold text-gray-100 mb-2">{article.title}</h3>
+                                <p className="text-sm text-gray-400 mt-2 line-clamp-3">{article.summary}</p>
                                 <button 
                                     onClick={() => handleOpenModal(article.title, article.content)}
-                                    className="mt-3 inline-block text-sm underline text-indigo-400 hover:text-indigo-300 focus:outline-none"
+                                    className="mt-4 px-4 py-2 bg-purple-700 text-white font-medium rounded-lg hover:bg-purple-800 transition duration-150 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-gray-800"
                                 >
-                                    Read more
+                                    Read Full Article
                                 </button>
                             </article>
                         ))}
@@ -105,15 +154,8 @@ function Newses() {
                 newsTitle={modalContent.title}
                 newsContent={modalContent.content}
             />
-        </>
+        </div>
     );
 }
 
-
-export default Newses;
-
-
-
-
-
-
+export default App;
