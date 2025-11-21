@@ -4,7 +4,7 @@ const coreTeam = [
   { name: "Rahul Singh Dhami", role: "Founder / Co-Founder", img: "/images/Ambasadors/replace.png", alt: "Rahul Singh Dhami" },
   { name: "Paras Bisht", role: "Chief Executive Officer", img: "/images/paras.jpg", alt: "Paras Bisht" },
   { name: "Udit Samant", role: "Technical Lead", img: "/images/udit.jpg", alt: "Udit Samant" },
-  { name: "Aman Panwar", role: "Public Relations & Outreach Head", img: "/images/aman.webp", alt: "Aman Panwar" },
+  { name: "Aman Panwar", role: "Public Relations \n and Outreach ", img: "/images/aman.webp", alt: "Aman Panwar" },
   { name: "Shantanu", role: "General Manager", img: "/images/shantanu.jpg", alt: "Shantanu" },
   { name: "Tushar", role: "Event Manager", img: "/images/tushar.jpg", alt: "Tushar" },
   { name: "Shadan Dabir Khan", role: "Operations Manager", img: "/images/shadan.jpg", alt: "Shadan Dabir Khan" },
@@ -219,6 +219,7 @@ function Team() {
 }
 
 export default Team;
+
 
 
 
