@@ -14,6 +14,13 @@ const NEWS_DATA = [
         summary: "14 - 15 May 2025 Lan Event at Graphic Era Hill University.",
         content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.\n\nThe event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
     },
+
+     {
+        id: 2,
+        title: "Summer Carnival 2025",
+        summary: "14 - 15 May 2025 Lan Event at Graphic Era Hill University.",
+        content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.\n\nThe event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
+    },
 ];
 
 
@@ -104,6 +111,7 @@ function Newses() {
 
 
 export default Newses;
+
 
 
 
