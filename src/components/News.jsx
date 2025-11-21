@@ -5,7 +5,7 @@ const NEWS_DATA = [
         id: 1,
         title: "Endgame 2025: Recap & Winners",
         summary: "EndGame 2025: Wizards Club and UK Esports Hub Host Major Campus Esports Event",
-        content: "EndGame 2025, hosted by The Wizards Club in collaboration with UK Esports Hub, concluded successfully as one of Uttarakhand's standout student driven esports events. \n Featuring high energy matchups across multiple titles headlined by Free Fire the tournament delivered well structured brackets, smooth operations, and strong crowd engagement.\n With professional support from UK Esports Hub, the event showcased rising demand for campus esports and highlighted The Wizards Club’s growing capability to run large-scale competitive events.",
+        content: "EndGame 2025, hosted by The Wizards Club in collaboration with UK Esports Hub, concluded successfully as one of Uttarakhand's standout student driven esports events. \n\n Featuring high energy matchups across multiple titles headlined by Free Fire the tournament delivered well structured brackets, smooth operations, and strong crowd engagement.\n\n With professional support from UK Esports Hub, the event showcased rising demand for campus esports and highlighted The Wizards Club’s growing capability to run large-scale competitive events.",
     },
     
     {
@@ -104,6 +104,7 @@ function Newses() {
 
 
 export default Newses;
+
 
 
 
