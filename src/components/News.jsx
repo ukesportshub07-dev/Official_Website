@@ -5,13 +5,20 @@ import { X } from 'lucide-react';
 const NEWS_DATA = [
     {
         id: 1,
+        title: "Uttarakhand Esports Festival 2026 (UEF-2026)",
+        summary: "The Uttarakhand Esports Festival 2026 UEF 2026 stands as the definitive upcoming premier LAN event meticulously organized by the UK Esports Hub ",
+        content: "The Uttarakhand Esports Festival 2026 UEF 2026 stands as the definitive upcoming premier LAN event meticulously organized by the UK Esports Hub the leading platform dedicated to cultivating competitive gaming within the region Scheduled for Mid January 2026 this festival is engineered not just as a tournament but as a comprehensive showcase designed to profoundly elevate the state's esports landscape.\n\n A Focus on Collegiate and Competitive Growth UEF 2026 will center on a large scale intensely competitive Free Fire Tournament  utilizing strategically placed LAN Qualifiers to ensure widespread regional accessibility and participation A key pillar of this initiative is its focus on collegiate esports growth with the event strategically engaging competitive teams and players from 12 Universities across Uttarakhand.\n\n Substantial Rewards and Professional Stage The festival provides a  compelling incentive structure featuring a substantial total Prize Pool of up to ₹1,50,000+ alongside significant in game rewards exceeding 150,000+  Diamonds. This combined reward package offers a genuine professional  pathway and recognition for top tier performance. UEF 2026 offers amateur  and semi pro players across the region a critical high visibility platform to  rigorously test their skills compete under professional tournament conditions and solidify their presence within the dynamic and rapidly evolving local  esports community.",
+    },
+    
+    {
+        id: 2,
         title: "Endgame 2025: Recap & Winners",
         summary: "EndGame 2025: Wizards Club and UK Esports Hub Host Major Campus Esports Event",
         content: "EndGame 2025, hosted by The Wizards Club in collaboration with UK Esports Hub, concluded successfully as one of Uttarakhand's standout student driven esports events. \n\n Featuring high energy matchups across multiple titles headlined by Free Fire the tournament delivered well structured brackets, smooth operations, and strong crowd engagement.\n\n With professional support from UK Esports Hub, the event showcased rising demand for campus esports and highlighted The Wizards Club’s growing capability to run large-scale competitive events.",
     },
     
     {
-        id: 2,
+        id: 3,
         title: "Summer Carnival 2025",
         summary: "14 - 15 May 2025 Lan Event at Graphic Era Hill University.",
         content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.\n\nThe event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
@@ -159,3 +166,4 @@ const App = () => {
 }
 
 export default App;
+
