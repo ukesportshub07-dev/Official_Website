@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 // const imageData = [
 //     { id: 1, src: '/logos/social_logo.png', alt: "logo", title: "S One" },
@@ -196,3 +196,4 @@ const App = () => {
 };
 
 export default App;
+
