@@ -4,8 +4,9 @@ const NEWS_DATA = [
     {
         id: 1,
         title: "Endgame 2025: Recap & Winners",
-        summary: "Highlights, MVPs and match VODs from Endgame 2025.",
-        content: "The full article content for Endgame 2025 includes detailed team analysis, MVP interviews, and links to all streaming VODs.\n\nThe tournament was a great success, showcasing the best talent in the region. We look forward to next year's event!",
+        summary: "EndGame 2025: Wizards Club and UK Esports Hub Host Major Campus Esports Event",
+        content: "Endgame EndGame 2025: Wizards Club and UK Esports Hub Host Major Campus Esports Event \n  UK Esports Hub collaboration with The Wizards Club, GEHU has successfully concluded EndGame 2025, one of the most notable student driven esports events of the year. The tournament drew competitive teams from multiple campuses, marking a strong step forward for organized collegiate esports in Uttarakhand. \n The event featured high intensity matchups across popular titles, with Free Fire serving as the headline competition. Participants competed through structured brackets and time bound rounds, creating a tournament environment that ran with surprising precision for a student organized event. \n Crowd engagement remained consistent throughout the day, supported by live commentary, on ground coordination, and real time match updates. The presence of UK Esports Hub added an additional layer of professional oversight, helping maintain competitive integrity and smooth technical operations. \n EndGame 2025 not only highlighted the rising demand for esports events in universities but also demonstrated the Wizards Club’s growing capability to execute large-scale competitive programs. The success of the event has set expectations for bigger collaborations and a stronger esports ecosystem in the region.
+ ",
     },
     
     {
@@ -104,4 +105,5 @@ function Newses() {
 
 
 export default Newses;
+
 
