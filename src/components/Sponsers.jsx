@@ -155,3 +155,44 @@ import React from 'react';
 // );
 
 // export default SponserComp;
+import React from "react";
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center p-4 font-inter">
+      <div
+        className="bg-gray-900/60 backdrop-blur-xl p-10 md:p-14 rounded-3xl shadow-[0_0_40px_-10px_rgba(99,102,241,0.6)] max-w-2xl w-full text-center border border-gray-700/60 transform transition-all duration-700 hover:scale-[1.015] hover:shadow-[0_0_60px_-5px_rgba(99,102,241,0.9)]"
+      >
+        <div className="flex justify-center mb-8 animate-spin-slow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-indigo-400 drop-shadow-[0_0_15px_rgba(99,102,241,0.8)]"
+          >
+            <circle cx="12" cy="12" r="10" className="opacity-60" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+        </div>
+
+        <h1
+          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-300 leading-tight mb-6 tracking-tight animate-fade-in"
+        >
+          Announcing Soon
+        </h1>
+
+        <p className="mt-4 text-2xl sm:text-3xl font-light text-gray-300 opacity-90 animate-slide-up">
+          Big updates are on the way. Get ready.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default App;
