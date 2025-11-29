@@ -41,6 +41,7 @@ function App() {
   />
   <link rel="icon" type="image/png" href="/logos/favicon.png" />
 </Helmet>
+        <link rel="icon" type="image/png" href="/logos/favicon.png" />
 
 
 
