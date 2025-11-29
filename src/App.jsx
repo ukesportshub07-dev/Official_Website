@@ -39,6 +39,7 @@ function App() {
     name="keywords"
     content="uttarakhand esports, uk esports hub, esports dehradun, gaming tournaments dehradun, uttarakhand gaming community, uk esports tournaments, bgmi tournament uttarakhand, free fire tournament dehradun, lan events uk"
   />
+  <link rel="icon" type="image/png" href="/logos/favicon.png" />
 </Helmet>
 
 
