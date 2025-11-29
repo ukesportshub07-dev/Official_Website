@@ -12,7 +12,7 @@ function Blogs() {
   return (
     <>
       <Helmet>
-        <title>Uttarakhand Esports Hub | Updates & News</title>
+        <title>Uk Esports Hub | Updates & News</title>
 
         <meta
           name="description"
@@ -34,3 +34,4 @@ function Blogs() {
 }
 
 export default Blogs;
+
