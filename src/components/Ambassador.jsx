@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const ambassadors = [
-  { name: "Dikshita Maindola", role: "D.A.V. Post Graduate College Dehradun", img: "/images/Ambasadors/Dikshita.webp", alt: "Dikshita Maindola" },
+  { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "a" },
   { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "b" },
   { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "c" },
   { name: "Coming Soon", role: "Wanna be next? Contact us!", img: "/images/Ambasadors/replace.png", alt: "d" },
@@ -215,6 +215,7 @@ function Ambassador() {
 }
 
 export default Ambassador;
+
 
 
 
