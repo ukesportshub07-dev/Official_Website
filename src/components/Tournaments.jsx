@@ -17,7 +17,7 @@ const tournamentData = [
     details: "13 Nov - 14 Nov 2025 • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹2,00,000/-",
     src: "/Banner/Battle.webp",
     status: "Event Recap",
-    statusColor: "border-red-600",
+    statusColor: "border-purple-600",
     themeColor: "cyan",
     isHighlighted: false,
   },
@@ -27,7 +27,7 @@ const tournamentData = [
     details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000/-",
     src: "/Banner/endgame.webp",
     status: "Event Recap",
-    statusColor: "border-red-600",
+    statusColor: "border-purple-600",
     themeColor: "cyan",
     isHighlighted: false,
   },
@@ -37,7 +37,7 @@ const tournamentData = [
     details: "27 Sep 2025 • Offline • Uttarakhand",
     src: "/Banner/Free Fire Max Nova Clash.webp",
     status: "Event Recap",
-    statusColor: "border-red-600",
+    statusColor: "border-purple-600",
     themeColor: "pink",
     isHighlighted: false,
   },
@@ -47,7 +47,7 @@ const tournamentData = [
     details: "25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000/- • Uttarakhand",
     src: "/Banner/Domination.webp",
     status: "Event Recap",
-    statusColor: "border-red-600",
+    statusColor: "border-purple-600",
     themeColor: "pink",
     isHighlighted: false,
   },
@@ -57,7 +57,7 @@ const tournamentData = [
     details: "14 - 15 May • LAN • Prizepool Upto: ₹25,000/-",
     src: "Banner/summer_carnival.webp",
     status: "Event Recap",
-    statusColor: "border-red-600",
+    statusColor: "border-purple-600",
     themeColor: "purple",
     isHighlighted: false,
   },
@@ -70,7 +70,7 @@ export default function App() {
   const [highlightActive, setHighlightActive] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const [isDragging, setIsDragging] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -99,14 +99,16 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, [updateLayout]);
 
-
+  
   useEffect(() => {
     if (!isHovered && !isDragging && maxIndex > 0) {
       autoSwipeTimer.current = setInterval(() => {
         setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
       }, 4000);
     }
-    return () => clearInterval(autoSwipeTimer.current);
+    return () => {
+      if (autoSwipeTimer.current) clearInterval(autoSwipeTimer.current);
+    };
   }, [isHovered, isDragging, maxIndex]);
 
   const runHighlightCheck = useCallback(() => {
@@ -117,7 +119,6 @@ export default function App() {
       highlightTimer.current = setTimeout(() => setHighlightActive(false), 3000);
     }, 50);
   }, []);
-
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -167,12 +168,13 @@ export default function App() {
     dragState.current.offset = 0;
   };
 
-  const carouselTransform = `translateX(${-currentIndex * slideWidth + (isDragging ? dragState.current.offset : 0)}px)`;
+  const carouselTransform = `translate3d(${-currentIndex * slideWidth + (isDragging ? dragState.current.offset : 0)}px, 0, 0)`;
 
   return (
-    <section ref={sectionRef} id="tournaments" className="bg-gray-900 min-h-screen py-20 overflow-hidden font-sans select-none">
+    <section ref={sectionRef} id="tournaments" className="bg-gray-900 min-h-screen py-20 overflow-hidden font-sans select-none text-white">
       <div className="max-w-7xl mx-auto px-6">
         
+        {/* Ongoing & Upcoming Section */}
         <div className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <h2 className="text-3xl font-black text-white uppercase tracking-tight">Ongoing & Upcoming</h2>
@@ -197,7 +199,7 @@ export default function App() {
                       }`
                     }`}
                 >
-                  <div className="overflow-hidden rounded-md mb-3 aspect-video">
+                  <div className="overflow-hidden rounded-md mb-3 aspect-video bg-gray-900">
                     <img
                       src={event.src}
                       alt={event.title}
@@ -250,13 +252,14 @@ export default function App() {
           </div>
         </div>
 
+        {/* Past Events Recap Section */}
         <div 
           onMouseEnter={() => setIsHovered(true)} 
           onMouseLeave={() => setIsHovered(false)}
         >
           <div className="flex items-center gap-4 mb-8">
             <h2 className="text-3xl font-black text-white uppercase tracking-tight">Past Events Recap</h2>
-            <div className="h-[2px] flex-grow bg-gradient-to-r from-red-500/50 to-transparent" />
+            <div className="h-[2px] flex-grow bg-gradient-to-r from-purple-500/50 to-transparent" />
           </div>
 
           <div
@@ -275,7 +278,7 @@ export default function App() {
                 <button
                   onClick={goToPrev}
                   disabled={currentIndex === 0}
-                  className="absolute left-0 top-[40%] -translate-y-1/2 z-10 p-3 m-2 bg-gray-900/80 backdrop-blur-md border border-gray-700 rounded-full text-white transition-all hover:bg-gray-700 disabled:opacity-30 disabled:pointer-events-none hidden sm:block"
+                  className="absolute left-0 top-[40%] -translate-y-1/2 z-20 p-3 m-2 bg-gray-900/80 backdrop-blur-md border border-gray-700 rounded-full text-white transition-all hover:bg-gray-700 disabled:opacity-30 disabled:pointer-events-none hidden sm:block"
                   aria-label="Previous Events"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
@@ -285,7 +288,7 @@ export default function App() {
                 <button
                   onClick={goToNext}
                   disabled={currentIndex >= maxIndex}
-                  className="absolute right-0 top-[40%] -translate-y-1/2 z-10 p-3 m-2 bg-gray-900/80 backdrop-blur-md border border-gray-700 rounded-full text-white transition-all hover:bg-gray-700 disabled:opacity-30 disabled:pointer-events-none hidden sm:block"
+                  className="absolute right-0 top-[40%] -translate-y-1/2 z-20 p-3 m-2 bg-gray-900/80 backdrop-blur-md border border-gray-700 rounded-full text-white transition-all hover:bg-gray-700 disabled:opacity-30 disabled:pointer-events-none hidden sm:block"
                   aria-label="Next Events"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
@@ -297,11 +300,11 @@ export default function App() {
 
             <div ref={containerRef} className="overflow-hidden cursor-grab active:cursor-grabbing">
               <div
-                className="flex"
+                className="flex will-change-transform"
                 style={{
                   transform: carouselTransform,
                   width: `${pastEvents.length * slideWidth}px`,
-                  transition: isDragging ? 'none' : 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)'
+                  transition: isDragging ? 'none' : 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)'
                 }}
               >
                 {pastEvents.map((event) => (
@@ -313,7 +316,7 @@ export default function App() {
                         'hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.2)]'
                       }`}
                     >
-                      <div className="overflow-hidden rounded-md mb-3 aspect-video">
+                      <div className="overflow-hidden rounded-md mb-3 aspect-video bg-gray-900">
                         <img
                           src={event.src}
                           alt={event.title}
@@ -327,7 +330,7 @@ export default function App() {
                       <div className="mt-4 flex flex-wrap gap-2 items-center">
                         <a
                           href="#news"
-                          className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors"
+                          className="px-3 py-2 border border-gray-600 rounded text-sm text-gray-300 transition-colors hover:text-white"
                         >
                           View Details
                         </a>
@@ -340,6 +343,23 @@ export default function App() {
                 ))}
               </div>
             </div>
+
+            {maxIndex > 0 && (
+              <div className="flex justify-center items-center gap-2 mt-10">
+                {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`h-1.5 transition-all duration-500 rounded-full ${
+                      currentIndex === idx 
+                        ? 'w-10 bg-purple-600 shadow-[0_0_10px_rgba(147,51,234,0.5)]' 
+                        : 'w-2 bg-gray-700 hover:bg-gray-500'
+                    }`}
+                    aria-label={`Slide to step ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
