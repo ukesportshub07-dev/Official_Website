@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const coreTeam = [
   { name: "Rahul Singh Dhami", role: "Founder / Co-Founder", img: "/images/Ambasadors/replace.png", alt: "Rahul Singh Dhami" },
-  { name: "Paras Bisht", role: "Chief Executive Officer", img: "/images/paras.jpg", alt: "Paras Bisht" },
+  { name: "N/A", role: "Chief Executive Officer", img: "", alt: "N/A" },
   { name: "Udit Samant", role: "Technical Lead", img: "/images/udit.jpg", alt: "Udit Samant" },
   { name: "Aman Panwar", role: "Public Relations \n and Outreach ", img: "/images/aman.webp", alt: "Aman Panwar" },
   { name: "Shantanu", role: "General Manager", img: "/images/shantanu.jpg", alt: "Shantanu" },
@@ -219,6 +219,7 @@ function Team() {
 }
 
 export default Team;
+
 
 
 
