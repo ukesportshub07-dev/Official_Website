@@ -117,9 +117,8 @@ const Formscreen = () => {
               <input
                 type="text"
                 name="College Name"
-                placeholder="College Name"
+                placeholder="College Name(Optional)"
                 className={inputClass}
-                required
               />
             </div>
           </div>
@@ -360,6 +359,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
