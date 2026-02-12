@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react";
 
-const EVENTS = [
-  {
-    id: "domination-s01",
-    title: "Domination League | S01",
-    steps: [
-      { id: "registrations", label: "Registrations Open", date: new Date(2026, 1, 12) },
-      { id: "fixtures", label: "Fixtures Released", date: new Date(2026, 1, 25) },
-      { id: "live", label: "Event Live", date: new Date(2026, 1, 26) },
-      { id: "results", label: "Results Announced", date: new Date(2026, 2, 10) },
-      { id: "prize", label: "Prize Distribution", date: new Date(2026, 2, 11) },
-    ],
+const STEPS = [
+  { 
+    id: "registrations", 
+    label: "Registrations Open", 
+    date: new Date(2026, 1, 12)
+  }, 
+  { 
+    id: "fixtures", 
+    label: "Fixtures Released", 
+    date: new Date(2026, 1, 25)
   },
-  {
-    id: "champions-s02",
-    title: "Champions Cup | S02",
-    steps: [
-      { id: "registrations", label: "Registrations Open", date: new Date(2026, 3, 5) },
-      { id: "fixtures", label: "Fixtures Released", date: new Date(2026, 3, 15) },
-      { id: "live", label: "Event Live", date: new Date(2026, 3, 18) },
-      { id: "results", label: "Results Announced", date: new Date(2026, 3, 25) },
-      { id: "prize", label: "Prize Distribution", date: new Date(2026, 3, 26) },
-    ],
+  { 
+    id: "live", 
+    label: "Event Live", 
+    date: new Date(2026, 1, 26)
+  },
+  { 
+    id: "results", 
+    label: "Results Announced", 
+    date: new Date(2026, 2, 10)
+  },
+  { 
+    id: "Prize Distribution", 
+    label: "Prize Distribution", 
+    date: new Date(2026, 2, 11)
   },
 ];
 
@@ -304,11 +307,3 @@ const Update = () => {
 
 
 export default Update;
-
-
-
-
-
-
-
-
