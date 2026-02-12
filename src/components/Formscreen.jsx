@@ -187,7 +187,7 @@
                 <label className={labelClass}>Select Event *</label>
                  <select name="Event" className={inputSelectClass} required>
                    <option value="">-- Select Event --</option>
-                  <option value="Dominion League"> Uttarakhand Esports Festival 2026 (UEF-2026)</option>
+                  <option value="Dominion League"> Domination League | S01</option>
               </select>
                </div>
                <div>
@@ -361,6 +361,7 @@
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
