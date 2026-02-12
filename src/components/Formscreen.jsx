@@ -104,20 +104,21 @@ const Formscreen = () => {
             <h2 className="text-xl font-bold mb-4 text-indigo-800">
               🏆 Team Information
             </h2>
+        
 
             <div className={formRowClass}>
               <input
                 type="text"
-                name="Team Name *"
-                placeholder="Team Name"
+                name="Team Name"
+                placeholder="Team Name (Required)"
                 className={inputClass}
                 required
               />
 
               <input
                 type="text"
-                name="College Name (Optional)"
-                placeholder="College Name(Optional)"
+                name="College Name"
+                placeholder="College Name (Optional)"
                 className={inputClass}
               />
             </div>
@@ -234,10 +235,12 @@ const Formscreen = () => {
                 className="accent-black w-4 h-4"
               />
               <span className="font-medium">
-                I agree to tournament rules.
-              </span>
+  I confirm that I have read, understood, and agree to comply with all tournament rules, regulations, and decisions made by the organizers. I acknowledge that any violation may result in penalties, disqualification, or removal from the event.
+</span>
             </label>
           </div>
+
+          
 
           {/* SUBMIT BUTTON */}
           <button
@@ -360,6 +363,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
