@@ -129,7 +129,7 @@
          <h1
           className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2 "
          >
-           🎮 Tournament Registration Form Will Open On Jan 2026
+           🎮 Dominion League   🎮
          </h1>
 
         
@@ -199,15 +199,14 @@
                 <label className={labelClass}>Select Event *</label>
                  <select name="Event" className={inputSelectClass} required>
                    <option value="">-- Select Event --</option>
-                  <option value="Uttarakhand Esports Festival 2026 (UEF-2026)"> Uttarakhand Esports Festival 2026 (UEF-2026)</option>
+                  <option value="Dominion League"> Uttarakhand Esports Festival 2026 (UEF-2026)</option>
               </select>
                </div>
                <div>
                 <label className={labelClass}>Select Game *</label>
                  <select name="Game" className={inputSelectClass} required onChange={handleGameChange} value={selectedGame}>
                    <option value="">-- Select Game --</option>
-                  <option value="freefire">Free Fire (4 Players)</option>
-                  <option value="bgmi">BGMI (4 Players)</option>
+                  <option value="freefire">Free Fire (4 Players) </option>
                  </select>
               </div>
              </div>
@@ -351,6 +350,7 @@
 // };
 
 // export default App;
+
 
 
 
