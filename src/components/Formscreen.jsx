@@ -91,7 +91,7 @@ const Formscreen = () => {
   const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-6";
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 font-sans bg-gradient-to-br from-indigo-900 via-purple-900 to-black">
+    <div className="min-h-screen p-4 sm:p-8 font-sans">
 
       <div className="max-w-5xl bg-white/95 backdrop-blur-lg mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl">
 
@@ -348,6 +348,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
