@@ -190,7 +190,7 @@
                 <label className={labelClass}>Select Game *</label>
                  <select name="Game" className={inputSelectClass} required onChange={handleGameChange} value={selectedGame}>
                    <option value="">-- Select Game --</option>
-                  <option value="freefire">Free Fire (4 Players) </option>
+                  <option value="freefire">Free Fire (5 Players) </option>
                  </select>
               </div>
              </div>
@@ -202,7 +202,7 @@
              style={{ display: isPlayerSectionVisible ? 'block' : 'none' }}
            >
             <h2 className="text-xl font-bold mb-2 flex items-center gap-2 text-gray-800">
-               👥 Team Players (4 members)
+               👥 Team Players (5 members)
              </h2>
 
             <p className="text-sm text-gray-600 mb-4">
@@ -357,6 +357,7 @@
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
