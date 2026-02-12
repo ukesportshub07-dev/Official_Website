@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const PlayerInput = ({ index }) => {
   const i = index + 1;
@@ -36,7 +36,7 @@ const PlayerInput = ({ index }) => {
 };
 
 const Formscreen = () => {
-  const [selectedGame, setSelectedGame] = useState('');
+  const [selectedGame, setSelectedGame] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const SHEET_URL = import.meta.env.VITE_API_URL;
@@ -47,7 +47,8 @@ const Formscreen = () => {
 
     setIsSubmitting(true);
 
-    const formData = new FormData(e.target);
+    const form = e.target;
+    const formData = new FormData(form);
     const urlEncodedData = new URLSearchParams();
 
     for (let [key, value] of formData.entries()) {
@@ -69,8 +70,9 @@ const Formscreen = () => {
 
       if (data.status === "success") {
         alert("✅ Registration Successful!");
-        e.target.reset();
-        setSelectedGame('');
+
+        form.reset();
+        setSelectedGame("");
       } else {
         alert("❌ " + data.message);
       }
@@ -89,8 +91,9 @@ const Formscreen = () => {
   const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-6";
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 font-sans bg-gray-50">
-      <div className="max-w-5xl bg-white mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-indigo-100/50">
+    <div className="min-h-screen p-4 sm:p-8 font-sans bg-gradient-to-br from-indigo-900 via-purple-900 to-black">
+
+      <div className="max-w-5xl bg-white/95 backdrop-blur-lg mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl">
 
         <h1 className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2">
           🎮 Domination League 🎮
@@ -183,42 +186,19 @@ const Formscreen = () => {
                   Free Fire (5 Players)
                 </option>
 
-                <option value="BGMI" disabled>
-                  BGMI (Coming Soon)
-                </option>
-
-                <option value="Counter Strike 2" disabled>
-                  Counter Strike 2 (Coming Soon)
-                </option>
-
-                <option value="Valorant" disabled>
-                  Valorant (Coming Soon)
-                </option>
-
-                <option value="Moba Legends" disabled>
-                  Moba Legends (Coming Soon)
-                </option>
-
-                 <option value="BGMI" disabled>
-                  FIFA (Coming Soon)
-                </option>
-
-                 <option value="BGMI" disabled>
-                  Supercell Games (Coming Soon)
-                </option>
-
-                 <option value="BGMI" disabled>
-                  Tekken 8 (Coming Soon)
-                </option>
-
-                 <option value="BGMI" disabled>
-                  sdDota 2 (Coming Soon)
-                </option>
-
+                <option disabled>BGMI (Coming Soon)</option>
+                <option disabled>Counter Strike 2 (Coming Soon)</option>
+                <option disabled>Valorant (Coming Soon)</option>
+                <option disabled>Moba Legends (Coming Soon)</option>
+                <option disabled>FIFA (Coming Soon)</option>
+                <option disabled>Supercell Games (Coming Soon)</option>
+                <option disabled>Tekken 8 (Coming Soon)</option>
+                <option disabled>Dota 2 (Coming Soon)</option>
               </select>
             </div>
           </div>
-          
+
+          {/* PLAYERS */}
           {selectedGame === "Free Fire" && (
             <div className="bg-gray-100 p-6 rounded-2xl mb-8">
               <h2 className="text-xl font-bold mb-4 text-gray-800">
@@ -233,26 +213,33 @@ const Formscreen = () => {
 
           {/* TERMS */}
           <div className="mb-6">
-            <label className="flex items-center space-x-2 text-sm text-black">
-              <input type="checkbox" name="terms" required />
-                <span className="text-black">
-                    I agree to tournament rules.
-                </span>
+            <label className="flex items-center space-x-2 text-sm text-black cursor-pointer">
+              <input
+                type="checkbox"
+                name="terms"
+                required
+                className="accent-black w-4 h-4"
+              />
+              <span className="font-medium">
+                I agree to tournament rules.
+              </span>
             </label>
           </div>
 
-
+          {/* SUBMIT BUTTON */}
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full text-white font-bold text-xl p-4 rounded-xl shadow-lg disabled:opacity-50"
-            style={{
-              background: isSubmitting
-                ? '#dc2626'
-                : 'linear-gradient(90deg, #4f46e5, #dc2626)',
-            }}
+            className="w-full text-white font-bold text-xl p-4 rounded-xl shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-indigo-600 via-purple-600 to-red-600 hover:shadow-red-500/50 disabled:opacity-70 disabled:cursor-not-allowed disabled:scale-100 flex items-center justify-center gap-3"
           >
-            {isSubmitting ? 'Submitting...' : '🚀 Submit Registration'}
+            {isSubmitting ? (
+              <>
+                <div className="w-6 h-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                Submitting...
+              </>
+            ) : (
+              "🚀 Submit Registration"
+            )}
           </button>
 
         </form>
@@ -262,7 +249,6 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
-
 
 
 //  -------------------------------------------------------------------------------
@@ -362,6 +348,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
