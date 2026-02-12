@@ -70,13 +70,11 @@ const Formscreen = () => {
 
       if (data.status === "success") {
         alert("✅ Registration Successful!");
-
         form.reset();
         setSelectedGame("");
       } else {
         alert("❌ " + data.message);
       }
-
     } catch (error) {
       console.error("Submission Error:", error);
       alert("Server error. Please try again later.");
@@ -91,7 +89,7 @@ const Formscreen = () => {
   const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-6";
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 font-sans">
+    <div className="min-h-screen p-4 sm:p-8 font-sans ">
 
       <div className="max-w-5xl bg-white/95 backdrop-blur-lg mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl">
 
@@ -133,6 +131,7 @@ const Formscreen = () => {
             </h2>
 
             <div className={formRowClass}>
+              {/* Gmail Validation */}
               <input
                 type="text"
                 name="Leader's Name"
@@ -144,19 +143,41 @@ const Formscreen = () => {
               <input
                 type="email"
                 name="Leader Email"
-                placeholder="Leader Email"
+                placeholder="leader@gmail.com"
                 className={inputClass}
+                pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+                title="Please enter a valid Gmail address"
                 required
               />
             </div>
 
-            <input
-              type="tel"
-              name="Leader Whatsapp Number"
-              placeholder="WhatsApp Number"
-              className={`${inputClass} mt-6`}
-              required
-            />
+            {/* Mobile Number with +91 */}
+            <div className="mt-6">
+              <label className="block font-medium mb-1 text-gray-700 text-sm">
+                WhatsApp Number *
+              </label>
+
+              <div className="flex">
+                <span className="inline-flex items-center px-4 rounded-l-xl border border-r-0 border-gray-300 bg-gray-100 text-gray-700 font-medium">
+                  +91
+                </span>
+
+                <input
+                  type="tel"
+                  name="Leader Whatsapp Number"
+                  placeholder="9876543210"
+                  className="w-full p-3 rounded-r-xl border border-gray-200 bg-white shadow-sm transition duration-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 focus:outline-none text-gray-900"
+                  pattern="[6-9]{1}[0-9]{9}"
+                  maxLength="10"
+                  inputMode="numeric"
+                  onInput={(e) => {
+                    e.target.value = e.target.value.replace(/[^0-9]/g, "");
+                  }}
+                  title="Enter valid 10-digit Indian number"
+                  required
+                />
+              </div>
+            </div>
           </div>
 
           {/* EVENT & GAME */}
@@ -181,19 +202,11 @@ const Formscreen = () => {
                 onChange={(e) => setSelectedGame(e.target.value)}
               >
                 <option value="">Select Game</option>
-
-                <option value="Free Fire">
-                  Free Fire (5 Players)
-                </option>
-
+                <option value="Free Fire">Free Fire (5 Players)</option>
                 <option disabled>BGMI (Coming Soon)</option>
                 <option disabled>Counter Strike 2 (Coming Soon)</option>
                 <option disabled>Valorant (Coming Soon)</option>
                 <option disabled>Moba Legends (Coming Soon)</option>
-                <option disabled>FIFA (Coming Soon)</option>
-                <option disabled>Supercell Games (Coming Soon)</option>
-                <option disabled>Tekken 8 (Coming Soon)</option>
-                <option disabled>Dota 2 (Coming Soon)</option>
               </select>
             </div>
           </div>
@@ -249,7 +262,6 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
-
 
 //  -------------------------------------------------------------------------------
 // import React from 'react';
@@ -348,6 +360,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
