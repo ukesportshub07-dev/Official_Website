@@ -131,8 +131,6 @@
          >
            🎮 Early Registration's Open🎮
          </h1>
-
-        <p className="text-center text-4xl text-black-200 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2" > This Registration Form is for upcoming online event Hosted by : UK ESPORTS HUB </p>
         
          <form onSubmit={handleSubmit}>
 
@@ -154,6 +152,10 @@
              <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-800">
                👤 Leader Contact Information
              </h2>
+             <p className="text-sm text-gray-600 mb-4">
+               All communication will be through the <b> Team Leader's WhatsApp Number & Email</b>.
+            </p>
+            
              <div className={formRowClass}>
                <div>
                  <label className={labelClass}>Leader Name *</label>
@@ -203,9 +205,9 @@
                👥 Team Players (4 members)
              </h2>
 
-            <p className="text-sm text-gray-500 mb-4">
-               Provide identification details for **all players**.  
-               All communication will be through the **Team Leader's WhatsApp Number**.
+            <p className="text-sm text-gray-600 mb-4">
+               Provide identification details for all players.  
+               All communication will be through the <b>Team Leader's WhatsApp Number</b>.
             </p>
 
              <div id="playerFields">
@@ -231,8 +233,9 @@
               className="mt-1 w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500"
              />
               <span>
+                This Registration Form is for upcoming online event Hosted by : UK ESPORTS HUB
                 I confirm all information is accurate and agree to tournament rules.
-                False information may result in disqualification.
+                False information may result in disqualification. 
               </span>
             </label>
            </div>
@@ -354,5 +357,6 @@
 //              </div>
  //            </div>
  //         </div>
+
 
 
