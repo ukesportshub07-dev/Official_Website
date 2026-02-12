@@ -30,20 +30,21 @@
 
    const basicInputs = (
      <div className={formRowClass}>
-       <input
-         type="text"
-         name={`Player ${i} Game Name`}
-         className={inputClass}
-         placeholder={`Player ${i} Game Name`}
-        required
-      />
      <input
-        type="text"
-        name={getIdNameAttribute(game)}
-        className={inputClass}
-        placeholder={getPlayerIdPlaceholder(game)}
-        required
-       />
+   type="text"
+   name={`Player ${i} Game Name`}
+   className={inputClass}
+   placeholder={`Player ${i} Game Name`}
+   required={i !== 5}
+/>
+ <input
+  type="text"
+  name={getIdNameAttribute(game)}
+  className={inputClass}
+  placeholder={getPlayerIdPlaceholder(game)}
+  required={i !== 5}
+/>
+
     </div>
    );
 
@@ -360,6 +361,7 @@
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
