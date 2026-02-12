@@ -148,26 +148,7 @@
              </div>
            </div>
 
- 
-           <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
-             <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-800">
-               🎓 College Name
-             </h2>
-            <div className={formRowClass}>
-               <div>
-                <label className={labelClass}> Select Your University / College</label>
-                 <select name="College Name" className={inputSelectClass} required>
-                  <option value="">-- Select Your University / College --</option>
-                  <option value="Graphic Era Hill University, Dehradun"> Graphic Era Hill University, Dehradun</option>
-                  <option value="Graphic Era Hill University, Haldwani"> Graphic Era Hill University, Haldwani</option>
-                   <option value="Graphic Era Hill University, Bhimtal"> Graphic Era Hill University, Bhimtal</option>
-                   <option value="Graphic Era University, Dehradun"> Graphic Era (Deemed To Be) University, Dehradun </option>
-                 </select>
-              </div>
-             </div>
-          </div>
-
-          
+           
            <div className={`${formSectionBaseClass} bg-emerald-50 border-emerald-200`}>
              <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-emerald-800">
                👤 Leader Contact Information
@@ -353,4 +334,22 @@
 
 
 
+// For University 
 
+  //   <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
+  //           <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-800">
+ //              🎓 College Name
+ //            </h2>
+//            <div className={formRowClass}>
+//               <div>
+//                <label className={labelClass}> Select Your University / College</label>
+  //               <select name="College Name" className={inputSelectClass} required>
+//                  <option value="">-- Select Your University / College --</option>
+//                  <option value="Graphic Era Hill University, Dehradun"> Graphic Era Hill University, Dehradun</option>
+ //                 <option value="Graphic Era Hill University, Haldwani"> Graphic Era Hill University, Haldwani</option>
+ //                  <option value="Graphic Era Hill University, Bhimtal"> Graphic Era Hill University, Bhimtal</option>
+ //                  <option value="Graphic Era University, Dehradun"> Graphic Era (Deemed To Be) University, Dehradun </option>
+//                 </select>
+//              </div>
+ //            </div>
+ //         </div>
