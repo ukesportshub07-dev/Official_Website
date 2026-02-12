@@ -38,7 +38,6 @@
         required
       />
      <input
-      readOnly
         type="text"
         name={getIdNameAttribute(game)}
         className={inputClass}
@@ -51,7 +50,11 @@
   if (game === "freefire" || game === "bgmi") {
      return (
        <div className="mt-4 border-t border-gray-200 pt-4" key={index}>
-<h3 className="text-md font-bold mb-3 text-indigo-700">{`Player ${i}`}</h3>
+<h3 className="text-md font-bold mb-3 text-indigo-700">
+  {`Player ${i} ${
+    i === 1 ? "(IGL)" : i === 5 ? "(Optional)" : ""
+  }`}
+</h3>
          {basicInputs}
       </div>
      );
@@ -357,6 +360,7 @@
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
