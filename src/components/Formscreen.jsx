@@ -63,7 +63,7 @@
    const [selectedGame, setSelectedGame] = useState('');
    const [isSubmitting, setIsSubmitting] = useState(false);
 
-   const numPlayers = 4;
+   const numPlayers = 5;
    const isPlayerSectionVisible = !!selectedGame;
 
    const SHEET_URL = import.meta.env.VITE_API_URL;
@@ -129,7 +129,7 @@
          <h1
           className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2 "
          >
-           🎮 Early Registration's Open🎮
+           🎮 Domination League🎮
          </h1>
         
          <form onSubmit={handleSubmit}>
@@ -357,6 +357,7 @@
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
