@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PlayerInput = ({ game, index }) => {
+const PlayerInput = ({ index }) => {
   const i = index + 1;
 
   const inputClass =
@@ -9,7 +9,7 @@ const PlayerInput = ({ game, index }) => {
   const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-4";
 
   return (
-    <div className="mt-4 border-t border-gray-200 pt-4" key={index}>
+    <div className="mt-4 border-t border-gray-200 pt-4">
       <h3 className="text-md font-bold mb-3 text-indigo-700">
         {`Player ${i} ${i === 1 ? "(IGL)" : i === 5 ? "(Optional)" : ""}`}
       </h3>
@@ -39,16 +39,9 @@ const Formscreen = () => {
   const [selectedGame, setSelectedGame] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const numPlayers = 5;
-  const isPlayerSectionVisible = !!selectedGame;
-
   const SHEET_URL = import.meta.env.VITE_API_URL;
 
-  const handleGameChange = (e) => {
-    setSelectedGame(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (isSubmitting) return;
 
@@ -63,179 +56,159 @@ const Formscreen = () => {
       }
     }
 
-    fetch(SHEET_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: urlEncodedData.toString(),
-    })
-      .then(res => res.text())
-      .then(data => {
-        alert("Registration Successful! Server Response: " + data);
+    try {
+      const response = await fetch(SHEET_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: urlEncodedData.toString(),
+      });
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        alert("✅ Registration Successful!");
         e.target.reset();
         setSelectedGame('');
-      })
-      .catch(error => {
-        console.error("Submission Error:", error);
-        alert("Tournament Registration Form Will Open On Jan 2026");
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+      } else {
+        alert("❌ " + data.message);
+      }
+
+    } catch (error) {
+      console.error("Submission Error:", error);
+      alert("Server error. Please try again later.");
+    }
+
+    setIsSubmitting(false);
   };
 
-  const containerClass =
-    "max-w-5xl bg-white mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-indigo-100/50";
-
-  const formSectionBaseClass =
-    "rounded-2xl p-6 mb-8 border border-gray-100 transition duration-500 hover:shadow-lg";
-
-  const labelClass = "block font-medium mb-1 text-gray-700 text-sm";
-
-  const inputSelectClass =
+  const inputClass =
     "w-full p-3 rounded-xl border border-gray-200 bg-white shadow-sm transition duration-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 focus:outline-none text-gray-900";
 
   const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-6";
 
   return (
     <div className="min-h-screen p-4 sm:p-8 font-sans">
-      <div className={containerClass}>
+      <div className="max-w-5xl bg-white mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-indigo-100/50">
+
         <h1 className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2">
           🎮 Domination League 🎮
         </h1>
 
         <form onSubmit={handleSubmit}>
 
-          {/* 🏆 TEAM INFO */}
-          <div className={`${formSectionBaseClass} bg-indigo-50 border-indigo-200`}>
+          {/* TEAM INFO */}
+          <div className="bg-indigo-50 p-6 rounded-2xl mb-8">
             <h2 className="text-xl font-bold mb-4 text-indigo-800">
               🏆 Team Information
             </h2>
 
             <div className={formRowClass}>
-              <div>
-                <label className={labelClass}>Team Name *</label>
-                <input
-                  type="text"
-                  name="Team Name"
-                  className={inputSelectClass}
-                  placeholder="Enter your official team name"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* 👤 LEADER INFO */}
-          <div className={`${formSectionBaseClass} bg-emerald-50 border-emerald-200`}>
-            <h2 className="text-xl font-bold mb-4 text-emerald-800">
-              👤 Leader Contact Information
-            </h2>
-
-            <div className={formRowClass}>
-              <div>
-                <label className={labelClass}>Leader Name *</label>
-                <input
-                  type="text"
-                  name="Leader's Name"
-                  className={inputSelectClass}
-                  placeholder="Team Leader's Full Name"
-                  required
-                />
-              </div>
-
-              <div>
-                <label className={labelClass}>Email Address *</label>
-                <input
-                  type="email"
-                  name="Leader Email"
-                  className={inputSelectClass}
-                  placeholder="leader@example.com"
-                  required
-                />
-              </div>
-            </div>
-
-            <div className="mt-6">
-              <label className={labelClass}>WhatsApp Number *</label>
               <input
-                type="tel"
-                name="Leader Whatsapp Number"
-                className={inputSelectClass}
-                placeholder="+91 9876543210"
+                type="text"
+                name="Team Name"
+                placeholder="Team Name"
+                className={inputClass}
+                required
+              />
+
+              <input
+                type="text"
+                name="College Name"
+                placeholder="College Name"
+                className={inputClass}
                 required
               />
             </div>
           </div>
 
-          {/* 🎮 EVENT & GAME */}
-          <div className={`${formSectionBaseClass} bg-purple-50 border-purple-200`}>
-            <h2 className="text-xl font-bold mb-4 text-purple-800">
-              🗓️ Choose Event & Game
+          {/* LEADER INFO */}
+          <div className="bg-emerald-50 p-6 rounded-2xl mb-8">
+            <h2 className="text-xl font-bold mb-4 text-emerald-800">
+              👤 Leader Contact Information
             </h2>
 
             <div className={formRowClass}>
-              <div>
-                <label className={labelClass}>Select Event *</label>
-                <select name="Event" className={inputSelectClass} required>
-                  <option value="">-- Select Event --</option>
-                  <option value="Domination League | S01">
-                    Domination League | S01
-                  </option>
-                </select>
-              </div>
+              <input
+                type="text"
+                name="Leader's Name"
+                placeholder="Leader Name"
+                className={inputClass}
+                required
+              />
 
-              <div>
-                <label className={labelClass}>Select Game *</label>
-                <select
-                  name="Game"
-                  className={inputSelectClass}
-                  required
-                  onChange={handleGameChange}
-                  value={selectedGame}
-                >
-                  <option value="">-- Select Game --</option>
-                  <option value="Free Fire">
-                    Free Fire (5 Players)
-                  </option>
-                </select>
-              </div>
+              <input
+                type="email"
+                name="Leader Email"
+                placeholder="Leader Email"
+                className={inputClass}
+                required
+              />
+            </div>
+
+            <input
+              type="tel"
+              name="Leader Whatsapp Number"
+              placeholder="WhatsApp Number"
+              className={`${inputClass} mt-6`}
+              required
+            />
+          </div>
+
+          {/* EVENT */}
+          <div className="bg-purple-50 p-6 rounded-2xl mb-8">
+            <h2 className="text-xl font-bold mb-4 text-purple-800">
+              🗓️ Event & Game
+            </h2>
+
+            <div className={formRowClass}>
+              <select name="Event" className={inputClass} required>
+                <option value="">Select Event</option>
+                <option value="Domination League | S01">
+                  Domination League | S01
+                </option>
+              </select>
+
+              <select
+                name="Game"
+                className={inputClass}
+                required
+                onChange={(e) => setSelectedGame(e.target.value)}
+              >
+                <option value="">Select Game</option>
+                <option value="Free Fire">
+                  Free Fire (5 Players)
+                </option>
+              </select>
             </div>
           </div>
 
-          {/* 👥 PLAYERS */}
-          {isPlayerSectionVisible && (
-            <div className={`${formSectionBaseClass} bg-gray-100 border-gray-200`}>
-              <h2 className="text-xl font-bold mb-2 text-gray-800">
-                👥 Team Players (5 members)
+          {/* PLAYERS */}
+          {selectedGame && (
+            <div className="bg-gray-100 p-6 rounded-2xl mb-8">
+              <h2 className="text-xl font-bold mb-4 text-gray-800">
+                👥 Team Players
               </h2>
 
-              {Array.from({ length: numPlayers }).map((_, index) => (
-                <PlayerInput
-                  key={index}
-                  game={selectedGame}
-                  index={index}
-                />
+              {Array.from({ length: 5 }).map((_, index) => (
+                <PlayerInput key={index} index={index} />
               ))}
             </div>
           )}
 
-          {/* 🛡️ TERMS */}
-          <div className={`${formSectionBaseClass} bg-red-50 border-l-4 border-red-600`}>
-            <label className="flex items-start space-x-2 text-sm text-gray-700 cursor-pointer">
+          {/* TERMS */}
+          <div className="mb-6">
+            <label className="flex items-center space-x-2">
               <input type="checkbox" name="terms" required />
-              <span>
-                I confirm all information is accurate and agree to tournament rules.
-              </span>
+              <span>I agree to tournament rules.</span>
             </label>
           </div>
 
-         
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full text-white font-bold text-xl p-4 mt-6 rounded-xl shadow-lg disabled:opacity-50"
+            className="w-full text-white font-bold text-xl p-4 rounded-xl shadow-lg disabled:opacity-50"
             style={{
               background: isSubmitting
                 ? '#dc2626'
@@ -252,6 +225,7 @@ const Formscreen = () => {
 };
 
 export default Formscreen;
+
 
 
 //  -------------------------------------------------------------------------------
@@ -351,6 +325,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
