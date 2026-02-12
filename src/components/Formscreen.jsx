@@ -89,7 +89,7 @@ const Formscreen = () => {
   const formRowClass = "grid grid-cols-1 md:grid-cols-2 gap-6";
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 font-sans">
+    <div className="min-h-screen p-4 sm:p-8 font-sans bg-gray-50">
       <div className="max-w-5xl bg-white mx-auto my-10 rounded-3xl p-6 sm:p-10 shadow-2xl shadow-indigo-100/50">
 
         <h1 className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2">
@@ -156,7 +156,7 @@ const Formscreen = () => {
             />
           </div>
 
-          {/* EVENT */}
+          {/* EVENT & GAME */}
           <div className="bg-purple-50 p-6 rounded-2xl mb-8">
             <h2 className="text-xl font-bold mb-4 text-purple-800">
               🗓️ Event & Game
@@ -172,23 +172,57 @@ const Formscreen = () => {
 
               <select
                 name="Game"
-                className={inputClass}
+                className={`${inputClass} cursor-pointer`}
                 required
+                value={selectedGame}
                 onChange={(e) => setSelectedGame(e.target.value)}
               >
                 <option value="">Select Game</option>
+
                 <option value="Free Fire">
                   Free Fire (5 Players)
                 </option>
+
+                <option value="BGMI" disabled>
+                  BGMI (Coming Soon)
+                </option>
+
+                <option value="Counter Strike 2" disabled>
+                  Counter Strike 2 (Coming Soon)
+                </option>
+
+                <option value="Valorant" disabled>
+                  Valorant (Coming Soon)
+                </option>
+
+                <option value="Moba Legends" disabled>
+                  Moba Legends (Coming Soon)
+                </option>
+
+                 <option value="BGMI" disabled>
+                  FIFA (Coming Soon)
+                </option>
+
+                 <option value="BGMI" disabled>
+                  Supercell Games (Coming Soon)
+                </option>
+
+                 <option value="BGMI" disabled>
+                  Tekken 8 (Coming Soon)
+                </option>
+
+                 <option value="BGMI" disabled>
+                  sdDota 2 (Coming Soon)
+                </option>
+
               </select>
             </div>
           </div>
-
-          {/* PLAYERS */}
-          {selectedGame && (
+          
+          {selectedGame === "Free Fire" && (
             <div className="bg-gray-100 p-6 rounded-2xl mb-8">
               <h2 className="text-xl font-bold mb-4 text-gray-800">
-                👥 Team Players
+                👥 Team Players (5 Members)
               </h2>
 
               {Array.from({ length: 5 }).map((_, index) => (
@@ -199,11 +233,14 @@ const Formscreen = () => {
 
           {/* TERMS */}
           <div className="mb-6">
-            <label className="flex items-center space-x-2">
+            <label className="flex items-center space-x-2 text-sm text-black">
               <input type="checkbox" name="terms" required />
-              <span>I agree to tournament rules.</span>
+                <span className="text-black">
+                    I agree to tournament rules.
+                </span>
             </label>
           </div>
+
 
           <button
             type="submit"
@@ -325,6 +362,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
