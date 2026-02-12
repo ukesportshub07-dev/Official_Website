@@ -4,27 +4,27 @@ const STEPS = [
   { 
     id: "registrations", 
     label: "Registrations Open", 
-    date: new Date(2026, 0, 10)
+    date: new Date(2026, 1, 12)
   }, 
   { 
     id: "fixtures", 
     label: "Fixtures Released", 
-    date: new Date(2026, 0, 20)
+    date: new Date(2026, 1, 25)
   },
   { 
     id: "live", 
     label: "Event Live", 
-    date: new Date(2026, 0, 22)
+    date: new Date(2026, 1, 26)
   },
   { 
     id: "results", 
     label: "Results Announced", 
-    date: new Date(2026, 0, 30)
+    date: new Date(2026, 2, 08)
   },
   { 
-    id: "shortlisted", 
-    label: "Teams Shortlisted", 
-    date: new Date(2026, 0, 31)
+    id: "Prize Distribution", 
+    label: "Prize Distribution", 
+    date: new Date(2026, 2, 10)
   },
 ];
 
@@ -294,7 +294,7 @@ const Update = () => {
       <span className="text-sm text-gray-700">
       <strong className="text-blue-700">Current Status:</strong> 
               {/* {STEPS[currentIndex]?.label || "Coming Soon"} */}
-              Registration Opens Soon
+               Registration Open For Domination League | S01
       </span>
     </div>
   </div>
@@ -307,6 +307,7 @@ const Update = () => {
 
 
 export default Update;
+
 
 
 
