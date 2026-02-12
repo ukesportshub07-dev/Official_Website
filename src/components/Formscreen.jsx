@@ -129,9 +129,9 @@
          <h1
           className="text-center text-4xl text-purple-800 sm:text-5xl font-extrabold pb-6 mb-8 border-b-2 "
          >
-           🎮 Dominion League   🎮
+           🎮 Early Registration's Open🎮
          </h1>
-
+<p> This Registration Form is for upcoming online event Hosted by : UK ESPORTS HUB </p>
         
          <form onSubmit={handleSubmit}>
 
@@ -353,3 +353,4 @@
 //              </div>
  //            </div>
  //         </div>
+
