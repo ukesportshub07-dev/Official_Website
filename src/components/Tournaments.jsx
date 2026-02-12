@@ -3,8 +3,8 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 const tournamentData = [
   {
     id: 1,
-    title: "Campus Connect Uttrakhand",
-    details: "Jan Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹1,00,000+ • 12 Universities • Diamonds: 250,000+",
+    title: "Final Showdown",
+    details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹20,000",
     src: "/Banner/UEF.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600",
@@ -367,3 +367,4 @@ export default function App() {
     </section>
   );
 }
+
