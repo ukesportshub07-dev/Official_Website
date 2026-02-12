@@ -69,7 +69,7 @@ const Formscreen = () => {
       const data = await response.json();
 
       if (data.status === "success") {
-        alert("✅ Registration Successful!");
+        alert("✅ Registration Successful! Our team will contact you within 38 hours.");
         form.reset();
         setSelectedGame("");
       } else {
@@ -108,7 +108,7 @@ const Formscreen = () => {
             <div className={formRowClass}>
               <input
                 type="text"
-                name="Team Name"
+                name="Team Name *"
                 placeholder="Team Name"
                 className={inputClass}
                 required
@@ -116,7 +116,7 @@ const Formscreen = () => {
 
               <input
                 type="text"
-                name="College Name"
+                name="College Name (Optional)"
                 placeholder="College Name(Optional)"
                 className={inputClass}
               />
@@ -126,7 +126,7 @@ const Formscreen = () => {
           {/* LEADER INFO */}
           <div className="bg-emerald-50 p-6 rounded-2xl mb-8">
             <h2 className="text-xl font-bold mb-4 text-emerald-800">
-              👤 Leader Contact Information
+              👤 Leader Contact Information (Required)
             </h2>
 
             <div className={formRowClass}>
@@ -182,7 +182,7 @@ const Formscreen = () => {
           {/* EVENT & GAME */}
           <div className="bg-purple-50 p-6 rounded-2xl mb-8">
             <h2 className="text-xl font-bold mb-4 text-purple-800">
-              🗓️ Event & Game
+              🗓️ Event & Game (Required)
             </h2>
 
             <div className={formRowClass}>
@@ -224,7 +224,8 @@ const Formscreen = () => {
           )}
 
           {/* TERMS */}
-          <div className="mb-6">
+          
+          <div className="bg-emerald-50 p-6 rounded-2xl mb-8">
             <label className="flex items-center space-x-2 text-sm text-black cursor-pointer">
               <input
                 type="checkbox"
@@ -359,6 +360,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
