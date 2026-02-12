@@ -19,12 +19,12 @@ const STEPS = [
   { 
     id: "results", 
     label: "Results Announced", 
-    date: new Date(2026, 2, 08)
+    date: new Date(2026, 2, 10)
   },
   { 
     id: "Prize Distribution", 
     label: "Prize Distribution", 
-    date: new Date(2026, 2, 10)
+    date: new Date(2026, 2, 11)
   },
 ];
 
@@ -307,6 +307,7 @@ const Update = () => {
 
 
 export default Update;
+
 
 
 
