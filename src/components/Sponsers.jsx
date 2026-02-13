@@ -15,7 +15,7 @@ const sponsorCategories = [
         name: "FFM Community", 
         type: "Main Event Partner", 
         color: "from-blue-500 to-purple-600",
-        src: "" 
+        src: "/logos/FFM.png" 
       },
     ]
   },
@@ -345,3 +345,4 @@ export default function App() {
     </div>
   );
 }
+
