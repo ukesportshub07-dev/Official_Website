@@ -35,7 +35,7 @@ function Home() {
       <About />
       <Tournaments />
       <Team />
-      <Ambassador />
+      {/*<Ambassador />*/}
       <Contact />
       <Footer />
     </>
@@ -43,3 +43,4 @@ function Home() {
 }
 
 export default Home;
+
