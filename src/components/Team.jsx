@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const coreTeam = [
   { name: "Rahul Singh Dhami", role: "Founder / Co-Founder", img: "/images/Ambasadors/replace.png", alt: "Rahul Singh Dhami" },
-  { name: "N/A", role: "Chief Executive Officer", img: "/images/Ambasadors/replace.png", alt: "N/A" },
+  { name: "Paras Bisht", role: "Chief Executive Officer", img: "public/images/paras.jpg", alt: "Paras Bisht" },
   { name: "Udit Samant", role: "Technical Lead", img: "/images/udit.jpg", alt: "Udit Samant" },
-  { name: "Aman Panwar", role: "Public Relations \n and Outreach ", img: "/images/aman.webp", alt: "Aman Panwar" },
+  { name: "N/A", role: "Public Relations \n and Outreach ", img: "/images/Ambasadors/replace.png", alt: "N/A" },
   { name: "Shantanu", role: "General Manager", img: "/images/shantanu.jpg", alt: "Shantanu" },
   { name: "Tushar", role: "Event Manager", img: "/images/tushar.jpg", alt: "Tushar" },
-  { name: "Shadan Dabir Khan", role: "Operations Manager", img: "/images/shadan.jpg", alt: "Shadan Dabir Khan" },
+  { name: "N/A", role: "Operations Manager", img: "/images/Ambasadors/replace.png", alt: "N/A" },
 ];
 
 
