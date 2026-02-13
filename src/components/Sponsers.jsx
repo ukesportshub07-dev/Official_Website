@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { HashLink } from "react-router-hash-link";
 import { Award, Zap, MapPin, Monitor, Coffee, Radio, Home, Shirt, Newspaper, Gift, Users, GraduationCap, Plus, ArrowLeft, Send, CheckCircle } from 'lucide-react';
 
 const ANIM_DELAY = 100;
@@ -16,7 +15,7 @@ const sponsorCategories = [
         name: "FFM Community", 
         type: "Main Event Partner", 
         color: "from-blue-500 to-purple-600",
-        src: "/logos/FFM.png" 
+        src: "" 
       },
     ]
   },
@@ -293,17 +292,12 @@ const SponsorsView = ({ onOpenForm }) => (
           Ready to showcase your brand to thousands of enthusiasts? Join our growing ecosystem of visionary supporters.
         </p>
         <div className="flex flex-wrap justify-center gap-6">
-
-<div className="inline-block">
-  <HashLink
-    to="/#contact"
-    scroll={scrollWithOffset}
-    className="block px-10 py-4 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-500 transition-all shadow-2xl shadow-blue-600/20 transform hover:-translate-y-1 text-center cursor-pointer"
-  >
-    Contact Partnership Team
-  </HashLink>
-</div>
-
+          <button 
+            onClick={onOpenForm}
+            className="px-10 py-4 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-500 transition-all shadow-2xl shadow-blue-600/20 transform hover:-translate-y-1"
+          >
+            Contact Partnership Team
+          </button>
         </div>
       </div>
     </footer>
@@ -351,5 +345,3 @@ export default function App() {
     </div>
   );
 }
-
-
