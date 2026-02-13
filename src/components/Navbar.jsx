@@ -154,7 +154,7 @@ function Navbar() {
                   <div className="absolute right-0 mt-3 w-48 rounded-lg shadow-2xl bg-gray-700/95 backdrop-blur ring-1 ring-white/10 focus:outline-none z-50 origin-top-right animate-fade-in-down">
                     <HashLink to="/#hero" scroll={scrollWithOffset} className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors" onClick={handleLinkClick}>Who We Are</HashLink>
                     <HashLink to="/#team" scroll={scrollWithOffset} className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors" onClick={handleLinkClick}>Our Team</HashLink>
-                    <HashLink to="/#ambassador" scroll={scrollWithOffset} className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors" onClick={handleLinkClick}>Our Ambasadors</HashLink>
+                   {/*<HashLink to="/#ambassador" scroll={scrollWithOffset} className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors" onClick={handleLinkClick}>Our Ambasadors</HashLink>*/}
                   </div>
                 )}
               </div>
@@ -237,7 +237,7 @@ function Navbar() {
                 <div className="pl-4 border-l border-[#7c3aed] ml-2 space-y-1 py-1 animate-fade-in-down">
                   <HashLink to="/#hero" scroll={scrollWithOffset} className="block py-1 text-sm hover:text-[#7c3aed]" onClick={handleLinkClick}>Who We Are</HashLink>
                   <HashLink to="/#team" scroll={scrollWithOffset} className="block py-1 text-sm hover:text-[#7c3aed]" onClick={handleLinkClick}>Our Team</HashLink>
-                  <HashLink to="/#ambassador" scroll={scrollWithOffset} className="block py-1 text-sm hover:text-[#7c3aed]" onClick={handleLinkClick}>Our Ambasadors</HashLink>
+                 {/*<HashLink to="/#ambassador" scroll={scrollWithOffset} className="block py-1 text-sm hover:text-[#7c3aed]" onClick={handleLinkClick}>Our Ambasadors</HashLink>*/}
                 </div>
               )}
             </div>
@@ -270,5 +270,6 @@ function Navbar() {
     </>
   );
 }
+
 
 export default Navbar;
