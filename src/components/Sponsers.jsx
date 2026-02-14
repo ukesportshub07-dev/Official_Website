@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Award, Zap, MapPin, Monitor, Coffee, Radio, Home, Shirt, Newspaper, Gift, Users, GraduationCap, Plus, ArrowLeft, Send, CheckCircle } from 'lucide-react';
-
+import { Award, Zap, MapPin, GraduationCap, Monitor, Coffee, Radio, Home, Shirt, Newspaper, Gift, Users, Plus, ArrowLeft, Send, CheckCircle } from 'lucide-react';
 const ANIM_DELAY = 100;
 
 const sponsorCategories = [
@@ -35,19 +34,20 @@ const sponsorCategories = [
   }
 ];
 
- {
+  {
     id: 'university',
-    title: "Hosted via University Clubs",
+    title: "Campus Community Partner",
     icon: <GraduationCap className="w-6 h-6" />,
     tier: 'medium',
     sponsors: [ 
       { 
         id: 1, 
         name: "The Wizards Club, GEHU", 
-        type: "Graphic Era Hill Univeristy", 
+        type: "Graphic Era Hill University", 
         color: "from-blue-500 to-purple-600",
         src: "/logos/wizards.webp" 
-      },] 
+      },
+    ] 
   }
 ];
 
@@ -233,6 +233,7 @@ const PartnershipForm = ({ onBack }) => {
             <option>Powered By</option>
             <option>Venue Partner</option>
             <option>Supporting Partner</option>
+            <option>Campus Community Partner</option>
           </select>
         </div>
 
@@ -361,6 +362,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
