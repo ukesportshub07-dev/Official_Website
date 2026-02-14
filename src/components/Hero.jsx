@@ -136,9 +136,9 @@ function Hero() {
         >
           <div className="bg-gradient-to-b from-[#7c3aed]/30 to-transparent p-1 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]">
             <div className="bg-gray-800 rounded-xl p-6">
-              <img src="/Banner/UEF.webp" alt="UEF 2026"/>
-              <h3 className="text-lg font-bold">Next LAN: Uttarakhand Esports Festival 2026 (UEF-2026) </h3>
-              <p className="text-gray-400 mt-2 text-sm"> Mid Jan 2026 • 12 Universities — Competitive Free Fire Tournament.</p>
+              <img src="/Banner/finalshowdown.webp" alt="The Final Showdown"/>
+              <h3 className="text-lg font-bold">Next LAN:The Final Showdown </h3>
+              <p className="text-gray-400 mt-2 text-sm"> Mid Feb 2026 • Competitive Free Fire Tournament.</p>
               <div className="mt-4 flex gap-2">
                  <Link
               to="/Forms"
@@ -160,6 +160,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 
