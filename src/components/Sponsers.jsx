@@ -31,8 +31,7 @@ const sponsorCategories = [
     icon: <MapPin className="w-6 h-6" />,
     tier: 'medium',
     sponsors: [] 
-  }
-],
+  }, 
 
   {
     id: 'university',
@@ -41,7 +40,7 @@ const sponsorCategories = [
     tier: 'medium',
     sponsors: [ 
       { 
-        id: 1, 
+        id: 2,
         name: "The Wizards Club, GEHU", 
         type: "Graphic Era Hill University", 
         color: "from-blue-500 to-purple-600",
@@ -50,6 +49,7 @@ const sponsorCategories = [
     ] 
   }
 ];
+
 
 const SectionDivider = ({ title, icon, delay }) => (
   <div 
@@ -362,6 +362,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
