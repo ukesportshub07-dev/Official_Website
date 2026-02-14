@@ -41,12 +41,21 @@ const sponsorCategories = [
     sponsors: [ 
       { 
         id: 2,
-        name: "The Wizards Club, GEHU", 
-        type: "Graphic Era Hill University", 
+        name: "The Wizards Club", 
+        type: "Graphic Era Hill University, Dehradun", 
         color: "from-blue-500 to-purple-600",
         src: "/logos/wizards.webp",
         contain: true
       },
+      
+      { 
+      id: 3,
+      name: "The Esports Club", 
+      type: "Graphic Era Hill University, Bhimtal", 
+      color: "from-green-500 to-cyan-600",
+      src: "/logos/gehu.webp",
+      contain: true
+    },
     ] 
   }
 ];
@@ -368,6 +377,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
