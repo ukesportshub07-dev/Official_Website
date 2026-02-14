@@ -44,7 +44,8 @@ const sponsorCategories = [
         name: "The Wizards Club, GEHU", 
         type: "Graphic Era Hill University", 
         color: "from-blue-500 to-purple-600",
-        src: "/logos/wizards.webp" 
+        src: "/logos/wizards.webp",
+        contain: true
       },
     ] 
   }
@@ -129,16 +130,22 @@ const SponsorCard = ({ sponsor, tier, delay, isPlaceholder = false, onOpenForm }
         ${!sponsor.src ? 'bg-gradient-to-br ' + (sponsor.color || 'from-slate-700 to-slate-900') : 'bg-slate-900/50'}
       `}>
         {sponsor.src ? (
-          <img 
-            src={sponsor.src} 
-            alt={sponsor.name} 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.parentElement.classList.add('bg-slate-700');
-            }}
-          />
-        ) : (
+         {sponsor.src ? (
+    <img 
+      src={sponsor.src} 
+      alt={sponsor.name} 
+      className={`transition-transform duration-700 group-hover:scale-105 ${
+      sponsor.contain
+        ? "max-w-full max-h-full object-contain p-4"
+        : "w-full h-full object-cover"
+          }`}
+        onError={(e) => {
+        e.target.style.display = 'none';
+        e.target.parentElement.classList.add('bg-slate-700');
+        }}
+      />
+      ) : (
+  
           <span className={`font-black text-white/20 uppercase tracking-tighter ${tier === 'ultra' ? 'text-8xl' : 'text-6xl'}`}>
             {sponsor.name.charAt(0)}
           </span>
@@ -362,6 +369,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
