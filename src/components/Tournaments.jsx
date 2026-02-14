@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 const tournamentData = [
   {
     id: 1,
-    title: "Final Showdown",
+    title: "The Final Showdown",
     details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹20,000",
     src: "/Banner/finalshowdown.webp",
     status: "Upcoming Event",
@@ -367,5 +367,6 @@ export default function App() {
     </section>
   );
 }
+
 
 
