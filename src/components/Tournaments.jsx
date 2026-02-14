@@ -11,6 +11,18 @@ const tournamentData = [
     themeColor: "purple",
     isHighlighted: true,
   },
+
+  {
+    id: 1,
+    title: "The Final Showdown",
+    details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹50,000",
+    src: "/Banner/finalshowdown.webp",
+    status: "Upcoming Event",
+    statusColor: "border-green-600",
+    themeColor: "purple",
+    isHighlighted: true,
+  },
+  
   {
     id: 2,
     title: "Battel Era 2.0",
@@ -367,6 +379,7 @@ export default function App() {
     </section>
   );
 }
+
 
 
 
