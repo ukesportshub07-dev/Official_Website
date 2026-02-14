@@ -5,7 +5,7 @@ const tournamentData = [
     id: 1,
     title: "Final Showdown",
     details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹20,000",
-    src: "/Banner/UEF.webp",
+    src: "/Banner/finalshowdown.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600",
     themeColor: "purple",
@@ -367,4 +367,5 @@ export default function App() {
     </section>
   );
 }
+
 
