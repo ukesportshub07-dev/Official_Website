@@ -45,7 +45,6 @@ const sponsorCategories = [
         type: "Graphic Era Hill University, Dehradun", 
         color: "from-blue-500 to-purple-600",
         src: "/logos/wizards.webp",
-        contain: true
       },
       
       { 
@@ -377,6 +376,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
