@@ -293,7 +293,7 @@ const SponsorsView = ({ onOpenForm }) => (
         </p>
         <div className="flex flex-wrap justify-center gap-6">
           <button 
-            onClick={}
+            onClick={onOpenForm}
             className="px-10 py-4 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-500 transition-all shadow-2xl shadow-blue-600/20 transform hover:-translate-y-1"
           >
             Contact Partnership Team
@@ -345,5 +345,6 @@ export default function App() {
     </div>
   );
 }
+
 
 
