@@ -8,15 +8,15 @@ const tournamentData = [
     src: "/Banner/finalshowdown.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600",
-    themeColor: "purple",
+    themeColor: "pink",
     isHighlighted: true,
   },
 
   {
     id: 1,
-    title: "The Final Showdown",
-    details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹50,000",
-    src: "/Banner/finalshowdown.webp",
+    title: "Domination League",
+    details: "March 2026 • Online Matches • Prizepool Upto: ₹5,000 INR",
+    src: "/logos/social_logo.png",
     status: "Upcoming Event",
     statusColor: "border-green-600",
     themeColor: "purple",
@@ -379,6 +379,7 @@ export default function App() {
     </section>
   );
 }
+
 
 
 
