@@ -130,7 +130,6 @@ const SponsorCard = ({ sponsor, tier, delay, isPlaceholder = false, onOpenForm }
         ${!sponsor.src ? 'bg-gradient-to-br ' + (sponsor.color || 'from-slate-700 to-slate-900') : 'bg-slate-900/50'}
       `}>
         {sponsor.src ? (
-         {sponsor.src ? (
     <img 
       src={sponsor.src} 
       alt={sponsor.name} 
@@ -369,6 +368,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
