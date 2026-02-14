@@ -4,7 +4,7 @@ const tournamentData = [
   {
     id: 1,
     title: "The Final Showdown",
-    details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹20,000",
+    details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹50,000",
     src: "/Banner/finalshowdown.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600",
@@ -28,7 +28,7 @@ const tournamentData = [
     src: "/Banner/endgame.webp",
     status: "Event Recap",
     statusColor: "border-purple-600",
-    themeColor: "cyan",
+    themeColor: "pink",
     isHighlighted: false,
   },
   {
@@ -38,7 +38,7 @@ const tournamentData = [
     src: "/Banner/Free Fire Max Nova Clash.webp",
     status: "Event Recap",
     statusColor: "border-purple-600",
-    themeColor: "pink",
+    themeColor: "purple",
     isHighlighted: false,
   },
   {
@@ -48,7 +48,7 @@ const tournamentData = [
     src: "/Banner/Domination.webp",
     status: "Event Recap",
     statusColor: "border-purple-600",
-    themeColor: "pink",
+    themeColor: "cyan",
     isHighlighted: false,
   },
   {
@@ -58,7 +58,7 @@ const tournamentData = [
     src: "Banner/summer_carnival.webp",
     status: "Event Recap",
     statusColor: "border-purple-600",
-    themeColor: "purple",
+    themeColor: "pink",
     isHighlighted: false,
   },
 ];
@@ -367,6 +367,7 @@ export default function App() {
     </section>
   );
 }
+
 
 
 
