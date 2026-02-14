@@ -275,7 +275,7 @@ const SponsorsView = ({ onOpenForm }) => (
                 <SponsorCard 
                   tier={category.tier} 
                   isPlaceholder 
-                  onOpenForm={}
+                  onOpenForm={onOpenForm}
                   delay={(catIndex + 1) * ANIM_DELAY} 
                 />
               )}
@@ -345,6 +345,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
