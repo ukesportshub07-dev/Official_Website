@@ -145,7 +145,7 @@ function Hero() {
               className="px-3 py-2 bg-[#7c3aed] rounded-md text-sm font-semibold">
               Register Team
             </Link>
-                <a href="#tournaments" className="px-3 py-2 border border-gray-700 rounded-md text-sm">Event Info</a>
+                <a href="#news" className="px-3 py-2 border border-gray-700 rounded-md text-sm">Event Info</a>
               </div>
             </div>
           </div>
@@ -160,6 +160,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 
