@@ -35,6 +35,22 @@ const sponsorCategories = [
   }
 ];
 
+ {
+    id: 'university',
+    title: "Hosted via University Clubs",
+    icon: <GraduationCap className="w-6 h-6" />,
+    tier: 'medium',
+    sponsors: [ 
+      { 
+        id: 1, 
+        name: "The Wizards Club, GEHU", 
+        type: "Graphic Era Hill Univeristy", 
+        color: "from-blue-500 to-purple-600",
+        src: "/logos/wizards.webp" 
+      },] 
+  }
+];
+
 const SectionDivider = ({ title, icon, delay }) => (
   <div 
     className="flex items-center w-full my-12 px-4 md:px-12 opacity-0 animate-fade-in-up"
@@ -345,6 +361,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
