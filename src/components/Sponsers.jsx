@@ -32,7 +32,7 @@ const sponsorCategories = [
     tier: 'medium',
     sponsors: [] 
   }
-];
+],
 
   {
     id: 'university',
@@ -362,6 +362,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
