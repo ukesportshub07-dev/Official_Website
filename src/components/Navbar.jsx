@@ -98,20 +98,22 @@ function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <HashLink to="https://www.ukesportshub.in/" className="flex items-center gap-3"
-              scroll={scrollWithOffset}
-              onClick={handleLinkClick}>
-              <img
-                src={placeholderImageUrl}
-                alt="UK ESPORTS HUB Logo"
-                className="h-12 w-12 rounded-full "
-                onError={(e) => { e.target.src = placeholderImageUrl }}
-              />
-              <div>
-                <div className="text-lg font-extrabold text-white tracking-wider whitespace-nowrap">UK ESPORTS HUB</div>
-                <div className="text-xs text-gray-400 -mt-1 font-light block whitespace-nowrap lg:block">Uttarakhand Esports Community</div>
-              </div>
-            </HashLink>
+           <a href="/" className="flex items-center gap-3">
+  <img
+    src={placeholderImageUrl}
+    alt="UK ESPORTS HUB Logo"
+    className="h-12 w-12 rounded-full"
+    onError={(e) => { e.target.src = placeholderImageUrl }}
+  />
+  <div>
+    <div className="text-lg font-extrabold text-white tracking-wider whitespace-nowrap">
+      UK ESPORTS HUB
+    </div>
+    <div className="text-xs text-gray-400 -mt-1 font-light whitespace-nowrap">
+      Uttarakhand Esports Community
+    </div>
+  </div>
+</a>
 
             {/* Desktop Nav - Hidden until lg screens */}
             <nav className="hidden lg:flex items-center gap-6 text-sm">
@@ -273,5 +275,6 @@ function Navbar() {
 
 
 export default Navbar;
+
 
 
