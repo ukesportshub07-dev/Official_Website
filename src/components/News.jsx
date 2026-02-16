@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 
 const NEWS_DATA = [
     {
-        id: 1,
+        id: 3,
     title: "Domination League | Season 01: Registrations Open for India's Next Major Free Fire MAX Tournament",
     summary: "UK Esports Hub announces Domination League | Season 01, a nationwide Free Fire MAX tournament with ₹5000 prize pool and 120 team slots.",
     content: "UK Esports Hub, in supporting partnership with FFM Community India, has officially announced Domination League | Season 01, a nationwide Free Fire MAX esports tournament open to players across India. Designed to provide a professional competitive platform for emerging and experienced teams alike, the event aims to deliver structured competition, fair play, and high level esports engagement.\n\nRegistrations for the tournament opened on February 12, 2026, and will remain open until February 25, 2026. The tournament will officially begin on March 01, 2026, and is expected to run for approximately one to two weeks, concluding with the grand finals featuring the top qualifying teams.\n\nDomination League | Season 01 will follow a professional multi stage format consisting of Knockout rounds, Semifinals, and Grand Finals. All matches will be conducted using the official Free Fire MAX competitive point system to ensure fairness, transparency, and competitive integrity throughout the tournament.\n\nThe event is completely free to enter, making it accessible to all Free Fire MAX players across India. A total of 120 team slots are available, and participation will be granted on a first come, first served basis. Teams will compete on the India / Asia server, ensuring optimal performance and fair competition conditions.\n\nThe total prize pool for the tournament is ₹5000 along with additional in game diamonds. Detailed prize distribution will be announced before the finals. Beyond prizes, the event provides players with an opportunity to gain competitive experience, recognition, and exposure within the growing Indian esports ecosystem.\n\nUK Esports Hub continues its mission of building structured esports opportunities for players by organizing professional tournaments, supporting grassroots talent, and strengthening the competitive gaming community. Supporting partner FFM Community India adds additional community support and operational experience to ensure smooth tournament execution.\n\nPlayers can register now through the official registration portal:\nhttps://www.ukesportshub.in/Forms\n\nParticipants will receive match updates, schedules, and announcements through the official WhatsApp group and communication channels. Teams are advised to complete registration early, as slots are limited and expected to fill quickly.\n\nFor inquiries and support, players can contact:\nEmail: ukesportshub07@gmail.com\nWhatsApp: +91 97607 02302\nInstagram: instagram.com/ukesportshub\n\nDomination League | Season 01 represents another step forward in UK Esports Hub's commitment to providing professional, accessible, and competitive esports opportunities for players across India."
@@ -18,7 +18,7 @@ const NEWS_DATA = [
     },
     
     {
-        id: 3,
+        id: 1,
         title: "Summer Carnival 2025",
         summary: "14 - 15 May 2025 Lan Event at Graphic Era Hill University.",
         content: "The Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, wThe Summer Carnival, held on 13th & 14th May 2025 at Graphic Era Hill University, delivered two days of competitive gaming and energetic campus engagement.\n\n The highlight of the event was the Free Fire tournament, which drew an impressive 280 players, reflecting strong interest and participation from students and local gaming enthusiasts.\n\nThe event ran smoothly, maintained high excitement throughout, and successfully positioned the carnival as a key gaming attraction for the season.",
@@ -166,6 +166,7 @@ const App = () => {
 }
 
 export default App;
+
 
 
 
