@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { HashLink } from 'react-router-hash-link';
 
 const tournamentData = [
   {
@@ -225,7 +226,7 @@ export default function App() {
 
                   <div className="mt-4 flex flex-wrap gap-2 items-center">
                     <a
-                      href="#forms"
+                      href="/Forms"
                       className={`px-4 py-2 rounded text-sm font-bold text-white transition-all ${
                         event.themeColor === 'cyan' ? 'bg-cyan-600' : 
                         event.themeColor === 'pink' ? 'bg-pink-600' : 
@@ -379,6 +380,7 @@ export default function App() {
     </section>
   );
 }
+
 
 
 
