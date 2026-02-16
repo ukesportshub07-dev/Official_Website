@@ -41,7 +41,7 @@ function Contact() {
       <div className="grid md:grid-cols-2 gap-6">
         <div className="p-6 bg-gray-800 rounded-lg">
           <h3 className="font-semibold">Contact Us</h3>
-          <p className="text-gray-400 mt-2 text-sm">For sponsorships, hosting or partnerships — reach out and we'll reply within 48 hours.</p>
+          <p className="text-gray-400 mt-2 text-sm">For sponsorships, hosting or partnerships — reach out and we'll reply within 48 hours.  </p>
 
           <ul className="mt-4 text-sm text-gray-300 space-y-2">
             <li>📧 email: ukesportshub07@gmail.com</li>
@@ -82,3 +82,4 @@ function Contact() {
 }
 
 export default Contact;
+
