@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -51,14 +52,30 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
      
           <p className="text-sm text-gray-400 mt-2">Follow us on social platforms for real time updates, brackets, and live streams.</p>
 
-          <div className="flex mt-2">
-            <a href="https://www.instagram.com/ukesportshub" target="_blank" rel="noopener noreferrer" 
-              aria-label="UK Esports Hub" 
-              className="text-gray-400 hover:text-pink-500 transition duration-300" >
-              {InstagramIcon}
-               
-            </a>   
-          </div>
+          <div className="flex items-center gap-4 mt-2">
+      
+      <a
+        href="https://www.instagram.com/ukesportshub"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="UK Esports Hub Instagram"
+        className="text-gray-400 hover:text-pink-500 transition duration-300 text-xl"
+      >
+        <FaInstagram />
+      </a>
+
+     
+      <a
+        href="https://chat.whatsapp.com/BjBsBIji9py0vjXhUz4dig"  
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="UK Esports Hub WhatsApp"
+        className="text-gray-400 hover:text-green-500 transition duration-300 text-xl"
+      >
+        <FaWhatsapp />
+      </a>
+
+    </div>
         </div>
 
         <div className="grid grid-cols-2 gap-16 md:gap-24 lg:gap-32">
@@ -97,6 +114,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 }
 
 export default Footer;
+
 
 
 
