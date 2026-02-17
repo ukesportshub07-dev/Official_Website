@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import whatsappIcon from "/logos/whatsapp.png";
 
 const PlayerInput = ({ index }) => {
   const i = index + 1;
@@ -258,13 +259,23 @@ const Formscreen = () => {
             )}
           </button>
 
-          <button
-                  type="button"
-                  onClick={() => window.open("https://chat.whatsapp.com/BjBsBIji9py0vjXhUz4dig", "_blank")}
-                  className="w-full mt-4 text-white font-bold text-lg p-4 rounded-xl shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 bg-green-600 hover:bg-green-700"
-              >
-              💬 Click To Join WhatsApp
-              </button>
+         <button
+  type="button"
+  onClick={() =>
+    window.open(
+      "https://chat.whatsapp.com/BjBsBIji9py0vjXhUz4dig",
+      "_blank"
+    )
+  }
+  className="w-full mt-4 text-white font-bold text-lg p-4 rounded-xl shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 bg-green-600 hover:bg-green-700 flex items-center justify-center gap-3"
+>
+  <img
+    src={whatsappIcon}
+    alt="WhatsApp"
+    className="w-6 h-6"
+  />
+  Click To Join WhatsApp
+</button>
 
         </form>
       </div>
@@ -371,6 +382,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
