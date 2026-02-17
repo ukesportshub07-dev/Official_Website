@@ -241,7 +241,7 @@ const Formscreen = () => {
             </label>
           </div>
           
-<div className="bg-green-50 p-6 rounded-2xl mb-8">
+<div className="bg-green-700 p-6 rounded-2xl mb-8">
             <label className="flex items-center space-x-2 text-sm text-black cursor-pointer">
               <input
                 type="checkbox"
@@ -394,6 +394,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
