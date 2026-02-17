@@ -274,7 +274,7 @@ const Formscreen = () => {
     alt="WhatsApp"
     className="w-6 h-6"
   />
-  Click To Join WhatsApp
+  Click To Join WhatsApp Community 
 </button>
 
         </form>
@@ -382,6 +382,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
