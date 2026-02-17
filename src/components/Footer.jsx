@@ -58,6 +58,14 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
               {InstagramIcon}
                
             </a>
+            <a href="https://chat.whatsapp.com/BjBsBIji9py0vjXhUz4dig"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="UK Esports Hub WhatsApp"
+                 className="text-gray-400 hover:text-green-500 transition duration-300"
+                                >
+        <WhatsappIcon />
+            </a>
           </div>
         </div>
 
@@ -97,6 +105,7 @@ const formattedDate = currentDate.toLocaleDateString('en-GB', options);
 }
 
 export default Footer;
+
 
 
 
