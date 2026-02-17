@@ -240,7 +240,19 @@ const Formscreen = () => {
 </span>
             </label>
           </div>
-
+          
+<div className="bg-green-50 p-6 rounded-2xl mb-8">
+            <label className="flex items-center space-x-2 text-sm text-black cursor-pointer">
+              <input
+                type="checkbox"
+                name="terms"
+                required
+                className="accent-black w-4 h-4"
+              />
+              <span className="font-medium">
+I confirm that I have joined the official WhatsApp community to receive the latest updates, announcements, and important information regarding the tournament. I agree to stay informed through this channel and follow all instructions shared by the organizers.</span>
+            </label>
+          </div>
           
 
           {/* SUBMIT BUTTON */}
@@ -382,6 +394,7 @@ export default Formscreen;
 //              </div>
  //            </div>
  //         </div>
+
 
 
 
