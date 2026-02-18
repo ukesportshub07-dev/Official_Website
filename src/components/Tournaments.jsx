@@ -17,7 +17,7 @@ const tournamentData = [
     id: 1,
     title: "Domination League",
     details: "March 2026 • Online Matches • Prizepool Upto: ₹5,000 INR",
-    src: "/logos/social_logo.png",
+    src: "/Banner/roadmap.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600",
     themeColor: "purple",
@@ -380,6 +380,7 @@ export default function App() {
     </section>
   );
 }
+
 
 
 
