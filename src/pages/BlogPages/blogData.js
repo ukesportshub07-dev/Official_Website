@@ -1,4 +1,13 @@
 const blogData = [
+
+    {
+  id: 3,
+  title: "VALORANT Added to Esports Nations Cup 2026",
+  shortDesc: "VALORANT joins ENC 2026, introducing national-level competition.",
+  image: "/Banner/valorantenc.webp",
+  path: "/blog/valorant_enc",
+  year: "2026"
+},
     {
     id: 2,
     title: "Domination League",
