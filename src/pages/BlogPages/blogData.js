@@ -5,7 +5,7 @@ const blogData = [
   title: "VALORANT Added to Esports Nations Cup 2026",
   shortDesc: "VALORANT joins ENC 2026, introducing national-level competition.",
   image: "/Banner/valorantenc.webp",
-  path: "/blog/valorant_enc",
+  path: "/blog/valorantenc",
   year: "2026"
 },
     {
