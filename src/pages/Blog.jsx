@@ -11,7 +11,7 @@ const Blog = () => {
     );
 
   return (
-    <div className="min-h-screen bg-gray-900 p-10 pl-48 ">
+    <div className="min-h-screen bg-gray-900 p-10 lg:pl-48 ">
 
       <h1 className="text-5xl font-extrabold text-white">Our Blogs</h1>
       <p className="text-blue-200 text-lg mt-2">All you need to know</p>
