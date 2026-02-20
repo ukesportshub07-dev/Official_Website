@@ -28,7 +28,7 @@ const Domination = () => {
     date: "February 21, 2026",
     source: "UK Esports Hub",
     description:
-      "Domination League a online free fire event hosted by <b> UK ESPORTS HUB.</b>",
+      "Domination League a online free fire event hosted by UK ESPORTS HUB.",
   };
 
   return (
@@ -119,7 +119,7 @@ const Domination = () => {
   <div className="space-y-4">
     <p>
       The esports scene is growing faster than ever, and with it comes new opportunities for players to prove their skills, build their reputation, and compete at a higher level.
-      <span className="font-semibold text-white"> Domination League Season 01</span>, organized by UK Esports Hub, is designed to provide exactly that — a structured, competitive, and professional platform for rising and established teams.
+      <span className="font-semibold text-white"> Domination League Season 01 </span>, organized by UK Esports Hub, is designed to provide exactly that — a structured, competitive, and professional platform for rising and established teams.
     </p>
 
     <p>
