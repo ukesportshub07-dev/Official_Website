@@ -174,7 +174,7 @@ function Navbar() {
 
                 {isBlogOpen && (
                   <div className="absolute right-0 mt-3 w-48 rounded-lg shadow-2xl bg-gray-700/95 backdrop-blur ring-1 ring-white/10 focus:outline-none z-50 origin-top-right animate-fade-in-down">
-                    <HashLink to="/updates scroll={scrollWithOffset} className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors" onClick={handleLinkClick}>Updates</HashLink>
+                    <HashLink to="/updates" scroll={scrollWithOffset} className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors" onClick={handleLinkClick}>Updates</HashLink>
                     <HashLink to="/blog" scroll={scrollWithOffset} className="block px-4 py-2 text-sm text-gray-200 hover:text-[#7c3aed] rounded-md mx-1 transition-colors" onClick={handleLinkClick}>Blogs</HashLink>
                   </div>
                 )}
@@ -275,6 +275,7 @@ function Navbar() {
 
 
 export default Navbar;
+
 
 
 
