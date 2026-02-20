@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import Navbar from "../../components/Navbar";
+import Navbar from "../components/Navbar";
 
-const Domination = () => {
+const Ukesportshub = () => {
   const [views, setViews] = useState(0);
 
   useEffect(() => {
@@ -211,4 +211,4 @@ const Domination = () => {
   );
 };
 
-export default Domination;
+export default Ukesportshub;
