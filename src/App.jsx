@@ -51,6 +51,7 @@ function App() {
             <Route path="/pandp" element={<PrivacyandPolicy />} /> 
             <Route path="/gallery" element={<Gallery />} /> 
             <Route path="/blog" element={<Blog/>} />
+            <Route path="/updates" element={<Updates/>} />
             <Route path="/blog/*" element={<BlogRoutes />} /> 
 
             {/* Better 404 handling (Status code is still 200, but user sees error) */}
