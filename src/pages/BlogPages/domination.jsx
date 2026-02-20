@@ -113,72 +113,147 @@ const Domination = () => {
           </p>
 
           {/* CONTENT */}
-          <section className="space-y-6 text-gray-300 text-base leading-8">
-            <p>
-              The esports scene is growing faster than ever, and with it comes new opportunities for players to prove their skills, build their reputation, and compete at a higher level. 
-              Domination League Season 01, organized by UK Esports Hub, is designed to provide exactly that a structured, competitive, and professional platform for rising and established teams.
-            Whether you're an aspiring competitive player or part of an organized team, Domination League is your chance to step into a serious competitive environment. </p>
+          <section className="space-y-8 text-gray-300 text-base leading-8">
 
-            {/* Inline image */}
-            <figure className="my-8 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-700">
-              <img
-                src="/logos/domination_leauge.webp"
-                alt="Domination Leauge"
-                className="w-full object-cover max-h-96"
-              />
-              <figcaption className="bg-gray-800 text-gray-500 text-xs px-4 py-2 text-center">
-                Domination Leauge Season 01
-              </figcaption>
-            </figure>
-           
-            <p>
-            What is Domination League?
-            Domination League is an online esports tournament built to create real competitive opportunities for players across India. Unlike casual scrims or open matches, this league focuses on structured                    competition, organized scheduling, and live broadcasts, making it a professional experience for participants.
-            The league is designed with one clear goal: to identify, showcase, and promote competitive talent.
-            Participants will compete against other serious teams, test their strategies, and gain valuable experience in a tournament environment.
-            </p>
+  {/* Intro */}
+  <div className="space-y-4">
+    <p>
+      The esports scene is growing faster than ever, and with it comes new opportunities for players to prove their skills, build their reputation, and compete at a higher level.
+      <span className="font-semibold text-white"> Domination League Season 01</span>, organized by UK Esports Hub, is designed to provide exactly that — a structured, competitive, and professional platform for rising and established teams.
+    </p>
 
-            <p>
-            Why Domination League Matters
-            Most players remain stuck in casual matches without exposure or real competitive growth. Domination League changes that.
-            Here’s what makes it important:
-              1. Professional Competitive Environment
-            Players compete in a structured league format rather than random matches, which improves discipline, teamwork, and consistency.
-              2. Live Streaming Exposure
-            All matches will be streamed live on the official UK Esports Hub YouTube channel. This gives players visibility and a chance to build their competitive identity.
-              3. Skill Development
-            Real competition exposes weaknesses. Teams learn faster, improve faster, and adapt faster.
-              4. Community Growth
-            Domination League helps build a stronger esports ecosystem by connecting players, teams, and organizers.
-            </p>
+    <p>
+      Whether you're an aspiring competitive player or part of an organized team, Domination League is your chance to step into a serious competitive environment.
+    </p>
+  </div>
 
-            
-             {/* Pull quote */}
-            <blockquote className="my-8 bg-gray-800 border-l-4 border-indigo-500 rounded-r-xl px-6 py-5 text-indigo-300 text-lg font-semibold italic">
-              "Esports isn't just gaming anymore — it's careers, culture, and community."
-            </blockquote>
-            
-            <p>
-            Who Should Participate?
-            Domination League is ideal for:
-             > Competitive teams looking for exposure
-             > Players aiming to transition from casual to competitive
-             > Teams preparing for higher-tier tournaments
-             > Players who want to build reputation in esports
-             > If you are serious about esports, this is not optional — this is necessary.
-             > Playing only scrims will not get you recognized. Playing leagues will.
-            </p>
+  {/* Inline image */}
+  <figure className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-700">
+    <img
+      src="/logos/domination_leauge.webp"
+      alt="Domination League Season 01"
+      className="w-full object-cover max-h-96"
+    />
+    <figcaption className="bg-gray-800 text-gray-500 text-xs px-4 py-2 text-center">
+      Domination League Season 01
+    </figcaption>
+  </figure>
 
-         <p> Organized by UK Esports Hub
-          UK Esports Hub is actively working to build competitive opportunities and strengthen the esports ecosystem, especially for emerging players. The goal is simple: create real platforms where talent can                compete, grow, and get noticed.
-          Domination League Season 01 is a major step toward that mission. </p>
+  {/* What is Domination League */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      What is Domination League?
+    </h2>
 
-       <p> Final Words
-        Every competitive player reaches a point where casual play is no longer enough. 
-         You either step into real competition, or you stay invisible.
-         Domination League gives you that opportunity. The question is simple: Are you ready to compete, or are you comfortable staying average?
-               </p>
-          </section>
+    <p>
+      Domination League is an online esports tournament built to create real competitive opportunities for players across India. Unlike casual scrims or open matches, this league focuses on structured competition, organized scheduling, and live broadcasts, making it a professional experience for participants.
+    </p>
+
+    <p>
+      The league is designed with one clear goal: <span className="font-semibold text-white">to identify, showcase, and promote competitive talent.</span>
+      Participants will compete against serious teams, test their strategies, and gain valuable experience in a true tournament environment.
+    </p>
+  </div>
+
+  {/* Why it matters */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Why Domination League Matters
+    </h2>
+
+    <p>
+      Most players remain stuck in casual matches without exposure or real competitive growth. Domination League changes that.
+    </p>
+
+    <ol className="list-decimal list-inside space-y-3">
+      <li>
+        <span className="font-semibold text-white">Professional Competitive Environment</span><br />
+        Structured league matches improve discipline, teamwork, and consistency.
+      </li>
+
+      <li>
+        <span className="font-semibold text-white">Live Streaming Exposure</span><br />
+        All matches will be streamed live on the official UK Esports Hub YouTube channel, giving players visibility and recognition.
+      </li>
+
+      <li>
+        <span className="font-semibold text-white">Skill Development</span><br />
+        Real competition exposes weaknesses and accelerates improvement.
+      </li>
+
+      <li>
+        <span className="font-semibold text-white">Community Growth</span><br />
+        The league strengthens the esports ecosystem by connecting players, teams, and organizers.
+      </li>
+    </ol>
+  </div>
+
+  {/* Quote */}
+  <blockquote className="bg-gray-800 border-l-4 border-indigo-500 rounded-r-xl px-6 py-5 text-indigo-300 text-lg font-semibold italic">
+    "Esports isn't just gaming anymore — it's careers, culture, and community."
+  </blockquote>
+
+  {/* Who should participate */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Who Should Participate?
+    </h2>
+
+    <ul className="list-disc list-inside space-y-2">
+      <li>Competitive teams looking for exposure</li>
+      <li>Players transitioning from casual to competitive</li>
+      <li>Teams preparing for higher-tier tournaments</li>
+      <li>Players building their reputation in esports</li>
+    </ul>
+
+    <p className="font-semibold text-white">
+      If you are serious about esports, this is not optional — it is necessary.
+    </p>
+
+    <p>
+      Playing only scrims will not get you recognized. Playing leagues will.
+    </p>
+  </div>
+
+  {/* Organizer */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Organized by UK Esports Hub
+    </h2>
+
+    <p>
+      UK Esports Hub is actively building competitive opportunities and strengthening the esports ecosystem, especially for emerging players. The goal is simple: create platforms where talent can compete, grow, and get noticed.
+    </p>
+
+    <p>
+      Domination League Season 01 is a major step toward that mission.
+    </p>
+  </div>
+
+  {/* Final words */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Final Words
+    </h2>
+
+    <p>
+      Every competitive player reaches a point where casual play is no longer enough.
+    </p>
+
+    <p className="font-semibold text-white">
+      You either step into real competition, or you stay invisible.
+    </p>
+
+    <p>
+      Domination League gives you that opportunity.
+    </p>
+
+    <p className="text-lg font-bold text-indigo-400">
+      Are you ready to compete, or are you comfortable staying average?
+    </p>
+  </div>
+
+</section>
           
 
           {/* FOOTER */}
