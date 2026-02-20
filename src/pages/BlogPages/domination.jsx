@@ -22,13 +22,13 @@ const Domination = () => {
   }, []);
 
   const blog = {
-    title: "How Esports is Changing the Future of Gaming",
-    coverImage: "/logos/FFM.png",
+    title: "Domination League Season 01",
+    coverImage: "/logos/domination_leauge.webp",
     author: "Paras Bisht",
     date: "February 21, 2026",
     source: "UK Esports Hub",
     description:
-      "Discover how esports is transforming gaming into a global competitive industry.",
+      "Domination League a online free fire event hosted by <b> UK ESPORTS HUB.</b>",
   };
 
   return (
@@ -72,7 +72,7 @@ const Domination = () => {
           {/* Title over image */}
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-8 max-w-4xl mx-auto">
             <span className="inline-block bg-indigo-600 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
-              Esports
+              Online Event
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
               {blog.title}
@@ -115,42 +115,71 @@ const Domination = () => {
           {/* CONTENT */}
           <section className="space-y-6 text-gray-300 text-base leading-8">
             <p>
-              Esports has evolved from casual gaming to a billion-dollar industry.
-              Competitive gaming now attracts millions of viewers worldwide, rivaling
-              traditional sports in viewership and sponsorship revenue.
-            </p>
+              The esports scene is growing faster than ever, and with it comes new opportunities for players to prove their skills, build their reputation, and compete at a higher level. 
+              Domination League Season 01, organized by UK Esports Hub, is designed to provide exactly that a structured, competitive, and professional platform for rising and established teams.
+            Whether you're an aspiring competitive player or part of an organized team, Domination League is your chance to step into a serious competitive environment. </p>
 
             {/* Inline image */}
             <figure className="my-8 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-700">
               <img
-                src="/images/esports-tournament.jpg"
-                alt="Esports Tournament"
+                src="/logos/domination_leauge.webp"
+                alt="Domination Leauge"
                 className="w-full object-cover max-h-96"
               />
               <figcaption className="bg-gray-800 text-gray-500 text-xs px-4 py-2 text-center">
-                A competitive esports tournament in action.
+                Domination Leauge Season 01
               </figcaption>
             </figure>
-
+           
             <p>
-              Major tournaments now offer prize pools exceeding millions of dollars.
-              Organizations are investing heavily in esports infrastructure — from
-              dedicated training facilities to full-time coaching staff and sports
-              psychologists.
+            What is Domination League?
+            Domination League is an online esports tournament built to create real competitive opportunities for players across India. Unlike casual scrims or open matches, this league focuses on structured                    competition, organized scheduling, and live broadcasts, making it a professional experience for participants.
+            The league is designed with one clear goal: to identify, showcase, and promote competitive talent.
+            Participants will compete against other serious teams, test their strategies, and gain valuable experience in a tournament environment.
             </p>
 
-            {/* Pull quote */}
+            <p>
+            Why Domination League Matters
+            Most players remain stuck in casual matches without exposure or real competitive growth. Domination League changes that.
+            Here’s what makes it important:
+              1. Professional Competitive Environment
+            Players compete in a structured league format rather than random matches, which improves discipline, teamwork, and consistency.
+              2. Live Streaming Exposure
+            All matches will be streamed live on the official UK Esports Hub YouTube channel. This gives players visibility and a chance to build their competitive identity.
+              3. Skill Development
+            Real competition exposes weaknesses. Teams learn faster, improve faster, and adapt faster.
+              4. Community Growth
+            Domination League helps build a stronger esports ecosystem by connecting players, teams, and organizers.
+            </p>
+
+            
+             {/* Pull quote */}
             <blockquote className="my-8 bg-gray-800 border-l-4 border-indigo-500 rounded-r-xl px-6 py-5 text-indigo-300 text-lg font-semibold italic">
               "Esports isn't just gaming anymore — it's careers, culture, and community."
             </blockquote>
-
+            
             <p>
-              Platforms like YouTube and Twitch have accelerated esports growth,
-              enabling players to build massive audiences independently. The rise of
-              mobile esports has further democratized access, especially in regions
-              like South Asia where mobile-first gaming dominates.
+            Who Should Participate?
+            Domination League is ideal for:
+             > Competitive teams looking for exposure
+             > Players aiming to transition from casual to competitive
+             > Teams preparing for higher-tier tournaments
+             > Players who want to build reputation in esports
+             > If you are serious about esports, this is not optional — this is necessary.
+             > Playing only scrims will not get you recognized. Playing leagues will.
             </p>
+
+         <p> Organized by UK Esports Hub
+          UK Esports Hub is actively working to build competitive opportunities and strengthen the esports ecosystem, especially for emerging players. The goal is simple: create real platforms where talent can                compete, grow, and get noticed.
+          Domination League Season 01 is a major step toward that mission. </p>
+
+       <p> Final Words
+        Every competitive player reaches a point where casual play is no longer enough. 
+         You either step into real competition, or you stay invisible.
+         Domination League gives you that opportunity. The question is simple: Are you ready to compete, or are you comfortable staying average?
+               </p>
           </section>
+          
 
           {/* FOOTER */}
           <footer className="mt-12 pt-6 border-t border-gray-700 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-500">
