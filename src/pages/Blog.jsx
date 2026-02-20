@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import blogData from "../pages/BlogPages/blogData";
 import { HashLink } from "react-router-hash-link";
+import Navbar from "../../components/Navbar";
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -11,6 +12,7 @@ const Blog = () => {
     );
 
   return (
+    <Navbar/>
     <div className="min-h-screen bg-gray-900 p-10 lg:pl-48 ">
 
       <h1 className="text-5xl font-extrabold text-white">Our Blogs</h1>
