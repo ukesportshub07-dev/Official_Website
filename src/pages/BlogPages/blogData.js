@@ -14,7 +14,7 @@ const blogData = [
     shortDesc: "The esports scene is growing faster than ever, and with it comes new opportunities for players to prove their skills, build their reputation, and compete at a higher level.",
     image: "/logos/domination_leauge.webp",
     path: "/blog/domination",
-    year: "2026"
+    year: "2026" 
   }
     
 ];
