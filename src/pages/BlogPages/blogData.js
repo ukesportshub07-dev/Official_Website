@@ -15,9 +15,8 @@ const blogData = [
     image: "/logos/domination_leauge.webp",
     path: "/blog/domination",
     year: "2026"
-  },
-  
-  
+  }
+    
 ];
 
 export default blogData;
