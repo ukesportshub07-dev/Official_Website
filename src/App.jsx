@@ -6,12 +6,14 @@ import './index.css';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import Home from './pages/home.jsx';
-import Blogs from './pages/Blog.jsx';
+import Updates from './pages/Updates.jsx';
 import Form from './pages/Form.jsx';
 import Oursponsors from './pages/sponsor.jsx';
 import TermsandCondition from './pages/TermsandCondition.jsx';
 import PrivacyandPolicy from './pages/PrivacyandPolicy.jsx';
 import Gallery from './pages/Gallery.jsx';
+import Blog from './pages/Blog.jsx';
+import BlogRoutes from './pages/BlogPages/blogRoutes.jsx';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -42,12 +44,14 @@ function App() {
           
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<Blogs />} /> 
+            <Route path="/updates" element={<Updates />} /> 
             <Route path="/forms" element={<Form />} /> 
             <Route path="/sponsers" element={<Oursponsors/>} /> 
             <Route path="/tandc" element={<TermsandCondition/>} />
             <Route path="/pandp" element={<PrivacyandPolicy />} /> 
             <Route path="/gallery" element={<Gallery />} /> 
+            <Route path="/blog" element={<Blog/>} />
+            <Route path="/blog/*" element={<BlogRoutes />} /> 
 
             {/* Better 404 handling (Status code is still 200, but user sees error) */}
             <Route path="*" element={<div className="p-10 text-center"><h1 className="text-4xl text-red-500">404</h1><p>Page Not Found</p></div>} />
