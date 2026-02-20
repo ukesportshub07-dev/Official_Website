@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Domination from './domination'
 import Ukesportshub from './ukesportshub'
+import Valorantenc from './valorantenc'
 
 const BlogRoutes = () => {
     return (
