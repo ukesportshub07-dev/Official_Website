@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 
-const Valorant_enc = () => {
+const Valorantenc = () => {
   const [views, setViews] = useState(0);
 
   useEffect(() => {
@@ -212,4 +212,4 @@ const Valorant_enc = () => {
   );
 };
 
-export default Valorant_enc;
+export default Valorantenc;
