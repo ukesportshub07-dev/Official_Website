@@ -164,7 +164,7 @@ const Valorantenc = () => {
       className="w-full object-cover max-h-96"
     />
     <figcaption className="bg-gray-800 text-gray-500 text-xs px-4 py-2 text-center">
-      VALORANT confirmed as an official title in Esports Nations Cup 2026
+      VALORANT confirmed as an official title in Esports Nations Cup 2026 | Image Via: Esports Nation Cup
     </figcaption>
   </figure>
 
