@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 
-const Ukesportshub = () => {
+const Valorant_enc = () => {
   const [views, setViews] = useState(0);
 
   useEffect(() => {
@@ -212,4 +212,4 @@ const Ukesportshub = () => {
   );
 };
 
-export default Ukesportshub;
+export default Valorant_enc;
