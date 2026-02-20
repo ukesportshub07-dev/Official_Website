@@ -141,57 +141,131 @@ const Valorantenc = () => {
           {/* CONTENT */}
           <section className="space-y-8 text-gray-300 text-base leading-8">
 
-            <div className="space-y-4">
-              <p>
-                VALORANT has officially been confirmed as part of the Esports Nations Cup (ENC) 2026, marking a major milestone in the global expansion of competitive esports. This development strengthens VALORANT’s position as one of the most important tactical shooters in the esports ecosystem.
-              </p>
+  {/* Intro */}
+  <div className="space-y-4">
+    <p>
+      VALORANT has officially been announced as one of the featured titles in the Esports Nations Cup (ENC) 2026, marking a defining moment in the evolution of international esports competition. Since its launch, VALORANT has rapidly grown into one of the most competitive tactical shooters in the world, and its inclusion in ENC reflects its importance in the global esports ecosystem.
+    </p>
 
-              <p>
-                Unlike traditional esports tournaments, the Esports Nations Cup introduces a national representation format, where players compete for their countries rather than organizations. This brings a new level of prestige, identity, and international competition.
-              </p>
-            </div>
+    <p>
+      The Esports Nations Cup introduces a fundamentally different competitive structure compared to traditional esports tournaments. Instead of players competing under esports organizations, the tournament focuses on national representation, allowing players to represent their countries on an international stage. This shift creates a deeper level of competitive pride and introduces a new dimension of global rivalry.
+    </p>
 
-            <figure className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-700">
-              <img
-                src={blog.coverImage}
-                alt="VALORANT ENC 2026"
-                className="w-full object-cover max-h-96"
-              />
+    <p>
+      For the global esports community, this announcement reinforces the long-term stability and relevance of VALORANT as a tier-one competitive title. It also signals continued investment in international esports infrastructure and structured global tournaments.
+    </p>
+  </div>
 
-              <figcaption className="bg-gray-800 text-gray-500 text-xs px-4 py-2 text-center">
-                VALORANT officially joins ENC 2026
-              </figcaption>
-            </figure>
+  {/* Image */}
+  <figure className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-700">
+    <img
+      src={blog.coverImage}
+      alt="VALORANT ENC 2026"
+      className="w-full object-cover max-h-96"
+    />
+    <figcaption className="bg-gray-800 text-gray-500 text-xs px-4 py-2 text-center">
+      VALORANT confirmed as an official title in Esports Nations Cup 2026
+    </figcaption>
+  </figure>
 
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-white">
-                Global Competitive Impact
-              </h2>
+  {/* Tournament Structure */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      A New Era of International Competition
+    </h2>
+    <p>
+      The Esports Nations Cup 2026 will feature national teams from around the world, bringing together top-tier players to compete at the highest level. This format emphasizes national identity, teamwork, and coordinated performance rather than traditional organization-based rosters.
+    </p>
+   <p>
+      Players selected to represent their countries will carry the responsibility of competing not just for personal success, but for national recognition. This creates a unique competitive environment where performance reflects both individual skill and national esports strength.
+    </p>
+    <p>
+      The tournament structure is expected to include multiple competitive stages, beginning with group-level competition and progressing into elimination rounds. This ensures that only the most consistent and strategically prepared teams advance toward the final stages of the tournament.
+    </p>
+  </div>
 
-              <p>
-                The tournament will feature national teams from across multiple regions, providing players with the opportunity to compete internationally under their country’s banner. This format promotes national pride and introduces a new pathway for competitive recognition.
-              </p>
+  {/* Why VALORANT was chosen */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Why VALORANT Is a Key Addition
+    </h2>
 
-              <p>
-                National esports competitions represent the next stage in esports evolution, bridging the gap between traditional sports structures and modern competitive gaming.
-              </p>
-            </div>
+    <p>
+      VALORANT’s competitive design makes it particularly suitable for national-level tournaments. The game emphasizes communication, coordination, strategic planning, and precise mechanical execution. These qualities make it ideal for structured team competition at the international level.
+    </p>
+    <p>
+      Over the past few years, VALORANT has established a strong competitive ecosystem through official leagues, international events, and structured ranking systems. Its continued growth and consistent player engagement have positioned it as one of the most reliable esports titles globally.
+    </p>
+    <p>
+      The addition of VALORANT to ENC further strengthens its global competitive presence and opens new pathways for players to participate in international esports events beyond traditional organizational competition.
+    </p>
+  </div>
 
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-white">
-                UK Esports Hub Perspective
-              </h2>
+  {/* Global impact */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Global Impact on the Esports Ecosystem
+    </h2>
+    <p>
+      National-level esports competitions represent a major step toward the long-term development of competitive gaming. These tournaments introduce new layers of structure, legitimacy, and global recognition. They also help establish esports as a discipline comparable to traditional international sports.
+    </p>
+    <p>
+      For emerging regions, this format creates opportunities for players to gain international exposure and compete against top talent from other countries. It also helps strengthen national esports infrastructure and encourages investment in player development.
+    </p>
+    <p>
+      As more international tournaments adopt national representation formats, esports continues to move toward a more structured and globally unified competitive future.
+    </p>
+  </div>
 
-              <p>
-                The addition of VALORANT to ENC 2026 reflects the continued global growth of structured esports competition. Events like these create long-term opportunities for players and strengthen the legitimacy of esports worldwide.
-              </p>
+  {/* Player opportunities */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Opportunities for Players Worldwide
+    </h2>
+    <p>
+      The inclusion of VALORANT in ENC provides players with new competitive opportunities beyond traditional organizational tournaments. Players now have an additional pathway to compete internationally while representing their country.
+    </p>
+    <p>
+      This format rewards consistent performance, discipline, and high-level gameplay. It also encourages players to improve their competitive skills in order to qualify for national representation.
+    </p>
+    <p>
+      For developing esports regions, national tournaments can play a critical role in identifying new talent and accelerating the growth of competitive ecosystems.
+    </p>
+  </div>
 
-              <p className="text-lg font-bold text-indigo-400">
-                The future of esports is international, competitive, and more structured than ever before.
-              </p>
-            </div>
+  {/* UK Esports Hub perspective */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      UK Esports Hub Perspective
+    </h2>
+    <p>
+      From a long-term perspective, the inclusion of VALORANT in the Esports Nations Cup represents a significant advancement in global esports development. Structured international tournaments help strengthen competitive standards and create meaningful opportunities for players.
+    </p>
+   <p>
+      National-level events also contribute to the overall stability of esports by encouraging long-term infrastructure growth, talent development, and competitive consistency.
+    </p>
+    <p>
+      As esports continues to evolve, tournaments like ENC will play a crucial role in shaping the future of competitive gaming and providing platforms for players to reach higher levels of competition.
+    </p>
+  </div>
 
-          </section>
+  {/* Closing */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold text-white">
+      Looking Ahead
+    </h2>
+    <p>
+      The addition of VALORANT to the Esports Nations Cup 2026 marks the beginning of a new chapter in international esports competition. It reflects the continued growth of competitive gaming and the increasing importance of structured global tournaments.
+    </p>
+    <p>
+      As international esports continues to expand, events like ENC will help define the future of competitive gaming and create new opportunities for players, teams, and esports organizations worldwide.
+    </p>
+    <p className="text-lg font-bold text-indigo-400">
+      Competitive esports is no longer limited to organizations — it is becoming a global stage where nations compete.
+    </p>
+  </div>
+
+</section>
 
           {/* FOOTER */}
           <footer className="mt-12 pt-6 border-t border-gray-700 flex justify-between text-sm text-gray-500">
