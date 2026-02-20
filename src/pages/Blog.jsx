@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import blogData from "../pages/BlogPages/blogData";
 import { HashLink } from "react-router-hash-link";
-import Navbar from "../../components/Navbar";
+import Navbar from '../components/Navbar.jsx';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState("");
