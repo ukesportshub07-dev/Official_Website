@@ -1,10 +1,10 @@
 const blogData = [
     {
-  id: 5,
+  id: 4,
   title: "PARIVISION Defeat MOUZ to Reach PGL Cluj-Napoca 2026 Grand Final",
   shortDesc: "PARIVISION secure a dominant victory over MOUZ in the semifinal, advancing to the PGL Cluj-Napoca 2026 Grand Final and continuing their rise in Counter-Strike 2.",
-  image: "/Banner/parivision_mouz.webp",
-  path: "/blog/parivisionmouz",
+  image: "/Banner/parivisiondefeatmouz.webp",
+  path: "/blog/parivisiondefeatmouz",
   year: "2026"
 },
     
