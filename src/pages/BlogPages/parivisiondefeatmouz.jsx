@@ -19,7 +19,7 @@ const ParivisionMouz = () => {
 
   const blog = {
     title: "PARIVISION Defeat MOUZ to Reach PGL Cluj-Napoca 2026 Grand Final",
-    coverImage: "/Banner/parivision_mouz.webp", // add image in public/Banner/
+    coverImage: "/Banner/parivisiondefeatmouz", // add image in public/Banner/
     author: "Paras Bisht",
     date: "February 21, 2026",
     isoDate: "2026-02-21",
