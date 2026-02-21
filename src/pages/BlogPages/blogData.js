@@ -1,5 +1,13 @@
 const blogData = [
-
+    {
+  id: 5,
+  title: "PARIVISION Defeat MOUZ to Reach PGL Cluj-Napoca 2026 Grand Final",
+  shortDesc: "PARIVISION secure a dominant victory over MOUZ in the semifinal, advancing to the PGL Cluj-Napoca 2026 Grand Final and continuing their rise in Counter-Strike 2.",
+  image: "/Banner/parivision_mouz.webp",
+  path: "/blog/parivisionmouz",
+  year: "2026"
+},
+    
     {
   id: 3,
   title: "VALORANT Added to Esports Nations Cup 2026",
