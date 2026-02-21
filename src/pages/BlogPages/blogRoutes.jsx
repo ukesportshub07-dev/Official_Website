@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Domination from './domination'
 import Ukesportshub from './ukesportshub'
 import Valorantenc from './valorantenc'
-import parivisionmouz from './parivisionmouz'
+import ParivisionMouz from './parivisionmouz'
 
 const BlogRoutes = () => {
     return (
