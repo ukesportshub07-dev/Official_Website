@@ -3,29 +3,29 @@ import { HashLink } from 'react-router-hash-link';
 
 const tournamentData = [
   {
-    id: 1,
+    id: 2,
     title: "The Final Showdown",
     details: "Feb Mid 2026 • LAN Qualifiers • Prizepool Upto: ₹50,000",
     src: "/Banner/finalshowdown.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600",
     themeColor: "pink",
-    isHighlighted: true,
+    isHighlighted: false,
   },
 
   {
-    id: 1,
+    id: 3,
     title: "Domination League",
     details: "March 2026 • Online Matches • Prizepool Upto: ₹5,000 INR",
     src: "/Banner/roadmap.webp",
     status: "Upcoming Event",
     statusColor: "border-green-600",
     themeColor: "purple",
-    isHighlighted: true,
+    isHighlighted: false,
   },
   
   {
-    id: 2,
+    id: 4,
     title: "Battel Era 2.0",
     details: "13 Nov - 14 Nov 2025 • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹2,00,000/-",
     src: "/Banner/Battle.webp",
@@ -35,7 +35,7 @@ const tournamentData = [
     isHighlighted: false,
   },
   {
-    id: 3,
+    id: 5,
     title: "Endgame 2025 E-Sports Event",
     details: "06 Nov - 07 Nov • Offline Qualifiers • Offline Finals • Prizepool Upto: ₹1,00,000/-",
     src: "/Banner/endgame.webp",
@@ -45,7 +45,7 @@ const tournamentData = [
     isHighlighted: false,
   },
   {
-    id: 4,
+    id: 6,
     title: "Free Fire Max Nova Clash",
     details: "27 Sep 2025 • Offline • Uttarakhand",
     src: "/Banner/Free Fire Max Nova Clash.webp",
@@ -55,7 +55,7 @@ const tournamentData = [
     isHighlighted: false,
   },
   {
-    id: 5,
+    id: 7,
     title: "Domination 2025",
     details: "25 - 27 Aug 2025 • Offline • Prizepool Upto: ₹1,00,000/- • Uttarakhand",
     src: "/Banner/Domination.webp",
@@ -65,7 +65,7 @@ const tournamentData = [
     isHighlighted: false,
   },
   {
-    id: 6,
+    id: 8,
     title: "Summer Carnival 2025",
     details: "14 - 15 May • LAN • Prizepool Upto: ₹25,000/-",
     src: "Banner/summer_carnival.webp",
