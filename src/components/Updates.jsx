@@ -4,7 +4,7 @@ const STEPS = [
   { 
     id: "registrations", 
     label: "Registrations Open", 
-    date: new Date(2026, 1, 12)
+    date: new Date(0, 0, 0)
   }, 
   { 
     id: "fixtures", 
