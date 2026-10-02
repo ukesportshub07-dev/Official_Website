@@ -137,15 +137,15 @@ function Hero() {
           <div className="bg-gradient-to-b from-[#7c3aed]/30 to-transparent p-1 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]">
             <div className="bg-gray-800 rounded-xl p-6">
               <img src="/Banner/comingsoon.webp" alt="Coming Soon"/>
-              <h3 className="text-lg font-bold">Next LAN:Announcing Soon </h3>
+              <h3 className="text-lg font-bold">Next LAN: Announcing Soon </h3>
               <p className="text-gray-400 mt-2 text-sm"> Dates • Will be Announced Soon.</p>
               <div className="mt-4 flex gap-2">
-                 <Link
+            {/* <Link
               to="/Forms"
               className="px-3 py-2 bg-[#7c3aed] rounded-md text-sm font-semibold">
               Register Team
-            </Link>
-                <a href="/blog#news" className="px-3 py-2 border border-gray-700 rounded-md text-sm">Event Info</a>
+            </Link> 
+                <a href="/blog#news" className="px-3 py-2 border border-gray-700 rounded-md text-sm">Event Info</a> */}
               </div>
             </div>
           </div>
