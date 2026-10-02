@@ -108,13 +108,13 @@ function Hero() {
 
           <div ref={statsRef} className="mt-8 grid grid-cols-3 gap-3 text-xs text-gray-200">
             <AnimatedStatCard
-              targetNumber={5}
+              targetNumber={8}
               suffix="+"
               label="Tournaments"
               triggerAnimation={startAnimation}
             />
             <AnimatedStatCard
-              targetNumber={550}
+              targetNumber={1000}
               suffix="+"
               label="Community Members"
               triggerAnimation={startAnimation}
@@ -136,9 +136,9 @@ function Hero() {
         >
           <div className="bg-gradient-to-b from-[#7c3aed]/30 to-transparent p-1 rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]">
             <div className="bg-gray-800 rounded-xl p-6">
-              <img src="/Banner/finalshowdown.webp" alt="The Final Showdown"/>
-              <h3 className="text-lg font-bold">Next LAN:The Final Showdown </h3>
-              <p className="text-gray-400 mt-2 text-sm"> Mid Feb 2026 • Competitive Free Fire Tournament.</p>
+              <img src="/Banner/comingsoon.webp" alt="Coming Soon"/>
+              <h3 className="text-lg font-bold">Next LAN:Announcing Soon </h3>
+              <p className="text-gray-400 mt-2 text-sm"> Dates • Will be Announced Soon.</p>
               <div className="mt-4 flex gap-2">
                  <Link
               to="/Forms"
