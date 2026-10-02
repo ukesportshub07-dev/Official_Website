@@ -1,30 +1,25 @@
 import React, { useState, useEffect } from "react";
 
 const STEPS = [
-  { 
-    id: "registrations", 
-    label: "Registrations Open", 
-    date: new Date(0, 0, 0)
-  }, 
-  { 
-    id: "fixtures", 
-    label: "Fixtures Released", 
-    date: new Date(2026, 1, 25)
+  {
+    id: "completed",
+    label: "Previous Events Completed",
+    date: null
   },
-  { 
-    id: "live", 
-    label: "Event Live", 
-    date: new Date(2026, 1, 26)
+  {
+    id: "planning",
+    label: "New Events in Planning",
+    date: null
   },
-  { 
-    id: "results", 
-    label: "Results Announced", 
-    date: new Date(2026, 2, 10)
+  {
+    id: "announcement",
+    label: "Next Event Announcement",
+    date: null
   },
-  { 
-    id: "Prize Distribution", 
-    label: "Prize Distribution", 
-    date: new Date(2026, 2, 11)
+  {
+    id: "upcoming",
+    label: "Upcoming Events",
+    date: null
   },
 ];
 
